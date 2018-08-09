@@ -1,0 +1,10 @@
+D:\73280PAV\ProyectoLogin\ProyectoLogin\bin\Debug\ProyectoLogin.exe.config
+D:\73280PAV\ProyectoLogin\ProyectoLogin\bin\Debug\ProyectoLogin.exe
+D:\73280PAV\ProyectoLogin\ProyectoLogin\bin\Debug\ProyectoLogin.pdb
+D:\73280PAV\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.csprojResolveAssemblyReference.cache
+D:\73280PAV\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.frmLogin.resources
+D:\73280PAV\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.Properties.Resources.resources
+D:\73280PAV\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.csproj.GenerateResource.Cache
+D:\73280PAV\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.exe
+D:\73280PAV\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.pdb
+D:\73280PAV\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.frmPrincipal.resources
