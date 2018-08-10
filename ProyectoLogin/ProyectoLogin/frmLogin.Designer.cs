@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lblUser = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
@@ -43,9 +44,10 @@
             this.lblUser.AutoSize = true;
             this.lblUser.BackColor = System.Drawing.Color.Transparent;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(35, 27);
+            this.lblUser.Location = new System.Drawing.Point(47, 33);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(69, 17);
+            this.lblUser.Size = new System.Drawing.Size(80, 20);
             this.lblUser.TabIndex = 0;
             this.lblUser.Text = "Usuario:";
             // 
@@ -54,33 +56,37 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(8, 58);
+            this.lblPassword.Location = new System.Drawing.Point(11, 71);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(96, 17);
+            this.lblPassword.Size = new System.Drawing.Size(111, 20);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Contraseña:";
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(110, 24);
+            this.txtUser.Location = new System.Drawing.Point(147, 30);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(130, 20);
+            this.txtUser.Size = new System.Drawing.Size(172, 22);
             this.txtUser.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(110, 55);
+            this.txtPassword.Location = new System.Drawing.Point(147, 68);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = 'E';
-            this.txtPassword.Size = new System.Drawing.Size(130, 20);
+            this.txtPassword.Size = new System.Drawing.Size(172, 22);
             this.txtPassword.TabIndex = 1;
             // 
             // cmdIngresar
             // 
             this.cmdIngresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cmdIngresar.Location = new System.Drawing.Point(60, 91);
+            this.cmdIngresar.Location = new System.Drawing.Point(80, 112);
+            this.cmdIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdIngresar.Name = "cmdIngresar";
-            this.cmdIngresar.Size = new System.Drawing.Size(75, 23);
+            this.cmdIngresar.Size = new System.Drawing.Size(100, 28);
             this.cmdIngresar.TabIndex = 2;
             this.cmdIngresar.Text = "Ingresar";
             this.cmdIngresar.UseVisualStyleBackColor = false;
@@ -89,9 +95,10 @@
             // cmdSalir
             // 
             this.cmdSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.cmdSalir.Location = new System.Drawing.Point(152, 91);
+            this.cmdSalir.Location = new System.Drawing.Point(203, 112);
+            this.cmdSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdSalir.Name = "cmdSalir";
-            this.cmdSalir.Size = new System.Drawing.Size(75, 23);
+            this.cmdSalir.Size = new System.Drawing.Size(100, 28);
             this.cmdSalir.TabIndex = 3;
             this.cmdSalir.Text = "Salir";
             this.cmdSalir.UseVisualStyleBackColor = false;
@@ -100,17 +107,18 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProyectoLogin.Properties.Resources.Snow;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(260, 139);
+            this.pictureBox1.Size = new System.Drawing.Size(347, 171);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(264, 141);
+            this.ClientSize = new System.Drawing.Size(352, 174);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.cmdIngresar);
             this.Controls.Add(this.txtPassword);
@@ -118,6 +126,8 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

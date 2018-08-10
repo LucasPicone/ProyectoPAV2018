@@ -45,8 +45,9 @@ namespace ProyectoLogin
                                     "CASI HACKER",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
-                    fp.Show();
-                    this.Close();
+                    this.txtPassword.Text = string.Empty;
+                    this.txtUser.Text = string.Empty;
+                    fp.ShowDialog();
                 }
                 else
                 {

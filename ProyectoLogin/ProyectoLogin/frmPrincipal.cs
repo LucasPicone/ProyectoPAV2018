@@ -21,9 +21,11 @@ namespace ProyectoLogin
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            /*
             frmLogin fl;
             fl = new frmLogin();
             fl.ShowDialog();
+            */
         }
         public bool validarUsuario(string u, string p)
         {
