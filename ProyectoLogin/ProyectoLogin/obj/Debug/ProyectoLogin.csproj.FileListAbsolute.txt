@@ -19,3 +19,14 @@ C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018-master\ProyectoLog
 C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018-master\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.csproj.CoreCompileInputs.cache
 C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018-master\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.exe
 C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018-master\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.pdb
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\ProyectoLogin\ProyectoLogin\bin\Debug\ProyectoLogin.exe.config
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\ProyectoLogin\ProyectoLogin\bin\Debug\ProyectoLogin.exe
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\ProyectoLogin\ProyectoLogin\bin\Debug\ProyectoLogin.pdb
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.csprojResolveAssemblyReference.cache
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.frmLogin.resources
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.frmPrincipal.resources
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.Properties.Resources.resources
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.csproj.GenerateResource.cache
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.exe
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.pdb
