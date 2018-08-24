@@ -12,7 +12,7 @@ namespace ProyectoLogin
 {
     public partial class frmConsultaBugs : Form
     {
-        BDHelper oDatos = new BDHelper(@"Data Source=maquis;Initial Catalog=BUGSHISTO73280;User ID=avisuales1;password=avisuales1");
+        BDHelper oDatos = new BDHelper(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=BUGS;User ID=sa;password=1234"); // intaciar la clase que cree en un objeto datos para poder usarlo
         public frmConsultaBugs()
         {
             InitializeComponent();
@@ -20,19 +20,20 @@ namespace ProyectoLogin
 
         private void frmConsultaBugs_Load(object sender, EventArgs e)
         {
-            cargarCombo(cmbEstado, "Estados");
-            cargarCombo(cmbAsignado, "Users");
-            cargarCombo(cmbCriticidad, "Criticidades");
-            cargarCombo(cmbPrioridad, "Prioridades");
-            grdBugs.DataSource = oDatos.consultarTabla("Bugs");
+            this.cargarCombo(cmbEstado, "Estados"); //  utilizo el metodo que cree para cargar todos los combos del form
+            this.cargarCombo(cmbCriticidad, "Criticidades");
+            this.cargarCombo(cmbPrioridad, "Prioridades");
+            this.cargarCombo(cmbProducto, "Productos");
+            this.cargarCombo(cmbAsignado, "Perfiles");
+            this.grdBugs.DataSource = oDatos.consultarTabla("Bugs");
         }
 
-        private void cargarCombo(ComboBox combo, string nombreTabla)
+        private void cargarCombo(ComboBox combo,string nombreTabla) //creo un metodo para cargar los combos 
         {
             DataTable tabla = oDatos.consultarTabla(nombreTabla);
             combo.DataSource = tabla;
             combo.ValueMember = tabla.Columns[0].ColumnName;
             combo.DisplayMember = tabla.Columns[1].ColumnName;
-        }
+        }  
     }
 }
