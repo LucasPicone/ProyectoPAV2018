@@ -12,17 +12,8 @@ namespace ProyectoLogin
 {
     public partial class frmBugs : Form
     {
-        BDHelper oDatos = new BDHelper();
-        /*SqlConnection conexion;
-        SqlCommand comando;
-        DataTable tabla;
-        //hacer la conexion a la base BUGS o BUGSHISTO
-        String cadenaConexion = @"";
-        */
-        //hay que hacer el login contra la BD
-        private string user = "admin";
-        private string pass = "admin";
-        
+        BDHelper oDatos = new BDHelper(@"Data Source=localhost\SQLEXPRESS;Initial Catalog=BUGS;User ID=sa;password=1234");
+
         public frmBugs()
         {
             InitializeComponent();
@@ -30,12 +21,16 @@ namespace ProyectoLogin
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            //oDatos.cargarCombo("Prioridad");
+            
         }
 
         public bool validarUsuario(string u, string p)
         {
-            if (this.user == u && this.pass == p)
+            DataTable tabla;
+            tabla = new DataTable();
+            string comando = "SELECT * FROM Users WHERE n_usuario = '" + u + "' AND password = '" + p + "'";
+            tabla = oDatos.consultaSQL(comando);
+            if (tabla.Rows.Count > 0)
                 return true;
             else
                 return false;

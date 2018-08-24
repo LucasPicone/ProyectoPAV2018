@@ -34,9 +34,10 @@
             // 
             // cmdConsultaBugs
             // 
-            this.cmdConsultaBugs.Location = new System.Drawing.Point(228, 93);
+            this.cmdConsultaBugs.Location = new System.Drawing.Point(304, 114);
+            this.cmdConsultaBugs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdConsultaBugs.Name = "cmdConsultaBugs";
-            this.cmdConsultaBugs.Size = new System.Drawing.Size(75, 23);
+            this.cmdConsultaBugs.Size = new System.Drawing.Size(100, 28);
             this.cmdConsultaBugs.TabIndex = 0;
             this.cmdConsultaBugs.Text = "consultaBugs";
             this.cmdConsultaBugs.UseVisualStyleBackColor = true;
@@ -44,12 +45,13 @@
             // 
             // frmBugs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(857, 402);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(1143, 495);
             this.Controls.Add(this.cmdConsultaBugs);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBugs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
@@ -61,7 +63,6 @@
         #endregion
 
         private System.Windows.Forms.Button cmdConsultaBugs;
-
     }
 }
 
