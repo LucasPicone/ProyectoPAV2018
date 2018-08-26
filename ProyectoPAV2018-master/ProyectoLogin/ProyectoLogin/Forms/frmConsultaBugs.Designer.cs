@@ -50,154 +50,171 @@
             // lblFechaDesde
             // 
             this.lblFechaDesde.AutoSize = true;
-            this.lblFechaDesde.Location = new System.Drawing.Point(12, 10);
+            this.lblFechaDesde.Location = new System.Drawing.Point(16, 12);
+            this.lblFechaDesde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaDesde.Name = "lblFechaDesde";
-            this.lblFechaDesde.Size = new System.Drawing.Size(72, 13);
+            this.lblFechaDesde.Size = new System.Drawing.Size(94, 17);
             this.lblFechaDesde.TabIndex = 0;
             this.lblFechaDesde.Text = "Fecha  desde";
             // 
             // lblFechaHasta
             // 
             this.lblFechaHasta.AutoSize = true;
-            this.lblFechaHasta.Location = new System.Drawing.Point(295, 10);
+            this.lblFechaHasta.Location = new System.Drawing.Point(393, 12);
+            this.lblFechaHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaHasta.Name = "lblFechaHasta";
-            this.lblFechaHasta.Size = new System.Drawing.Size(66, 13);
+            this.lblFechaHasta.Size = new System.Drawing.Size(86, 17);
             this.lblFechaHasta.TabIndex = 1;
             this.lblFechaHasta.Text = "Fecha hasta";
             // 
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(95, 10);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(127, 12);
+            this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
-            this.dtpFechaDesde.Size = new System.Drawing.Size(121, 20);
+            this.dtpFechaDesde.Size = new System.Drawing.Size(160, 22);
             this.dtpFechaDesde.TabIndex = 6;
             // 
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(384, 10);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(512, 12);
+            this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
-            this.dtpFechaHasta.Size = new System.Drawing.Size(121, 20);
+            this.dtpFechaHasta.Size = new System.Drawing.Size(160, 22);
             this.dtpFechaHasta.TabIndex = 7;
             // 
             // cmbEstado
             // 
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Location = new System.Drawing.Point(95, 44);
+            this.cmbEstado.Location = new System.Drawing.Point(127, 54);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbEstado.Size = new System.Drawing.Size(121, 21);
+            this.cmbEstado.Size = new System.Drawing.Size(160, 24);
             this.cmbEstado.TabIndex = 8;
             // 
             // cmbProducto
             // 
             this.cmbProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProducto.FormattingEnabled = true;
-            this.cmbProducto.Location = new System.Drawing.Point(95, 120);
+            this.cmbProducto.Location = new System.Drawing.Point(127, 148);
+            this.cmbProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbProducto.Size = new System.Drawing.Size(121, 21);
+            this.cmbProducto.Size = new System.Drawing.Size(160, 24);
             this.cmbProducto.TabIndex = 9;
             // 
             // cmbCriticidad
             // 
             this.cmbCriticidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCriticidad.FormattingEnabled = true;
-            this.cmbCriticidad.Location = new System.Drawing.Point(384, 84);
+            this.cmbCriticidad.Location = new System.Drawing.Point(512, 103);
+            this.cmbCriticidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbCriticidad.Name = "cmbCriticidad";
             this.cmbCriticidad.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbCriticidad.Size = new System.Drawing.Size(121, 21);
+            this.cmbCriticidad.Size = new System.Drawing.Size(160, 24);
             this.cmbCriticidad.TabIndex = 10;
             // 
             // cmbPrioridad
             // 
             this.cmbPrioridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPrioridad.FormattingEnabled = true;
-            this.cmbPrioridad.Location = new System.Drawing.Point(95, 84);
+            this.cmbPrioridad.Location = new System.Drawing.Point(127, 103);
+            this.cmbPrioridad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbPrioridad.Name = "cmbPrioridad";
             this.cmbPrioridad.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbPrioridad.Size = new System.Drawing.Size(121, 21);
+            this.cmbPrioridad.Size = new System.Drawing.Size(160, 24);
             this.cmbPrioridad.TabIndex = 11;
             // 
             // cmbAsignado
             // 
             this.cmbAsignado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAsignado.FormattingEnabled = true;
-            this.cmbAsignado.Location = new System.Drawing.Point(384, 44);
+            this.cmbAsignado.Location = new System.Drawing.Point(512, 54);
+            this.cmbAsignado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbAsignado.Name = "cmbAsignado";
             this.cmbAsignado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmbAsignado.Size = new System.Drawing.Size(121, 21);
+            this.cmbAsignado.Size = new System.Drawing.Size(160, 24);
             this.cmbAsignado.TabIndex = 12;
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(384, 120);
+            this.btnConsultar.Location = new System.Drawing.Point(512, 148);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(121, 30);
+            this.btnConsultar.Size = new System.Drawing.Size(161, 37);
             this.btnConsultar.TabIndex = 13;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // lblAsignado
             // 
             this.lblAsignado.AutoSize = true;
-            this.lblAsignado.Location = new System.Drawing.Point(301, 52);
+            this.lblAsignado.Location = new System.Drawing.Point(401, 64);
+            this.lblAsignado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAsignado.Name = "lblAsignado";
-            this.lblAsignado.Size = new System.Drawing.Size(60, 13);
+            this.lblAsignado.Size = new System.Drawing.Size(79, 17);
             this.lblAsignado.TabIndex = 14;
             this.lblAsignado.Text = "Asignado a";
             // 
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Location = new System.Drawing.Point(12, 123);
+            this.lblProducto.Location = new System.Drawing.Point(16, 151);
+            this.lblProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(50, 13);
+            this.lblProducto.Size = new System.Drawing.Size(65, 17);
             this.lblProducto.TabIndex = 15;
             this.lblProducto.Text = "Producto";
             // 
             // lblCriticiadad
             // 
             this.lblCriticiadad.AutoSize = true;
-            this.lblCriticiadad.Location = new System.Drawing.Point(301, 87);
+            this.lblCriticiadad.Location = new System.Drawing.Point(401, 107);
+            this.lblCriticiadad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCriticiadad.Name = "lblCriticiadad";
-            this.lblCriticiadad.Size = new System.Drawing.Size(50, 13);
+            this.lblCriticiadad.Size = new System.Drawing.Size(66, 17);
             this.lblCriticiadad.TabIndex = 16;
             this.lblCriticiadad.Text = "Criticidad";
             // 
             // lblPrioridad
             // 
             this.lblPrioridad.AutoSize = true;
-            this.lblPrioridad.Location = new System.Drawing.Point(12, 87);
+            this.lblPrioridad.Location = new System.Drawing.Point(16, 107);
+            this.lblPrioridad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrioridad.Name = "lblPrioridad";
-            this.lblPrioridad.Size = new System.Drawing.Size(48, 13);
+            this.lblPrioridad.Size = new System.Drawing.Size(65, 17);
             this.lblPrioridad.TabIndex = 17;
             this.lblPrioridad.Text = "Prioridad";
             // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(12, 52);
+            this.lblEstado.Location = new System.Drawing.Point(16, 64);
+            this.lblEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(40, 13);
+            this.lblEstado.Size = new System.Drawing.Size(52, 17);
             this.lblEstado.TabIndex = 18;
             this.lblEstado.Text = "Estado";
             // 
             // grdBugs
             // 
             this.grdBugs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdBugs.Location = new System.Drawing.Point(15, 181);
+            this.grdBugs.Location = new System.Drawing.Point(20, 223);
+            this.grdBugs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdBugs.Name = "grdBugs";
-            this.grdBugs.Size = new System.Drawing.Size(715, 256);
+            this.grdBugs.Size = new System.Drawing.Size(953, 315);
             this.grdBugs.TabIndex = 19;
             // 
             // frmConsultaBugs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 449);
+            this.ClientSize = new System.Drawing.Size(989, 553);
             this.Controls.Add(this.grdBugs);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblPrioridad);
@@ -214,6 +231,7 @@
             this.Controls.Add(this.dtpFechaDesde);
             this.Controls.Add(this.lblFechaHasta);
             this.Controls.Add(this.lblFechaDesde);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmConsultaBugs";
             this.Text = "Consulta Bugs";
             this.Load += new System.EventHandler(this.frmConsultaBugs_Load);

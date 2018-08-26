@@ -36,9 +36,15 @@ namespace ProyectoLogin
                 return false;
         }
 
-        private void cmdConsultaBugs_Click(object sender, EventArgs e)
+        public void actualizarUsuarioLogueado(string user)
         {
-            frmConsultaBugs fc = new frmConsultaBugs();
+            lblUser.Text = user;
+        }
+
+        private void consultaDeBugsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaBugs fc;
+            fc = new frmConsultaBugs();
             fc.ShowDialog();
         }
     }

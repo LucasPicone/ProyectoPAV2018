@@ -45,8 +45,8 @@ namespace ProyectoLogin
                                     "CASI HACKER",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
-                    this.txtPassword.Text = string.Empty;
-                    this.txtUser.Text = string.Empty;
+                    fp.actualizarUsuarioLogueado(txtUser.Text);
+                    limpiarInfoLogin();
                     fp.ShowDialog();
                 }
                 else
@@ -55,11 +55,16 @@ namespace ProyectoLogin
                     "Validacion de datos",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
-                    this.txtUser.Text = string.Empty;
-                    this.txtPassword.Text = string.Empty;
+                    limpiarInfoLogin();
                     this.txtUser.Focus();
                 }
             }
+        }
+
+        private void limpiarInfoLogin()
+        {
+            this.txtUser.Text = string.Empty;
+            this.txtPassword.Text = string.Empty;
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)

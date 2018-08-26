@@ -25,7 +25,6 @@ namespace ProyectoLogin
             this.cargarCombo(cmbPrioridad, "Prioridades");
             this.cargarCombo(cmbProducto, "Productos");
             this.cargarCombo(cmbAsignado, "Perfiles");
-            this.grdBugs.DataSource = oDatos.consultarTabla("Bugs");
         }
 
         private void cargarCombo(ComboBox combo,string nombreTabla) //creo un metodo para cargar los combos 
@@ -34,6 +33,11 @@ namespace ProyectoLogin
             combo.DataSource = tabla;
             combo.ValueMember = tabla.Columns[0].ColumnName;
             combo.DisplayMember = tabla.Columns[1].ColumnName;
-        }  
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            this.grdBugs.DataSource = oDatos.consultarTabla("Bugs");
+        }
     }
 }
