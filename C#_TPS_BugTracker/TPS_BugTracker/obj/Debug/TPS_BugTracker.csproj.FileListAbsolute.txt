@@ -1,0 +1,11 @@
+D:\ClasePractica5_2018\C#_TPS_BugTracker\TPS_BugTracker\bin\Debug\TPS_BugTracker.exe.config
+D:\ClasePractica5_2018\C#_TPS_BugTracker\TPS_BugTracker\bin\Debug\TPS_BugTracker.exe
+D:\ClasePractica5_2018\C#_TPS_BugTracker\TPS_BugTracker\bin\Debug\TPS_BugTracker.pdb
+D:\ClasePractica5_2018\C#_TPS_BugTracker\TPS_BugTracker\obj\Debug\TPS_BugTracker.csprojResolveAssemblyReference.cache
+D:\ClasePractica5_2018\C#_TPS_BugTracker\TPS_BugTracker\obj\Debug\TPS_BugTracker.frmBugs.resources
+D:\ClasePractica5_2018\C#_TPS_BugTracker\TPS_BugTracker\obj\Debug\TPS_BugTracker.frmLogin.resources
+D:\ClasePractica5_2018\C#_TPS_BugTracker\TPS_BugTracker\obj\Debug\TPS_BugTracker.frmPrincipal.resources
+D:\ClasePractica5_2018\C#_TPS_BugTracker\TPS_BugTracker\obj\Debug\TPS_BugTracker.Properties.Resources.resources
+D:\ClasePractica5_2018\C#_TPS_BugTracker\TPS_BugTracker\obj\Debug\TPS_BugTracker.csproj.GenerateResource.Cache
+D:\ClasePractica5_2018\C#_TPS_BugTracker\TPS_BugTracker\obj\Debug\TPS_BugTracker.exe
+D:\ClasePractica5_2018\C#_TPS_BugTracker\TPS_BugTracker\obj\Debug\TPS_BugTracker.pdb
