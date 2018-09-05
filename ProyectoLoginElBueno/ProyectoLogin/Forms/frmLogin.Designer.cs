@@ -39,6 +39,7 @@
             this.cmbLabsis = new System.Windows.Forms.Button();
             this.cmbCasa = new System.Windows.Forms.Button();
             this.lblBD = new System.Windows.Forms.Label();
+            this.cbxAudio = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,10 +110,11 @@
             this.pictureBox1.Size = new System.Drawing.Size(335, 186);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // cmbLabsis
             // 
-            this.cmbLabsis.Location = new System.Drawing.Point(61, 151);
+            this.cmbLabsis.Location = new System.Drawing.Point(84, 151);
             this.cmbLabsis.Name = "cmbLabsis";
             this.cmbLabsis.Size = new System.Drawing.Size(75, 23);
             this.cmbLabsis.TabIndex = 7;
@@ -122,7 +124,7 @@
             // 
             // cmbCasa
             // 
-            this.cmbCasa.Location = new System.Drawing.Point(201, 151);
+            this.cmbCasa.Location = new System.Drawing.Point(165, 151);
             this.cmbCasa.Name = "cmbCasa";
             this.cmbCasa.Size = new System.Drawing.Size(75, 23);
             this.cmbCasa.TabIndex = 8;
@@ -139,11 +141,23 @@
             this.lblBD.TabIndex = 9;
             this.lblBD.Text = "Cambio de base de datos";
             // 
+            // cbxAudio
+            // 
+            this.cbxAudio.AutoSize = true;
+            this.cbxAudio.Location = new System.Drawing.Point(277, 157);
+            this.cbxAudio.Name = "cbxAudio";
+            this.cbxAudio.Size = new System.Drawing.Size(60, 17);
+            this.cbxAudio.TabIndex = 10;
+            this.cbxAudio.Text = "Musica";
+            this.cbxAudio.UseVisualStyleBackColor = true;
+            this.cbxAudio.CheckedChanged += new System.EventHandler(this.cbxAudio_CheckedChanged);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 186);
+            this.Controls.Add(this.cbxAudio);
             this.Controls.Add(this.lblBD);
             this.Controls.Add(this.cmbCasa);
             this.Controls.Add(this.cmbLabsis);
@@ -178,5 +192,6 @@
         private System.Windows.Forms.Button cmbLabsis;
         private System.Windows.Forms.Button cmbCasa;
         private System.Windows.Forms.Label lblBD;
+        private System.Windows.Forms.CheckBox cbxAudio;
     }
 }

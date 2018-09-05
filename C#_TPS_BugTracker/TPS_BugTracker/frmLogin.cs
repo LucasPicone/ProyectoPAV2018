@@ -50,5 +50,10 @@ namespace TPS_BugTracker
             }
 
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

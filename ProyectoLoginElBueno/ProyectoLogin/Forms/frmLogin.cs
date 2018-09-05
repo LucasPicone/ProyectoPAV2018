@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoLogin.Properties;
+using System.Media;
 
 namespace ProyectoLogin
 {
@@ -15,9 +17,14 @@ namespace ProyectoLogin
         public frmLogin()
         {
             InitializeComponent();
+            reproductor = new SoundPlayer(@"C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\Properties\sax_guy.wav");
         }
 
+
+        private SoundPlayer reproductor;
+        
         frmBugs fp = new frmBugs();
+
         private void frmLogin_Load(object sender, EventArgs e)
         {
             this.txtUser.Focus();
@@ -89,6 +96,21 @@ namespace ProyectoLogin
         {
             string cadena = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BUGS;User ID=sa;password=1234";
             fp.cambioStringConexion(cadena);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxAudio_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (cbxAudio.Checked)
+                reproductor.PlayLooping();
+            else
+                reproductor.Stop();
+
         }
     }
 }

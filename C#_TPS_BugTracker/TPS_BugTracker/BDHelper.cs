@@ -8,6 +8,7 @@ public class BDHelper
     private string string_conexion = "Data Source=maquis;Initial Catalog=avisuales_73280;User ID=avisuales1;password=avisuales1";
 
     private static BDHelper instance; //Unica instancia de la clase
+
     public static BDHelper getBDHelper()
     {
         if (instance == null)

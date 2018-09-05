@@ -67,3 +67,15 @@ D:\ProyectoLogin\ProyectoLogin\obj\Debug\ProyectoLogin.csproj.GenerateResource.C
 D:\ProyectoLoginElBueno\ProyectoLogin\bin\Debug\ProyectoLogin.exe.config
 D:\ProyectoLoginElBueno\ProyectoLogin\obj\Debug\ProyectoLogin.exe
 D:\ProyectoLoginElBueno\ProyectoLogin\obj\Debug\ProyectoLogin.pdb
+C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\bin\Debug\ProyectoLogin.exe.config
+C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\bin\Debug\ProyectoLogin.exe
+C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\bin\Debug\ProyectoLogin.pdb
+C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\obj\Debug\ProyectoLogin.csprojAssemblyReference.cache
+C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\obj\Debug\ProyectoLogin.frmConsultaBugs.resources
+C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\obj\Debug\ProyectoLogin.frmLogin.resources
+C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\obj\Debug\ProyectoLogin.frmBugs.resources
+C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\obj\Debug\ProyectoLogin.Properties.Resources.resources
+C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\obj\Debug\ProyectoLogin.csproj.GenerateResource.cache
+C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\obj\Debug\ProyectoLogin.csproj.CoreCompileInputs.cache
+C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\obj\Debug\ProyectoLogin.exe
+C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\obj\Debug\ProyectoLogin.pdb
