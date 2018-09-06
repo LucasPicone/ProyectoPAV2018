@@ -111,6 +111,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\sax_guy.wav" />
+    <None Include="Resources\roblox.wav" />
+    <EmbeddedResource Include="Resources\sax_guy.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -10,18 +10,25 @@ using System.Windows.Forms;
 using ProyectoLogin.Properties;
 using System.Media;
 
+
 namespace ProyectoLogin
 {
     public partial class frmLogin : Form
     {
         public frmLogin()
         {
+
             InitializeComponent();
-            reproductor = new SoundPlayer(@"C:\Users\simon\Documents\GitHub\ProyectoPAV2018\ProyectoLoginElBueno\ProyectoLogin\Properties\sax_guy.wav");
+             
+            var audioSaxGuy = Resources.sax_guy;
+            var audioRoblox = Resources.roblox;
+            reproductor = new SoundPlayer(audioSaxGuy);
+            reproductorRoblox = new SoundPlayer(audioRoblox);
         }
 
 
         private SoundPlayer reproductor;
+        private SoundPlayer reproductorRoblox;
         
         frmBugs fp = new frmBugs();
 
@@ -43,6 +50,7 @@ namespace ProyectoLogin
                     "Validacion de datos", 
                     MessageBoxButtons.OK, 
                     MessageBoxIcon.Error);
+
             }
             else
             {
@@ -81,7 +89,10 @@ namespace ProyectoLogin
                                 "Salida",
                                 MessageBoxButtons.YesNo,
                                 MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                reproductorRoblox.Play();
                 e.Cancel = false;
+            }
             else
                 e.Cancel = true;
         }
@@ -98,10 +109,7 @@ namespace ProyectoLogin
             fp.cambioStringConexion(cadena);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void cbxAudio_CheckedChanged(object sender, EventArgs e)
         {

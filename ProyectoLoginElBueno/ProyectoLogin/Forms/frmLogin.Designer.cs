@@ -110,7 +110,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(335, 186);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // cmbLabsis
             // 
@@ -156,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 186);
+            this.ClientSize = new System.Drawing.Size(341, 196);
             this.Controls.Add(this.cbxAudio);
             this.Controls.Add(this.lblBD);
             this.Controls.Add(this.cmbCasa);
