@@ -90,7 +90,7 @@ namespace ProyectoLogin
                                 MessageBoxButtons.YesNo,
                                 MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                reproductorRoblox.Play();
+                reproductorRoblox.PlaySync();
                 e.Cancel = false;
             }
             else
