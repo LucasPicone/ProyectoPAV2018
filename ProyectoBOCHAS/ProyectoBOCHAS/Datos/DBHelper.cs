@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
+
+namespace ProyectoBOCHAS
+{
+    class DBHelper
+    {
+        string cadenaConexion;
+        SqlConnection conexion;
+        SqlCommand comando;
+
+        private void Conectar()
+        {
+            conexion.Open();
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+        }
+
+        private void Desconectar()
+        {
+            conexion.Close();
+        }
+
+        public DBHelper()
+        {
+            cadenaConexion = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BDBochas;User ID=sa;password=1234";
+            conexion = new SqlConnection(cadenaConexion);
+            comando = null;
+        }
+
+        public DataTable ConsultarTabla(string nombreTabla)
+        {
+            DataTable tabla = new DataTable();
+            Conectar();
+            comando.CommandText = "SELECT * FROM " + nombreTabla;
+            tabla.Load(comando.ExecuteReader());
+            Desconectar();
+            return tabla;
+        }
+
+        public DataTable ConsultaSQL(string strsql)
+        {
+            DataTable tabla = new DataTable();
+            Conectar();
+            comando.CommandText = strsql;
+            tabla.Load(comando.ExecuteReader());
+            Desconectar();
+            return tabla;
+        }
+
+        public void ComandoSQL(string strsql)
+        {
+            //insert/update/delete
+            Conectar();
+            comando.CommandText = strsql;
+            comando.ExecuteNonQuery();
+            Desconectar();
+        }
+    }
+}
