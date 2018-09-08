@@ -16,5 +16,10 @@ namespace ProyectoBOCHAS
         {
             InitializeComponent();
         }
+        
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

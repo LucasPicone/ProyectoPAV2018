@@ -30,7 +30,7 @@ namespace ProyectoBOCHAS
         {
             cadenaConexion = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BDBochas;User ID=sa;password=1234";
             conexion = new SqlConnection(cadenaConexion);
-            comando = null;
+            comando = new SqlCommand();
         }
 
         public DataTable ConsultarTabla(string nombreTabla)

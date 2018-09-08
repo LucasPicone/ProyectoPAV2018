@@ -12,17 +12,18 @@ namespace ProyectoBOCHAS
 {
     public partial class frmLogin : Form
     {
+        Usuario usuario = new Usuario();
         public frmLogin()
         {
             InitializeComponent();
             this.AcceptButton = cmdIngresar;
         }
-
+        
         private void frmLogin_Load(object sender, EventArgs e)
         {
             txtUsuario.Focus();
         }
-
+        
         private void LimpiarCampos()
         {
             txtUsuario.Text = string.Empty;
@@ -51,14 +52,14 @@ namespace ProyectoBOCHAS
             }
             else
             {
-                //validar...
+                if (usuario.ValidarUsuario(txtUsuario.Text, txtPassword.Text))
                 {
                     MessageBox.Show("Ingreso Exitoso", "Validación de Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmPrincipal fp = new frmPrincipal();
                     fp.ShowDialog();
                     LimpiarCampos();
                 }
-                //else
+                else
                 {
                     MessageBox.Show("Usuario y/o contraseña incorrectos", "Validación de Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     LimpiarCampos();
