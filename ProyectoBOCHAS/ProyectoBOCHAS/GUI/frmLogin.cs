@@ -56,7 +56,9 @@ namespace ProyectoBOCHAS
                 {
                     MessageBox.Show("Ingreso Exitoso", "Validación de Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frmPrincipal fp = new frmPrincipal();
+                    this.ShowInTaskbar = false;
                     fp.ShowDialog();
+                    this.ShowInTaskbar = true;
                     LimpiarCampos();
                 }
                 else

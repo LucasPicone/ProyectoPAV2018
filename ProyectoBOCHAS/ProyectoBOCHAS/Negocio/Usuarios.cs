@@ -25,5 +25,19 @@ namespace ProyectoBOCHAS
             else
                 return false;
         }
+
+        public DataTable ConsultarUsuario()
+        {
+            DataTable tabla = new DataTable();
+            string strsql = "select * from Usuarios where estado = 'S'";
+            tabla = oDatos.ConsultaSQL(strsql);
+            return tabla;
+        }
+
+        public void CargarUsuario(string usuario, string password)
+        {
+            string strsql = "insert into Usuarios (nombreUsuario, password, estado) values ('" + usuario + "', '" + password + "', 'S')";
+            oDatos.ComandoSQL(strsql);
+        }
     }
 }

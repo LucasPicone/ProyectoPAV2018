@@ -37,5 +37,11 @@ namespace ProyectoBOCHAS
             else
                 e.Cancel = true;
         }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            frmUsuario frmUsuario = new frmUsuario();
+            frmUsuario.Show();
+        }
     }
 }
