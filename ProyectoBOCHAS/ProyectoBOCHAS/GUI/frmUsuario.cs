@@ -13,6 +13,7 @@ namespace ProyectoBOCHAS
     public partial class frmUsuario : Form
     {
         Usuario usuario = new Usuario();
+
         public frmUsuario()
         {
             InitializeComponent();
@@ -118,6 +119,38 @@ namespace ProyectoBOCHAS
             cmdCargar.Enabled = true;
             cmdCancelar.Enabled = true;
             cmdNuevo.Enabled = false;
+        }
+
+        private void cmdEliminar_Click(object sender, EventArgs e)
+        {
+            HabilitarNuevo();
+            if (txtPassword.Text == string.Empty || txtUsuario.Text == string.Empty)
+            {
+                MessageBox.Show("No realizo la carga de alguno de los campos.", "Validación de Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                if (txtUsuario.Text.Length > 20)
+                {
+                    MessageBox.Show("El nombre de usuario debe tener 20 caracteres o menos", "Validación de Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    if (txtPassword.Text.Length > 10)
+                    {
+                        MessageBox.Show("La contraseña debe tener 10 caracteres o menos", "Validación de Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else 
+                        if (usuario.ValidarUsuario(txtUsuario.Text, txtPassword.Text) == false)
+                        {
+                            MessageBox.Show("No existe este usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                            usuario.EliminarUsuario(txtPassword.Text, txtPassword.Text);
+                            llenarGrilla(usuario.ConsultarUsuario(), dgvUsuario); 
+                            
+                }         
+            }
         }
     }
 }

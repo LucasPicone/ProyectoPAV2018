@@ -39,5 +39,13 @@ namespace ProyectoBOCHAS
             string strsql = "insert into Usuarios (nombreUsuario, password, estado) values ('" + usuario + "', '" + password + "', 'S')";
             oDatos.ComandoSQL(strsql);
         }
+
+        public void EliminarUsuario(string usuario, string password)
+        {
+            string strsql = "Update Usuarios set estado = 'N' where nombreUsuario = " + usuario + " and password = " + password;
+            oDatos.ComandoSQL(strsql);
+
+        }
+
     }
 }

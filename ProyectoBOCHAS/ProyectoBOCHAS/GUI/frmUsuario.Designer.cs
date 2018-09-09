@@ -57,12 +57,13 @@
             this.idUsuario,
             this.nombreUsuario,
             this.password});
-            this.dgvUsuario.Location = new System.Drawing.Point(365, 21);
+            this.dgvUsuario.Location = new System.Drawing.Point(274, 17);
+            this.dgvUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.ReadOnly = true;
             this.dgvUsuario.RowHeadersVisible = false;
             this.dgvUsuario.RowTemplate.Height = 24;
-            this.dgvUsuario.Size = new System.Drawing.Size(405, 150);
+            this.dgvUsuario.Size = new System.Drawing.Size(304, 122);
             this.dgvUsuario.TabIndex = 0;
             this.dgvUsuario.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvUsuario_CellFormatting);
             // 
@@ -102,43 +103,48 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(41, 24);
+            this.lblUsuario.Location = new System.Drawing.Point(31, 20);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(61, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario:";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(13, 58);
+            this.lblPassword.Location = new System.Drawing.Point(10, 47);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(85, 17);
+            this.lblPassword.Size = new System.Drawing.Size(64, 13);
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Contraseña:";
             // 
             // txtUsuario
             // 
             this.txtUsuario.Enabled = false;
-            this.txtUsuario.Location = new System.Drawing.Point(104, 21);
+            this.txtUsuario.Location = new System.Drawing.Point(78, 17);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(76, 20);
             this.txtUsuario.TabIndex = 3;
             // 
             // txtPassword
             // 
             this.txtPassword.Enabled = false;
-            this.txtPassword.Location = new System.Drawing.Point(104, 55);
+            this.txtPassword.Location = new System.Drawing.Point(78, 45);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(100, 22);
+            this.txtPassword.Size = new System.Drawing.Size(76, 20);
             this.txtPassword.TabIndex = 4;
             // 
             // cmdNuevo
             // 
-            this.cmdNuevo.Location = new System.Drawing.Point(16, 122);
+            this.cmdNuevo.Location = new System.Drawing.Point(12, 99);
+            this.cmdNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdNuevo.Name = "cmdNuevo";
-            this.cmdNuevo.Size = new System.Drawing.Size(90, 37);
+            this.cmdNuevo.Size = new System.Drawing.Size(68, 30);
             this.cmdNuevo.TabIndex = 5;
             this.cmdNuevo.Text = "Nuevo";
             this.cmdNuevo.UseVisualStyleBackColor = true;
@@ -147,9 +153,10 @@
             // cmdCargar
             // 
             this.cmdCargar.Enabled = false;
-            this.cmdCargar.Location = new System.Drawing.Point(131, 122);
+            this.cmdCargar.Location = new System.Drawing.Point(98, 99);
+            this.cmdCargar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdCargar.Name = "cmdCargar";
-            this.cmdCargar.Size = new System.Drawing.Size(90, 37);
+            this.cmdCargar.Size = new System.Drawing.Size(68, 30);
             this.cmdCargar.TabIndex = 6;
             this.cmdCargar.Text = "Cargar";
             this.cmdCargar.UseVisualStyleBackColor = true;
@@ -158,20 +165,23 @@
             // cmdEliminar
             // 
             this.cmdEliminar.Enabled = false;
-            this.cmdEliminar.Location = new System.Drawing.Point(249, 122);
+            this.cmdEliminar.Location = new System.Drawing.Point(187, 99);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(90, 37);
+            this.cmdEliminar.Size = new System.Drawing.Size(68, 30);
             this.cmdEliminar.TabIndex = 7;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
+            this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Enabled = false;
-            this.checkBox1.Location = new System.Drawing.Point(211, 58);
+            this.checkBox1.Location = new System.Drawing.Point(158, 47);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(153, 21);
+            this.checkBox1.Size = new System.Drawing.Size(117, 17);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "Mostrar contraseña";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -180,9 +190,10 @@
             // cmdCancelar
             // 
             this.cmdCancelar.Enabled = false;
-            this.cmdCancelar.Location = new System.Drawing.Point(131, 188);
+            this.cmdCancelar.Location = new System.Drawing.Point(98, 153);
+            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(90, 37);
+            this.cmdCancelar.Size = new System.Drawing.Size(68, 30);
             this.cmdCancelar.TabIndex = 9;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
@@ -190,9 +201,9 @@
             // 
             // frmUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 262);
+            this.ClientSize = new System.Drawing.Size(600, 213);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cmdEliminar);
@@ -204,6 +215,7 @@
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.dgvUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmUsuario";
             this.Text = "frmAltaUsuario";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
