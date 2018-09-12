@@ -70,12 +70,17 @@ namespace ProyectoBOCHAS.GUI
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-           
-                
-            MessageBox.Show("¿Está seguro que desea eliminar el usuario?", "Eliminación de usuario", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            usr.EliminarUsuario(txtModBuscar.Text, txtPassModificar.Text);
-            MessageBox.Show("Usuario eliminado con éxito", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+
+
+            if (MessageBox.Show("¿Está seguro que desea eliminar el usuario?", "Eliminación de usuario", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel) ;
+
+            else
+            {
+                usr.EliminarUsuario(txtModBuscar.Text, txtPassModificar.Text);
+                MessageBox.Show("Usuario eliminado con éxito", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            
            
         }
 
