@@ -44,9 +44,10 @@ namespace ProyectoBOCHAS
             frmUsuario.Show();
         }
 
-        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
-
+            frmBecas frmBecas = new frmBecas();
+            frmBecas.Show();
         }
     }
 }

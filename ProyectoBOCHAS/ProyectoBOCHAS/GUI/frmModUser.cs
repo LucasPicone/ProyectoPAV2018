@@ -77,7 +77,7 @@ namespace ProyectoBOCHAS.GUI
             else
             {
                 usr.EliminarUsuario(txtModBuscar.Text, txtPassModificar.Text);
-                MessageBox.Show("Usuario eliminado con éxito", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuario eliminado", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             
@@ -105,7 +105,7 @@ namespace ProyectoBOCHAS.GUI
                     else
                     {
                         usr.ModificarUsuario(txtModBuscar.Text, txtNuevoNombre.Text, txtNuevaPass.Text);
-                        MessageBox.Show("El usuario se ha modificado con éxito", "Modificación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("El usuario se ha modificado", "Modificación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                 }

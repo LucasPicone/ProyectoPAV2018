@@ -73,8 +73,8 @@ namespace ProyectoBOCHAS
                     {
                         usuario.CargarUsuario(txtUsuario.Text, txtPassword.Text);
                         llenarGrilla(usuario.ConsultarUsuario(), dgvUsuario);
-                        cmdCargar.Enabled = false;
-                        cmdNuevo.Enabled = true;
+                        MessageBox.Show("Usuario creado", "Creacion exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DeshabilitarNuevo();
                     }
                 }
             }

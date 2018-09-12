@@ -43,6 +43,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.cmdModUsuario = new System.Windows.Forms.Button();
+            this.lblCampoObligatorio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,13 +58,13 @@
             this.idUsuario,
             this.nombreUsuario,
             this.password});
-            this.dgvUsuario.Location = new System.Drawing.Point(445, 11);
-            this.dgvUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvUsuario.Location = new System.Drawing.Point(593, 14);
+            this.dgvUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.ReadOnly = true;
             this.dgvUsuario.RowHeadersVisible = false;
             this.dgvUsuario.RowTemplate.Height = 24;
-            this.dgvUsuario.Size = new System.Drawing.Size(347, 128);
+            this.dgvUsuario.Size = new System.Drawing.Size(463, 158);
             this.dgvUsuario.TabIndex = 0;
             this.dgvUsuario.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvUsuario_CellFormatting);
             // 
@@ -103,48 +104,48 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(26, 17);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(35, 21);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(84, 18);
             this.lblUsuario.TabIndex = 1;
-            this.lblUsuario.Text = "Usuario:";
+            this.lblUsuario.Text = "Usuario: (*)";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(8, 57);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(11, 70);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(64, 13);
+            this.lblPassword.Size = new System.Drawing.Size(109, 18);
             this.lblPassword.TabIndex = 2;
-            this.lblPassword.Text = "Contraseña:";
+            this.lblPassword.Text = "Contraseña: (*)";
             // 
             // txtUsuario
             // 
             this.txtUsuario.Enabled = false;
-            this.txtUsuario.Location = new System.Drawing.Point(73, 14);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsuario.Location = new System.Drawing.Point(126, 17);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(131, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(173, 22);
             this.txtUsuario.TabIndex = 3;
             // 
             // txtPassword
             // 
             this.txtPassword.Enabled = false;
-            this.txtPassword.Location = new System.Drawing.Point(73, 55);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(126, 68);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(131, 20);
+            this.txtPassword.Size = new System.Drawing.Size(173, 22);
             this.txtPassword.TabIndex = 4;
             // 
             // cmdNuevo
             // 
-            this.cmdNuevo.Location = new System.Drawing.Point(11, 109);
-            this.cmdNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.cmdNuevo.Location = new System.Drawing.Point(15, 134);
+            this.cmdNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdNuevo.Name = "cmdNuevo";
-            this.cmdNuevo.Size = new System.Drawing.Size(101, 30);
+            this.cmdNuevo.Size = new System.Drawing.Size(135, 37);
             this.cmdNuevo.TabIndex = 5;
             this.cmdNuevo.Text = "Nueva acción";
             this.cmdNuevo.UseVisualStyleBackColor = true;
@@ -153,10 +154,10 @@
             // cmdCargar
             // 
             this.cmdCargar.Enabled = false;
-            this.cmdCargar.Location = new System.Drawing.Point(263, 11);
-            this.cmdCargar.Margin = new System.Windows.Forms.Padding(2);
+            this.cmdCargar.Location = new System.Drawing.Point(351, 14);
+            this.cmdCargar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdCargar.Name = "cmdCargar";
-            this.cmdCargar.Size = new System.Drawing.Size(117, 37);
+            this.cmdCargar.Size = new System.Drawing.Size(156, 46);
             this.cmdCargar.TabIndex = 6;
             this.cmdCargar.Text = "Cargar usuario";
             this.cmdCargar.UseVisualStyleBackColor = true;
@@ -166,10 +167,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Enabled = false;
-            this.checkBox1.Location = new System.Drawing.Point(263, 58);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox1.Location = new System.Drawing.Point(305, 70);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(117, 17);
+            this.checkBox1.Size = new System.Drawing.Size(153, 21);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "Mostrar contraseña";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -178,10 +179,10 @@
             // cmdCancelar
             // 
             this.cmdCancelar.Enabled = false;
-            this.cmdCancelar.Location = new System.Drawing.Point(279, 109);
-            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.cmdCancelar.Location = new System.Drawing.Point(372, 134);
+            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(101, 30);
+            this.cmdCancelar.Size = new System.Drawing.Size(135, 37);
             this.cmdCancelar.TabIndex = 9;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
@@ -190,19 +191,30 @@
             // cmdModUsuario
             // 
             this.cmdModUsuario.Enabled = false;
-            this.cmdModUsuario.Location = new System.Drawing.Point(132, 109);
+            this.cmdModUsuario.Location = new System.Drawing.Point(176, 134);
+            this.cmdModUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.cmdModUsuario.Name = "cmdModUsuario";
-            this.cmdModUsuario.Size = new System.Drawing.Size(116, 30);
+            this.cmdModUsuario.Size = new System.Drawing.Size(155, 37);
             this.cmdModUsuario.TabIndex = 10;
             this.cmdModUsuario.Text = "Modificar Datos";
             this.cmdModUsuario.UseVisualStyleBackColor = true;
             this.cmdModUsuario.Click += new System.EventHandler(this.cmdModUsuario_Click);
             // 
+            // lblCampoObligatorio
+            // 
+            this.lblCampoObligatorio.AutoSize = true;
+            this.lblCampoObligatorio.Location = new System.Drawing.Point(24, 104);
+            this.lblCampoObligatorio.Name = "lblCampoObligatorio";
+            this.lblCampoObligatorio.Size = new System.Drawing.Size(144, 17);
+            this.lblCampoObligatorio.TabIndex = 11;
+            this.lblCampoObligatorio.Text = "(*) Campo Obligatorio";
+            // 
             // frmUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 153);
+            this.ClientSize = new System.Drawing.Size(1075, 188);
+            this.Controls.Add(this.lblCampoObligatorio);
             this.Controls.Add(this.cmdModUsuario);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.checkBox1);
@@ -214,7 +226,7 @@
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.dgvUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmUsuario";
             this.Text = "Gestión de usuario";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
@@ -239,5 +251,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button cmdCancelar;
         private System.Windows.Forms.Button cmdModUsuario;
+        private System.Windows.Forms.Label lblCampoObligatorio;
     }
 }

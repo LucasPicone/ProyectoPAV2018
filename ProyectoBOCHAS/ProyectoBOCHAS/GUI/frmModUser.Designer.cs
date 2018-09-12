@@ -56,15 +56,15 @@
             // txtModBuscar
             // 
             this.txtModBuscar.Location = new System.Drawing.Point(47, 43);
-            this.txtModBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtModBuscar.Name = "txtModBuscar";
             this.txtModBuscar.Size = new System.Drawing.Size(468, 22);
-            this.txtModBuscar.TabIndex = 2;
+            this.txtModBuscar.TabIndex = 1;
             // 
             // cmdBscarUsuarioMod
             // 
             this.cmdBscarUsuarioMod.Location = new System.Drawing.Point(47, 148);
-            this.cmdBscarUsuarioMod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdBscarUsuarioMod.Margin = new System.Windows.Forms.Padding(4);
             this.cmdBscarUsuarioMod.Name = "cmdBscarUsuarioMod";
             this.cmdBscarUsuarioMod.Size = new System.Drawing.Size(469, 28);
             this.cmdBscarUsuarioMod.TabIndex = 3;
@@ -96,29 +96,29 @@
             // 
             this.txtNuevoNombre.Enabled = false;
             this.txtNuevoNombre.Location = new System.Drawing.Point(220, 212);
-            this.txtNuevoNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNuevoNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNuevoNombre.Name = "txtNuevoNombre";
             this.txtNuevoNombre.Size = new System.Drawing.Size(229, 22);
-            this.txtNuevoNombre.TabIndex = 8;
+            this.txtNuevoNombre.TabIndex = 4;
             // 
             // txtNuevaPass
             // 
             this.txtNuevaPass.Enabled = false;
             this.txtNuevaPass.Location = new System.Drawing.Point(220, 244);
-            this.txtNuevaPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNuevaPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtNuevaPass.Name = "txtNuevaPass";
             this.txtNuevaPass.PasswordChar = '*';
             this.txtNuevaPass.Size = new System.Drawing.Size(229, 22);
-            this.txtNuevaPass.TabIndex = 9;
+            this.txtNuevaPass.TabIndex = 5;
             // 
             // cmdModificar
             // 
             this.cmdModificar.Enabled = false;
             this.cmdModificar.Location = new System.Drawing.Point(47, 329);
-            this.cmdModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdModificar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdModificar.Name = "cmdModificar";
             this.cmdModificar.Size = new System.Drawing.Size(141, 53);
-            this.cmdModificar.TabIndex = 10;
+            this.cmdModificar.TabIndex = 6;
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.UseVisualStyleBackColor = true;
             this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
@@ -126,10 +126,10 @@
             // cmdCancelar
             // 
             this.cmdCancelar.Location = new System.Drawing.Point(197, 422);
-            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(157, 53);
-            this.cmdCancelar.TabIndex = 11;
+            this.cmdCancelar.TabIndex = 8;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
             this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
@@ -137,20 +137,20 @@
             // txtPassModificar
             // 
             this.txtPassModificar.Location = new System.Drawing.Point(47, 102);
-            this.txtPassModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassModificar.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassModificar.Name = "txtPassModificar";
             this.txtPassModificar.PasswordChar = '*';
             this.txtPassModificar.Size = new System.Drawing.Size(468, 22);
-            this.txtPassModificar.TabIndex = 12;
+            this.txtPassModificar.TabIndex = 2;
             // 
             // cmdEliminar
             // 
             this.cmdEliminar.Enabled = false;
             this.cmdEliminar.Location = new System.Drawing.Point(373, 330);
-            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(143, 52);
-            this.cmdEliminar.TabIndex = 13;
+            this.cmdEliminar.TabIndex = 7;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
             this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
@@ -183,7 +183,7 @@
             this.Controls.Add(this.txtModBuscar);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmModUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Modificar datos de usuario";
