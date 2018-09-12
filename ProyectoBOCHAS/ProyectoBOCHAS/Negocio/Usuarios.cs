@@ -10,6 +10,7 @@ namespace ProyectoBOCHAS
     class Usuario
     {
         DBHelper oDatos;
+
         public Usuario()
         {
             oDatos = new DBHelper();
@@ -18,7 +19,7 @@ namespace ProyectoBOCHAS
         public bool ValidarUsuario(string usuario, string password)
         {
             DataTable tabla = new DataTable();
-            string comando = "SELECT * FROM Usuarios WHERE nombreusuario = '" + usuario + "' AND password = '" + password + "'";
+            string comando = "SELECT * FROM Usuarios WHERE nombreusuario = '" + usuario + "' AND password = '" + password + "' AND estado= 'S'";
             tabla = oDatos.ConsultaSQL(comando);
             if (tabla.Rows.Count > 0)
                 return true;
@@ -42,9 +43,15 @@ namespace ProyectoBOCHAS
 
         public void EliminarUsuario(string usuario, string password)
         {
-            string strsql = "Update Usuarios set estado = 'N' where nombreUsuario = " + usuario + " and password = " + password;
+            string strsql = "use BDBochas Update Usuarios set estado = 'N' where nombreUsuario = '" + usuario + "' and password ='" + password+"'";
             oDatos.ComandoSQL(strsql);
 
+        }
+
+        public void ModificarUsuario(string usuario,string param1,string param2)
+        {
+            string strsql = "use BDBochas Update Usuarios set nombreUsuario = '"+param1+"',password ='"+param2+"' where nombreUsuario = '" + usuario+"'";
+            oDatos.ComandoSQL(strsql);
         }
 
     }

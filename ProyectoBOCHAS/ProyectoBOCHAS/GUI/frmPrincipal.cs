@@ -20,7 +20,7 @@ namespace ProyectoBOCHAS
         
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,6 +42,11 @@ namespace ProyectoBOCHAS
         {
             frmUsuario frmUsuario = new frmUsuario();
             frmUsuario.Show();
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

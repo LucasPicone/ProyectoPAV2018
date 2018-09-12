@@ -40,42 +40,47 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(42, 31);
+            this.lblUsuario.Location = new System.Drawing.Point(32, 25);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(61, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario:";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(18, 85);
+            this.lblPassword.Location = new System.Drawing.Point(14, 69);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(85, 17);
+            this.lblPassword.Size = new System.Drawing.Size(64, 13);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Contraseña:";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(109, 28);
+            this.txtUsuario.Location = new System.Drawing.Point(82, 23);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(154, 22);
+            this.txtUsuario.Size = new System.Drawing.Size(116, 20);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(109, 82);
+            this.txtPassword.Location = new System.Drawing.Point(82, 67);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(154, 22);
+            this.txtPassword.Size = new System.Drawing.Size(116, 20);
             this.txtPassword.TabIndex = 3;
             // 
             // cmdIngresar
             // 
             this.cmdIngresar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.cmdIngresar.Location = new System.Drawing.Point(58, 137);
+            this.cmdIngresar.Location = new System.Drawing.Point(44, 111);
+            this.cmdIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdIngresar.Name = "cmdIngresar";
-            this.cmdIngresar.Size = new System.Drawing.Size(75, 48);
+            this.cmdIngresar.Size = new System.Drawing.Size(56, 39);
             this.cmdIngresar.TabIndex = 4;
             this.cmdIngresar.Text = "Ingresar";
             this.cmdIngresar.UseVisualStyleBackColor = false;
@@ -84,9 +89,10 @@
             // cmbSalir
             // 
             this.cmbSalir.BackColor = System.Drawing.Color.Salmon;
-            this.cmbSalir.Location = new System.Drawing.Point(160, 136);
+            this.cmbSalir.Location = new System.Drawing.Point(120, 110);
+            this.cmbSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbSalir.Name = "cmbSalir";
-            this.cmbSalir.Size = new System.Drawing.Size(75, 49);
+            this.cmbSalir.Size = new System.Drawing.Size(56, 40);
             this.cmbSalir.TabIndex = 5;
             this.cmbSalir.Text = "Salir";
             this.cmbSalir.UseVisualStyleBackColor = false;
@@ -94,10 +100,10 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(296, 218);
+            this.ClientSize = new System.Drawing.Size(224, 184);
             this.Controls.Add(this.cmbSalir);
             this.Controls.Add(this.cmdIngresar);
             this.Controls.Add(this.txtPassword);
@@ -105,8 +111,9 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(314, 265);
-            this.MinimumSize = new System.Drawing.Size(314, 265);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(240, 223);
+            this.MinimumSize = new System.Drawing.Size(240, 223);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
