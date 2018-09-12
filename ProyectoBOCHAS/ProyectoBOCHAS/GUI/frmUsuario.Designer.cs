@@ -216,7 +216,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUsuario";
-            this.Text = "frmAltaUsuario";
+            this.Text = "Gestión de usuario";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
             this.ResumeLayout(false);
