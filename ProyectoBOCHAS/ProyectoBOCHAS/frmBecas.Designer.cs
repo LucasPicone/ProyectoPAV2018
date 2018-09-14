@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvBecas = new System.Windows.Forms.DataGridView();
+            this.idBeca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -37,11 +40,8 @@
             this.cmdModificar = new System.Windows.Forms.Button();
             this.cmdCancelar = new System.Windows.Forms.Button();
             this.cmdEliminar = new System.Windows.Forms.Button();
-            this.idBeca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmdHabilitar = new System.Windows.Forms.Button();
-            this.cmbidbeca = new System.Windows.Forms.ComboBox();
+            this.txtInstrucciones = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBecas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +61,24 @@
             this.dgvBecas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBecas.Size = new System.Drawing.Size(647, 125);
             this.dgvBecas.TabIndex = 0;
+            this.dgvBecas.SelectionChanged += new System.EventHandler(this.dgvBecas_SelectionChanged);
+            // 
+            // idBeca
+            // 
+            this.idBeca.HeaderText = "# Beca";
+            this.idBeca.Name = "idBeca";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre Beca";
+            this.nombre.Name = "nombre";
+            // 
+            // descripcion
+            // 
+            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.Width = 111;
             // 
             // lblNombre
             // 
@@ -74,7 +92,7 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(28, 269);
+            this.lblDescripcion.Location = new System.Drawing.Point(20, 272);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(86, 17);
             this.lblDescripcion.TabIndex = 3;
@@ -99,7 +117,7 @@
             // 
             // cmdNueva
             // 
-            this.cmdNueva.Location = new System.Drawing.Point(413, 212);
+            this.cmdNueva.Location = new System.Drawing.Point(389, 227);
             this.cmdNueva.Name = "cmdNueva";
             this.cmdNueva.Size = new System.Drawing.Size(82, 31);
             this.cmdNueva.TabIndex = 6;
@@ -110,7 +128,7 @@
             // 
             // cmdModificar
             // 
-            this.cmdModificar.Location = new System.Drawing.Point(413, 262);
+            this.cmdModificar.Location = new System.Drawing.Point(389, 277);
             this.cmdModificar.Name = "cmdModificar";
             this.cmdModificar.Size = new System.Drawing.Size(82, 31);
             this.cmdModificar.TabIndex = 7;
@@ -121,7 +139,7 @@
             // 
             // cmdCancelar
             // 
-            this.cmdCancelar.Location = new System.Drawing.Point(413, 309);
+            this.cmdCancelar.Location = new System.Drawing.Point(389, 324);
             this.cmdCancelar.Name = "cmdCancelar";
             this.cmdCancelar.Size = new System.Drawing.Size(82, 31);
             this.cmdCancelar.TabIndex = 8;
@@ -132,7 +150,7 @@
             // 
             // cmdEliminar
             // 
-            this.cmdEliminar.Location = new System.Drawing.Point(515, 212);
+            this.cmdEliminar.Location = new System.Drawing.Point(491, 227);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(82, 30);
             this.cmdEliminar.TabIndex = 9;
@@ -141,26 +159,9 @@
             this.cmdEliminar.Visible = false;
             this.cmdEliminar.Click += new System.EventHandler(this.cmdEliminar_Click);
             // 
-            // idBeca
-            // 
-            this.idBeca.HeaderText = "# Beca";
-            this.idBeca.Name = "idBeca";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre Beca";
-            this.nombre.Name = "nombre";
-            // 
-            // descripcion
-            // 
-            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.Width = 111;
-            // 
             // cmdHabilitar
             // 
-            this.cmdHabilitar.Location = new System.Drawing.Point(413, 212);
+            this.cmdHabilitar.Location = new System.Drawing.Point(389, 228);
             this.cmdHabilitar.Name = "cmdHabilitar";
             this.cmdHabilitar.Size = new System.Drawing.Size(184, 128);
             this.cmdHabilitar.TabIndex = 10;
@@ -168,21 +169,23 @@
             this.cmdHabilitar.UseVisualStyleBackColor = true;
             this.cmdHabilitar.Click += new System.EventHandler(this.cmdHabilitar_Click);
             // 
-            // cmbidbeca
+            // txtInstrucciones
             // 
-            this.cmbidbeca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbidbeca.FormattingEnabled = true;
-            this.cmbidbeca.Location = new System.Drawing.Point(112, 193);
-            this.cmbidbeca.Name = "cmbidbeca";
-            this.cmbidbeca.Size = new System.Drawing.Size(254, 24);
-            this.cmbidbeca.TabIndex = 11;
+            this.txtInstrucciones.AutoSize = true;
+            this.txtInstrucciones.Location = new System.Drawing.Point(12, 194);
+            this.txtInstrucciones.Name = "txtInstrucciones";
+            this.txtInstrucciones.Size = new System.Drawing.Size(616, 17);
+            this.txtInstrucciones.TabIndex = 11;
+            this.txtInstrucciones.Text = "Cargue los campos abajo para agregar beca o seleccione una de la lista para modif" +
+    "icar/eliminar.";
+            this.txtInstrucciones.Visible = false;
             // 
             // frmBecas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 378);
-            this.Controls.Add(this.cmbidbeca);
+            this.Controls.Add(this.txtInstrucciones);
             this.Controls.Add(this.cmdHabilitar);
             this.Controls.Add(this.cmdEliminar);
             this.Controls.Add(this.cmdCancelar);
@@ -217,6 +220,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.Button cmdEliminar;
         private System.Windows.Forms.Button cmdHabilitar;
-        private System.Windows.Forms.ComboBox cmbidbeca;
+        private System.Windows.Forms.Label txtInstrucciones;
     }
 }
