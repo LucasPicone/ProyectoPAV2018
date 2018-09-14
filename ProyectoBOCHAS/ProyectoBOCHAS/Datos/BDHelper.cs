@@ -14,13 +14,6 @@ namespace ProyectoBOCHAS
         SqlConnection conexion;
         SqlCommand comando;
 
-        private void Conectar()
-        {
-            conexion.Open();
-            comando.Connection = conexion;
-            comando.CommandType = CommandType.Text;
-        }
-
         private void Desconectar()
         {
             conexion.Close();
@@ -36,28 +29,32 @@ namespace ProyectoBOCHAS
         public DataTable ConsultarTabla(string nombreTabla)
         {
             DataTable tabla = new DataTable();
-            Conectar();
+            conexion.Open();
+            comando.Connection = conexion;
+            //comando.CommandType = CommandType.Text;
             comando.CommandText = "SELECT * FROM " + nombreTabla;
             tabla.Load(comando.ExecuteReader());
             Desconectar();
             return tabla;
         }
 
-        public DataTable ConsultaSQL(string strsql)
+        public DataTable ConsultaSQL(SqlCommand comando)
         {
             DataTable tabla = new DataTable();
-            Conectar();
-            comando.CommandText = strsql;
+            conexion.Open();
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
             tabla.Load(comando.ExecuteReader());
             Desconectar();
             return tabla;
         }
 
-        public void ComandoSQL(string strsql)
+        public void ComandoSQL(SqlCommand comando)
         {
             //insert/update/delete
-            Conectar();
-            comando.CommandText = strsql;
+            conexion.Open();
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
             Desconectar();
         }

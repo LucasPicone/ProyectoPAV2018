@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace ProyectoBOCHAS
 {
@@ -19,27 +20,33 @@ namespace ProyectoBOCHAS
         public DataTable ConsultarBecas()
         {
             DataTable tabla = new DataTable();
-            string strsql = "select * from Becas where estado = 'S'";
-            tabla = oDatos.ConsultaSQL(strsql);
+            SqlCommand comando = new SqlCommand("select * from Becas where estado = 'S'");
+            tabla = oDatos.ConsultaSQL(comando);
             return tabla;
         }
 
         public void CargarBeca(string nombre, string descripcion)
         {
-            string strsql = "insert into Becas (nombre, descripcion, estado) values ('" + nombre + "', '" + descripcion + "', 'S')";
-            oDatos.ComandoSQL(strsql);
+            SqlCommand comando = new SqlCommand("insert into Becas (nombre, descripcion, estado) values (@nombre, @descripcion, 'S')");
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.Parameters.AddWithValue("@descripcion", descripcion);
+            oDatos.ComandoSQL(comando);
         }
 
         public void ModificarBeca(int idBeca, string nombre, string descripcion)
         {
-            string strsql = "update Becas set nombre = '" + nombre + "', descripcion = '" + descripcion + "' where idBeca = " + idBeca;
-            oDatos.ComandoSQL(strsql);
+            SqlCommand comando = new SqlCommand("update Becas set nombre = @nombre, descripcion = @descripcion where idBeca = @idBeca");
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.Parameters.AddWithValue("@descripcion", descripcion);
+            comando.Parameters.AddWithValue("@idBeca", idBeca);
+            oDatos.ComandoSQL(comando);
         }
 
         public void EliminarBeca(int idBeca)
         {
-            string strsql = "update Becas set estado = 'N' where idBeca = " + idBeca;
-            oDatos.ComandoSQL(strsql);
+            SqlCommand comando = new SqlCommand("update Becas set estado = 'N' where idBeca = @idBeca");
+            comando.Parameters.AddWithValue("@idBeca", idBeca);
+            oDatos.ComandoSQL(comando);
         }
     }
 }

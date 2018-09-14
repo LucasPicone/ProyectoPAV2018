@@ -40,7 +40,7 @@ namespace ProyectoLogin
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             string strsql = "select b.id_bug, b.titulo, p.nombre, b.fecha_alta, e.n_estado, c.n_criticidad, pr.n_prioridad from bugs b, Estados e, Productos p, Prioridades pr, Criticidades c WHERE 1=1 ";
-            strsql += "and b.fecha_alta>= " + dtpFechaDesde.ToString() + " ";
+            strsql += "and b.fecha_alta>= " + dtpFechaDesde.Value.ToShortDateString() + " ";
             strsql += "AND (b.id_estado=e.id_estado) and (b.id_criticidad=c.id_criticidad) and (b.id_prioridad=pr.id_prioridad) and (b.id_producto=p.id_producto) ORDER BY fecha_alta DESC";
             this.grdBugs.DataSource = oDatos.consultaSQL(strsql);
         }

@@ -1,4 +1,4 @@
-﻿namespace ProyectoBOCHAS.GUI
+﻿namespace ProyectoBOCHAS
 {
     partial class frmSocios
     {
@@ -28,155 +28,233 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dgvSocios = new System.Windows.Forms.DataGridView();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtDni = new System.Windows.Forms.TextBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.cmdNuevo = new System.Windows.Forms.Button();
+            this.cmdCancelar = new System.Windows.Forms.Button();
+            this.cmdModificar = new System.Windows.Forms.Button();
+            this.idSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmdHabilitar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dgvSocios
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.dgvSocios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSocios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idSocio,
+            this.apellido,
+            this.nombre,
+            this.direccion,
+            this.dni,
+            this.fechaNacimiento});
+            this.dgvSocios.Location = new System.Drawing.Point(13, 13);
+            this.dgvSocios.Name = "dgvSocios";
+            this.dgvSocios.RowHeadersVisible = false;
+            this.dgvSocios.RowTemplate.Height = 24;
+            this.dgvSocios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSocios.Size = new System.Drawing.Size(945, 150);
+            this.dgvSocios.TabIndex = 0;
             // 
-            // label2
+            // txtApellido
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.txtApellido.Enabled = false;
+            this.txtApellido.Location = new System.Drawing.Point(177, 177);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(117, 22);
+            this.txtApellido.TabIndex = 1;
             // 
-            // label3
+            // txtNombre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Location = new System.Drawing.Point(177, 205);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(117, 22);
+            this.txtNombre.TabIndex = 2;
             // 
-            // label4
+            // txtDireccion
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 89);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.txtDireccion.Enabled = false;
+            this.txtDireccion.Location = new System.Drawing.Point(177, 233);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(117, 22);
+            this.txtDireccion.TabIndex = 3;
             // 
-            // label5
+            // txtDni
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "label5";
+            this.txtDni.Enabled = false;
+            this.txtDni.Location = new System.Drawing.Point(177, 262);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(117, 22);
+            this.txtDni.TabIndex = 4;
             // 
-            // label6
+            // dtpFecha
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 141);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
+            this.dtpFecha.Enabled = false;
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(177, 300);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(117, 22);
+            this.dtpFecha.TabIndex = 5;
             // 
-            // label7
+            // lblApellido
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 167);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(90, 180);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(81, 17);
+            this.lblApellido.TabIndex = 6;
+            this.lblApellido.Text = "Apellido: (*)";
             // 
-            // textBox1
+            // lblNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(109, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 7;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(90, 208);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(81, 17);
+            this.lblNombre.TabIndex = 7;
+            this.lblNombre.Text = "Nombre: (*)";
             // 
-            // textBox2
+            // lblDireccion
             // 
-            this.textBox2.Location = new System.Drawing.Point(109, 34);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(81, 236);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(90, 17);
+            this.lblDireccion.TabIndex = 8;
+            this.lblDireccion.Text = "Dirección: (*)";
             // 
-            // textBox3
+            // lblDni
             // 
-            this.textBox3.Location = new System.Drawing.Point(109, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
+            this.lblDni.AutoSize = true;
+            this.lblDni.Location = new System.Drawing.Point(117, 262);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(54, 17);
+            this.lblDni.TabIndex = 9;
+            this.lblDni.Text = "DNI: (*)";
             // 
-            // textBox4
+            // lblFecha
             // 
-            this.textBox4.Location = new System.Drawing.Point(109, 86);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 10;
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(7, 300);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(164, 17);
+            this.lblFecha.TabIndex = 10;
+            this.lblFecha.Text = "Fecha de Nacimiento: (*)";
             // 
-            // textBox5
+            // cmdNuevo
             // 
-            this.textBox5.Location = new System.Drawing.Point(109, 112);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 11;
+            this.cmdNuevo.Location = new System.Drawing.Point(311, 204);
+            this.cmdNuevo.Name = "cmdNuevo";
+            this.cmdNuevo.Size = new System.Drawing.Size(84, 37);
+            this.cmdNuevo.TabIndex = 11;
+            this.cmdNuevo.Text = "Nuevo";
+            this.cmdNuevo.UseVisualStyleBackColor = true;
+            this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
             // 
-            // textBox6
+            // cmdCancelar
             // 
-            this.textBox6.Location = new System.Drawing.Point(109, 138);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 12;
+            this.cmdCancelar.Location = new System.Drawing.Point(401, 204);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(84, 37);
+            this.cmdCancelar.TabIndex = 12;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.UseVisualStyleBackColor = true;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
-            // textBox7
+            // cmdModificar
             // 
-            this.textBox7.Location = new System.Drawing.Point(109, 164);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 13;
+            this.cmdModificar.Location = new System.Drawing.Point(311, 247);
+            this.cmdModificar.Name = "cmdModificar";
+            this.cmdModificar.Size = new System.Drawing.Size(174, 37);
+            this.cmdModificar.TabIndex = 13;
+            this.cmdModificar.Text = "Modificar/Eliminar";
+            this.cmdModificar.UseVisualStyleBackColor = true;
+            this.cmdModificar.Click += new System.EventHandler(this.cmdModificar_Click);
+            // 
+            // idSocio
+            // 
+            this.idSocio.HeaderText = "# Socio";
+            this.idSocio.Name = "idSocio";
+            // 
+            // apellido
+            // 
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // direccion
+            // 
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            // 
+            // dni
+            // 
+            this.dni.HeaderText = "Documento";
+            this.dni.Name = "dni";
+            // 
+            // fechaNacimiento
+            // 
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.fechaNacimiento.DefaultCellStyle = dataGridViewCellStyle1;
+            this.fechaNacimiento.HeaderText = "Fecha de Nacimiento";
+            this.fechaNacimiento.Name = "fechaNacimiento";
+            // 
+            // cmdHabilitar
+            // 
+            this.cmdHabilitar.Location = new System.Drawing.Point(491, 205);
+            this.cmdHabilitar.Name = "cmdHabilitar";
+            this.cmdHabilitar.Size = new System.Drawing.Size(174, 79);
+            this.cmdHabilitar.TabIndex = 15;
+            this.cmdHabilitar.Text = "Nueva Acción";
+            this.cmdHabilitar.UseVisualStyleBackColor = true;
+            this.cmdHabilitar.Click += new System.EventHandler(this.cmdHabilitar_Click);
             // 
             // frmSocios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 323);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(961, 367);
+            this.Controls.Add(this.cmdHabilitar);
+            this.Controls.Add(this.cmdModificar);
+            this.Controls.Add(this.cmdCancelar);
+            this.Controls.Add(this.cmdNuevo);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblDni);
+            this.Controls.Add(this.lblDireccion);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.lblApellido);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.txtDni);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtApellido);
+            this.Controls.Add(this.dgvSocios);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSocios";
             this.Text = "frmSocios";
+            this.Load += new System.EventHandler(this.frmSocios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,19 +262,26 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.DataGridView dgvSocios;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtDni;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblDni;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Button cmdNuevo;
+        private System.Windows.Forms.Button cmdCancelar;
+        private System.Windows.Forms.Button cmdModificar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idSocio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimiento;
+        private System.Windows.Forms.Button cmdHabilitar;
     }
 }
