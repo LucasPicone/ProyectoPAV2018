@@ -31,21 +31,22 @@ namespace ProyectoBOCHAS
             {
                 for (int i = 0; i < tabla.Rows.Count; i++)
                 {
-                    grilla.Rows.Add(tabla.Rows[i]["idSocio"], tabla.Rows[i]["apellido"], tabla.Rows[i]["nombre"], tabla.Rows[i]["direccion"], tabla.Rows[i]["dni"], tabla.Rows[i]["fechaNacimiento"]);
+                    grilla.Rows.Add(tabla.Rows[i]["idSocio"], tabla.Rows[i]["apellido"], tabla.Rows[i]["nombre"], tabla.Rows[i]["direccion"], tabla.Rows[i]["dni"], tabla.Rows[i]["fechaNacimiento"], tabla.Rows[i]["nroTelefono"], tabla.Rows[i]["responsableTelefono"]);
                 }
             }
         }
 
         private void cmdNuevo_Click(object sender, EventArgs e)
         {
-            if (txtApellido.Text == string.Empty || txtNombre.Text == string.Empty || txtDireccion.Text == string.Empty || txtDni.Text == string.Empty)
+            if (txtApellido.Text == string.Empty || txtNombre.Text == string.Empty || txtDni.Text == string.Empty || (txtTelefono.Text == string.Empty || txtResponsable.Text == string.Empty))
             {
                 MessageBox.Show("No realizo la carga de algun campo obligatorio", "Validación de entrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                socios.NuevoSocio(txtApellido.Text, txtNombre.Text, txtDireccion.Text, txtDni.Text, dtpFecha.Value.ToString("MM/dd/yyyy"));
+                socios.NuevoSocio(txtApellido.Text, txtNombre.Text, txtDireccion.Text, txtDni.Text, dtpFecha.Value.ToString("MM/dd/yyyy"), txtTelefono.Text, txtResponsable.Text);
                 llenarGrilla(socios.ConsultarSocio(), dgvSocios);
+                cmdCancelar_Click(sender, e);
             }
         }
 
@@ -57,6 +58,8 @@ namespace ProyectoBOCHAS
             txtDireccion.Enabled = false;
             txtDni.Enabled = false;
             dtpFecha.Enabled = false;
+            txtResponsable.Enabled = false;
+            txtTelefono.Enabled = false;
         }
 
         private void cmdModificar_Click(object sender, EventArgs e)
@@ -73,6 +76,8 @@ namespace ProyectoBOCHAS
             txtDireccion.Enabled = true;
             txtDni.Enabled = true;
             dtpFecha.Enabled = true;
+            txtResponsable.Enabled = true;
+            txtTelefono.Enabled = true;
         }
     }
 }
