@@ -34,10 +34,6 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.dgvSocios = new System.Windows.Forms.DataGridView();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblDni = new System.Windows.Forms.Label();
-            this.cmdBuscar = new System.Windows.Forms.Button();
             this.idSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +42,10 @@
             this.fechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nroTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.responsableTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.cmdBuscar = new System.Windows.Forms.Button();
             this.txtApellidoNuevo = new System.Windows.Forms.TextBox();
             this.txtNombreNuevo = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -113,43 +113,6 @@
             this.dgvSocios.TabIndex = 3;
             this.dgvSocios.SelectionChanged += new System.EventHandler(this.dgvSocios_SelectionChanged);
             // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(30, 18);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(62, 17);
-            this.lblApellido.TabIndex = 4;
-            this.lblApellido.Text = "Apellido:";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(30, 46);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(62, 17);
-            this.lblNombre.TabIndex = 5;
-            this.lblNombre.Text = "Nombre:";
-            // 
-            // lblDni
-            // 
-            this.lblDni.AutoSize = true;
-            this.lblDni.Location = new System.Drawing.Point(8, 74);
-            this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(84, 17);
-            this.lblDni.TabIndex = 6;
-            this.lblDni.Text = "Documento:";
-            // 
-            // cmdBuscar
-            // 
-            this.cmdBuscar.Location = new System.Drawing.Point(216, 37);
-            this.cmdBuscar.Name = "cmdBuscar";
-            this.cmdBuscar.Size = new System.Drawing.Size(75, 34);
-            this.cmdBuscar.TabIndex = 7;
-            this.cmdBuscar.Text = "Buscar";
-            this.cmdBuscar.UseVisualStyleBackColor = true;
-            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
-            // 
             // idSocio
             // 
             this.idSocio.HeaderText = "# Socio";
@@ -192,6 +155,43 @@
             // 
             this.responsableTelefono.HeaderText = "Responsable";
             this.responsableTelefono.Name = "responsableTelefono";
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(30, 18);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(62, 17);
+            this.lblApellido.TabIndex = 4;
+            this.lblApellido.Text = "Apellido:";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(30, 46);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(62, 17);
+            this.lblNombre.TabIndex = 5;
+            this.lblNombre.Text = "Nombre:";
+            // 
+            // lblDni
+            // 
+            this.lblDni.AutoSize = true;
+            this.lblDni.Location = new System.Drawing.Point(8, 74);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(84, 17);
+            this.lblDni.TabIndex = 6;
+            this.lblDni.Text = "Documento:";
+            // 
+            // cmdBuscar
+            // 
+            this.cmdBuscar.Location = new System.Drawing.Point(216, 37);
+            this.cmdBuscar.Name = "cmdBuscar";
+            this.cmdBuscar.Size = new System.Drawing.Size(75, 34);
+            this.cmdBuscar.TabIndex = 7;
+            this.cmdBuscar.Text = "Buscar";
+            this.cmdBuscar.UseVisualStyleBackColor = true;
+            this.cmdBuscar.Click += new System.EventHandler(this.cmdBuscar_Click);
             // 
             // txtApellidoNuevo
             // 
@@ -415,7 +415,7 @@
             this.Controls.Add(this.txtApellido);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmModSocios";
-            this.Text = "frmModSocios";
+            this.Text = "Modificación de Socios";
             ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

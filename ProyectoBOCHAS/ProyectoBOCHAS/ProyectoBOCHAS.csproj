@@ -44,6 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Negocio\Categorias.cs" />
+    <Compile Include="Negocio\Disciplinas.cs" />
+    <Compile Include="GUI\frmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCategorias.designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDisciplinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDisciplinas.Designer.cs">
+      <DependentUpon>frmDisciplinas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmModSocios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +106,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Negocio\Usuarios.cs" />
     <Compile Include="Negocio\Socios.cs" />
+    <EmbeddedResource Include="GUI\frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDisciplinas.resx">
+      <DependentUpon>frmDisciplinas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmBecas.resx">
       <DependentUpon>frmBecas.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSocios));
             this.dgvSocios = new System.Windows.Forms.DataGridView();
             this.idSocio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,9 +107,9 @@
             // 
             // fechaNacimiento
             // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.fechaNacimiento.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.fechaNacimiento.DefaultCellStyle = dataGridViewCellStyle1;
             this.fechaNacimiento.HeaderText = "Fecha de Nacimiento";
             this.fechaNacimiento.Name = "fechaNacimiento";
             // 
@@ -268,20 +268,20 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(103, 286);
+            this.lblTelefono.Location = new System.Drawing.Point(84, 286);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(68, 17);
+            this.lblTelefono.Size = new System.Drawing.Size(87, 17);
             this.lblTelefono.TabIndex = 18;
-            this.lblTelefono.Text = "Telefono:";
+            this.lblTelefono.Text = "Telefono: (*)";
             // 
             // lblResponsable
             // 
             this.lblResponsable.AutoSize = true;
-            this.lblResponsable.Location = new System.Drawing.Point(76, 315);
+            this.lblResponsable.Location = new System.Drawing.Point(57, 315);
             this.lblResponsable.Name = "lblResponsable";
-            this.lblResponsable.Size = new System.Drawing.Size(95, 17);
+            this.lblResponsable.Size = new System.Drawing.Size(114, 17);
             this.lblResponsable.TabIndex = 19;
-            this.lblResponsable.Text = "Responsable:";
+            this.lblResponsable.Text = "Responsable: (*)";
             // 
             // frmSocios
             // 
@@ -310,7 +310,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSocios";
-            this.Text = "frmSocios";
+            this.Text = "Socios";
             this.Load += new System.EventHandler(this.frmSocios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSocios)).EndInit();
             this.ResumeLayout(false);

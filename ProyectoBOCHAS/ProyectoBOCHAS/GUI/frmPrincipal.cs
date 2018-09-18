@@ -55,5 +55,11 @@ namespace ProyectoBOCHAS
             frmSocios frmSocios = new frmSocios();
             frmSocios.Show();
         }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            frmDisciplinas frmDisciplinas = new frmDisciplinas();
+            frmDisciplinas.Show();
+        }
     }
 }
