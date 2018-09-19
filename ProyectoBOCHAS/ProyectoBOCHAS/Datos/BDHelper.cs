@@ -21,7 +21,7 @@ namespace ProyectoBOCHAS
 
         public DBHelper()
         {
-            cadenaConexion = @"Data Source=USUARIO-3WU9RFG\SQLEXPRESS;Initial Catalog=BDBochas;Integrated Security=True";
+            cadenaConexion = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=BDBochas;User ID=sa;password=1234";
             conexion = new SqlConnection(cadenaConexion);
             comando = new SqlCommand();
         }
