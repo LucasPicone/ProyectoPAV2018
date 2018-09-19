@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoBOCHAS.Negocio;
 
-namespace ProyectoBOCHAS.GUI
+namespace ProyectoBOCHAS
 {
     public partial class frmTipoProducto : Form
     {
@@ -168,6 +167,11 @@ namespace ProyectoBOCHAS.GUI
                 llenarGrilla(tipo.consultarTiposProducto(), dgvTipoProducto);
                 MessageBox.Show("Tipo modificado con exito", "Modificación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
+        }
+
+        private void frmTipoProducto_Load(object sender, EventArgs e)
+        {
 
         }
     }

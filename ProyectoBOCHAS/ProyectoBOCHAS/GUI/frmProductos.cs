@@ -7,10 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoBOCHAS.Negocio;
 
-
-namespace ProyectoBOCHAS.GUI
+namespace ProyectoBOCHAS
 {
     public partial class frmProductos : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace ProyectoBOCHAS.GUI
+﻿namespace ProyectoBOCHAS
 {
     partial class frmProductos
     {

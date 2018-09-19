@@ -61,5 +61,11 @@ namespace ProyectoBOCHAS
             frmDisciplinas frmDisciplinas = new frmDisciplinas();
             frmDisciplinas.Show();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProductos frmProductos = new frmProductos();
+            frmProductos.ShowDialog();
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace ProyectoBOCHAS.GUI
+﻿namespace ProyectoBOCHAS
 {
     partial class frmTipoProducto
     {
@@ -269,6 +269,7 @@
             this.Controls.Add(this.gbxMod);
             this.Name = "frmTipoProducto";
             this.Text = "frmTipoProducto";
+            this.Load += new System.EventHandler(this.frmTipoProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoProducto)).EndInit();
             this.gbxCarga.ResumeLayout(false);
             this.gbxCarga.PerformLayout();
