@@ -62,72 +62,81 @@
             // lblDisciplina
             // 
             this.lblDisciplina.AutoSize = true;
-            this.lblDisciplina.Location = new System.Drawing.Point(12, 9);
+            this.lblDisciplina.Location = new System.Drawing.Point(16, 11);
+            this.lblDisciplina.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDisciplina.Name = "lblDisciplina";
-            this.lblDisciplina.Size = new System.Drawing.Size(52, 13);
+            this.lblDisciplina.Size = new System.Drawing.Size(68, 17);
             this.lblDisciplina.TabIndex = 0;
             this.lblDisciplina.Text = "Disciplina";
             // 
             // lblNombreCategoria
             // 
             this.lblNombreCategoria.AutoSize = true;
-            this.lblNombreCategoria.Location = new System.Drawing.Point(12, 35);
+            this.lblNombreCategoria.Location = new System.Drawing.Point(16, 43);
+            this.lblNombreCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreCategoria.Name = "lblNombreCategoria";
-            this.lblNombreCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lblNombreCategoria.Size = new System.Drawing.Size(69, 17);
             this.lblNombreCategoria.TabIndex = 1;
             this.lblNombreCategoria.Text = "Categoria";
             // 
             // lblEdadDesde
             // 
             this.lblEdadDesde.AutoSize = true;
-            this.lblEdadDesde.Location = new System.Drawing.Point(12, 62);
+            this.lblEdadDesde.Location = new System.Drawing.Point(16, 76);
+            this.lblEdadDesde.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEdadDesde.Name = "lblEdadDesde";
-            this.lblEdadDesde.Size = new System.Drawing.Size(61, 13);
+            this.lblEdadDesde.Size = new System.Drawing.Size(80, 17);
             this.lblEdadDesde.TabIndex = 2;
             this.lblEdadDesde.Text = "Edad inicial";
             // 
             // cmbDisciplina
             // 
-            this.cmbDisciplina.Location = new System.Drawing.Point(95, 6);
+            this.cmbDisciplina.Location = new System.Drawing.Point(127, 7);
+            this.cmbDisciplina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbDisciplina.Name = "cmbDisciplina";
-            this.cmbDisciplina.Size = new System.Drawing.Size(231, 21);
+            this.cmbDisciplina.Size = new System.Drawing.Size(307, 24);
             this.cmbDisciplina.TabIndex = 3;
             // 
             // lblEdadHasta
             // 
             this.lblEdadHasta.AutoSize = true;
-            this.lblEdadHasta.Location = new System.Drawing.Point(12, 88);
+            this.lblEdadHasta.Location = new System.Drawing.Point(16, 108);
+            this.lblEdadHasta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEdadHasta.Name = "lblEdadHasta";
-            this.lblEdadHasta.Size = new System.Drawing.Size(59, 13);
+            this.lblEdadHasta.Size = new System.Drawing.Size(77, 17);
             this.lblEdadHasta.TabIndex = 4;
             this.lblEdadHasta.Text = "Edad tope ";
             // 
             // txtEdadTope
             // 
-            this.txtEdadTope.Location = new System.Drawing.Point(95, 85);
+            this.txtEdadTope.Location = new System.Drawing.Point(127, 105);
+            this.txtEdadTope.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEdadTope.Name = "txtEdadTope";
-            this.txtEdadTope.Size = new System.Drawing.Size(40, 20);
+            this.txtEdadTope.Size = new System.Drawing.Size(52, 22);
             this.txtEdadTope.TabIndex = 5;
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(95, 32);
+            this.txtCategoria.Location = new System.Drawing.Point(127, 39);
+            this.txtCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(231, 20);
+            this.txtCategoria.Size = new System.Drawing.Size(307, 22);
             this.txtCategoria.TabIndex = 6;
             // 
             // txtEdadInicial
             // 
-            this.txtEdadInicial.Location = new System.Drawing.Point(95, 59);
+            this.txtEdadInicial.Location = new System.Drawing.Point(127, 73);
+            this.txtEdadInicial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEdadInicial.Name = "txtEdadInicial";
-            this.txtEdadInicial.Size = new System.Drawing.Size(40, 20);
+            this.txtEdadInicial.Size = new System.Drawing.Size(52, 22);
             this.txtEdadInicial.TabIndex = 7;
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(176, 132);
+            this.btnConsultar.Location = new System.Drawing.Point(235, 162);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(75, 51);
+            this.btnConsultar.Size = new System.Drawing.Size(100, 63);
             this.btnConsultar.TabIndex = 9;
             this.btnConsultar.Text = "Consultar categorias";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -135,9 +144,10 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(176, 196);
+            this.btnModificar.Location = new System.Drawing.Point(235, 241);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 51);
+            this.btnModificar.Size = new System.Drawing.Size(100, 63);
             this.btnModificar.TabIndex = 10;
             this.btnModificar.Text = "Modificar categoria";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -145,9 +155,10 @@
             // 
             // btnAñadir
             // 
-            this.btnAñadir.Location = new System.Drawing.Point(95, 196);
+            this.btnAñadir.Location = new System.Drawing.Point(127, 241);
+            this.btnAñadir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(75, 51);
+            this.btnAñadir.Size = new System.Drawing.Size(100, 63);
             this.btnAñadir.TabIndex = 11;
             this.btnAñadir.Text = "Añadir categoria";
             this.btnAñadir.UseVisualStyleBackColor = true;
@@ -155,9 +166,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(257, 196);
+            this.btnEliminar.Location = new System.Drawing.Point(343, 241);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 51);
+            this.btnEliminar.Size = new System.Drawing.Size(100, 63);
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar categoria";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -176,12 +188,14 @@
             this.edadHasta,
             this.precioCuota,
             this.precioInscripcion});
-            this.dgvCategorias.Location = new System.Drawing.Point(349, 6);
+            this.dgvCategorias.Location = new System.Drawing.Point(465, 7);
+            this.dgvCategorias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.RowHeadersVisible = false;
             this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCategorias.Size = new System.Drawing.Size(700, 177);
+            this.dgvCategorias.Size = new System.Drawing.Size(933, 218);
             this.dgvCategorias.TabIndex = 8;
+            this.dgvCategorias.SelectionChanged += new System.EventHandler(this.dgvCategorias_SelectionChanged);
             // 
             // idDisciplina
             // 
@@ -226,9 +240,10 @@
             // 
             // btnNuevaAccion
             // 
-            this.btnNuevaAccion.Location = new System.Drawing.Point(257, 132);
+            this.btnNuevaAccion.Location = new System.Drawing.Point(343, 162);
+            this.btnNuevaAccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevaAccion.Name = "btnNuevaAccion";
-            this.btnNuevaAccion.Size = new System.Drawing.Size(75, 51);
+            this.btnNuevaAccion.Size = new System.Drawing.Size(100, 63);
             this.btnNuevaAccion.TabIndex = 14;
             this.btnNuevaAccion.Text = "Nueva Accion";
             this.btnNuevaAccion.UseVisualStyleBackColor = true;
@@ -237,44 +252,42 @@
             // lblPrecioInscripcion
             // 
             this.lblPrecioInscripcion.AutoSize = true;
-            this.lblPrecioInscripcion.Location = new System.Drawing.Point(148, 63);
-            this.lblPrecioInscripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecioInscripcion.Location = new System.Drawing.Point(197, 78);
             this.lblPrecioInscripcion.Name = "lblPrecioInscripcion";
-            this.lblPrecioInscripcion.Size = new System.Drawing.Size(74, 13);
+            this.lblPrecioInscripcion.Size = new System.Drawing.Size(98, 17);
             this.lblPrecioInscripcion.TabIndex = 15;
             this.lblPrecioInscripcion.Text = "Inscripción: (*)";
             // 
             // txtPrecioInscripcion
             // 
-            this.txtPrecioInscripcion.Location = new System.Drawing.Point(226, 63);
-            this.txtPrecioInscripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecioInscripcion.Location = new System.Drawing.Point(301, 78);
+            this.txtPrecioInscripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioInscripcion.Name = "txtPrecioInscripcion";
-            this.txtPrecioInscripcion.Size = new System.Drawing.Size(76, 20);
+            this.txtPrecioInscripcion.Size = new System.Drawing.Size(100, 22);
             this.txtPrecioInscripcion.TabIndex = 16;
             // 
             // lblPrecioCuota
             // 
             this.lblPrecioCuota.AutoSize = true;
-            this.lblPrecioCuota.Location = new System.Drawing.Point(150, 87);
-            this.lblPrecioCuota.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrecioCuota.Location = new System.Drawing.Point(200, 107);
             this.lblPrecioCuota.Name = "lblPrecioCuota";
-            this.lblPrecioCuota.Size = new System.Drawing.Size(51, 13);
+            this.lblPrecioCuota.Size = new System.Drawing.Size(68, 17);
             this.lblPrecioCuota.TabIndex = 17;
             this.lblPrecioCuota.Text = "Cuota: (*)";
             // 
             // txtPrecioCuota
             // 
-            this.txtPrecioCuota.Location = new System.Drawing.Point(226, 88);
-            this.txtPrecioCuota.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecioCuota.Location = new System.Drawing.Point(301, 108);
+            this.txtPrecioCuota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioCuota.Name = "txtPrecioCuota";
-            this.txtPrecioCuota.Size = new System.Drawing.Size(76, 20);
+            this.txtPrecioCuota.Size = new System.Drawing.Size(100, 22);
             this.txtPrecioCuota.TabIndex = 18;
             // 
             // frmCategorias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 263);
+            this.ClientSize = new System.Drawing.Size(1400, 324);
             this.Controls.Add(this.txtPrecioCuota);
             this.Controls.Add(this.lblPrecioCuota);
             this.Controls.Add(this.txtPrecioInscripcion);
@@ -294,6 +307,7 @@
             this.Controls.Add(this.lblNombreCategoria);
             this.Controls.Add(this.lblDisciplina);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmCategorias";
             this.Text = "Categorias";
             this.Load += new System.EventHandler(this.frmCategorias_Load);

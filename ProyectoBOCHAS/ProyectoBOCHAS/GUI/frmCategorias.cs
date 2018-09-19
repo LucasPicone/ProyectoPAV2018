@@ -49,8 +49,6 @@ namespace ProyectoBOCHAS
             btnAñadir.Enabled = true;
             btnEliminar.Enabled = true;
             btnModificar.Enabled = true;
-            cmbDisciplina.Enabled = false;
-            btnConsultar.Enabled = false;
         }
 
         private void llenarGrilla(DataTable tabla, DataGridView grilla)
@@ -100,17 +98,6 @@ namespace ProyectoBOCHAS
             return false;
         }
 
-
-        private void dgvCategorias_SelectionChanged(object sender, EventArgs e)
-        {
-           
-            txtCategoria.Text = dgvCategorias.CurrentRow.Cells[2].Value.ToString();
-            txtEdadInicial.Text = dgvCategorias.CurrentRow.Cells[3].Value.ToString();
-            txtEdadTope.Text = dgvCategorias.CurrentRow.Cells[4].Value.ToString();
-            txtPrecioInscripcion.Text = dgvCategorias.CurrentRow.Cells[5].Value.ToString();
-            txtPrecioCuota.Text = dgvCategorias.CurrentRow.Cells[6].Value.ToString();
-        }
-
         private void btnAñadir_Click(object sender, EventArgs e) //FALTA VALIDAR LOS PRECIOS
         {
             if (txtCategoria.Text.Length == 0 || txtEdadInicial.Text.Length == 0 || txtEdadTope.Text.Length == 0)
@@ -144,6 +131,15 @@ namespace ProyectoBOCHAS
                 categoria.eliminarCategoria(id, txtCategoria.Text, txtEdadInicial.Text, txtEdadTope.Text, cmbDisciplina.SelectedValue.ToString(), txtPrecioInscripcion.Text, txtPrecioCuota.Text);
                 llenarGrilla(categoria.consultaCategorias(), dgvCategorias);
             }
+        }
+
+        private void dgvCategorias_SelectionChanged(object sender, EventArgs e)
+        {
+            txtCategoria.Text = dgvCategorias.CurrentRow.Cells[2].Value.ToString();
+            txtEdadInicial.Text = dgvCategorias.CurrentRow.Cells[3].Value.ToString();
+            txtEdadTope.Text = dgvCategorias.CurrentRow.Cells[4].Value.ToString();
+            txtPrecioInscripcion.Text = dgvCategorias.CurrentRow.Cells[5].Value.ToString();
+            txtPrecioCuota.Text = dgvCategorias.CurrentRow.Cells[6].Value.ToString();
         }
     }
 }

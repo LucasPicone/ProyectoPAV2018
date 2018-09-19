@@ -63,14 +63,9 @@ namespace ProyectoBOCHAS
 
          public void eliminarCategoria (int idCategoria, string nombre, string edadDesde, string edadHasta, string idDisciplina, string precioInscripcion, string precioCuota)
          {
-             SqlCommand sql = new SqlCommand("USE BDBochas Update Categorias set estado = 'S' where idCategoria = @idCategoria and nombre = @nombre and edadDesde = @edadDesde and edadHasta = @edadHasta and idDisciplina = @idDisciplina");
+             SqlCommand sql = new SqlCommand("USE BDBochas Update Categorias set estado = 'N' where idCategoria = @idCategoria and idDisciplina = @idDisciplina");
              sql.Parameters.AddWithValue("@idCategoria", idCategoria);
-             sql.Parameters.AddWithValue("@nombre", nombre);
-             sql.Parameters.AddWithValue("@edadDesde", edadDesde);
-             sql.Parameters.AddWithValue("@edadHasta", edadHasta);
              sql.Parameters.AddWithValue("@idDisciplina", idDisciplina);
-             sql.Parameters.AddWithValue("@precioInscripcion", precioInscripcion);
-             sql.Parameters.AddWithValue("@precioCuota", precioCuota);
              oDatos.ComandoSQL(sql);
          }
      } 
