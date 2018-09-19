@@ -16,7 +16,7 @@ namespace ProyectoBOCHAS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDisciplinas());
+            Application.Run(new frmLogin());
         }
     }
 }

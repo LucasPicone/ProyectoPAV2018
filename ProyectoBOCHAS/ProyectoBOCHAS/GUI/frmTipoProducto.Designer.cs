@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTipoProducto));
             this.dgvTipoProducto = new System.Windows.Forms.DataGridView();
             this.idTipoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,11 +62,12 @@
             this.dgvTipoProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idTipoProducto,
             this.nombre});
-            this.dgvTipoProducto.Location = new System.Drawing.Point(12, 12);
+            this.dgvTipoProducto.Location = new System.Drawing.Point(16, 15);
+            this.dgvTipoProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTipoProducto.Name = "dgvTipoProducto";
             this.dgvTipoProducto.RowHeadersVisible = false;
             this.dgvTipoProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTipoProducto.Size = new System.Drawing.Size(531, 119);
+            this.dgvTipoProducto.Size = new System.Drawing.Size(708, 146);
             this.dgvTipoProducto.TabIndex = 0;
             this.dgvTipoProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoProducto_CellContentClick);
             // 
@@ -75,6 +77,7 @@
             this.idTipoProducto.HeaderText = "# Tipo Producto";
             this.idTipoProducto.MinimumWidth = 50;
             this.idTipoProducto.Name = "idTipoProducto";
+            this.idTipoProducto.Width = 127;
             // 
             // nombre
             // 
@@ -83,9 +86,10 @@
             // 
             // cmdCargarTipoIni
             // 
-            this.cmdCargarTipoIni.Location = new System.Drawing.Point(60, 35);
+            this.cmdCargarTipoIni.Location = new System.Drawing.Point(80, 43);
+            this.cmdCargarTipoIni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdCargarTipoIni.Name = "cmdCargarTipoIni";
-            this.cmdCargarTipoIni.Size = new System.Drawing.Size(168, 39);
+            this.cmdCargarTipoIni.Size = new System.Drawing.Size(224, 48);
             this.cmdCargarTipoIni.TabIndex = 8;
             this.cmdCargarTipoIni.Text = "Cargar nuevo tipo de producto";
             this.cmdCargarTipoIni.UseVisualStyleBackColor = true;
@@ -93,9 +97,10 @@
             // 
             // cmdModElini
             // 
-            this.cmdModElini.Location = new System.Drawing.Point(290, 35);
+            this.cmdModElini.Location = new System.Drawing.Point(387, 43);
+            this.cmdModElini.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdModElini.Name = "cmdModElini";
-            this.cmdModElini.Size = new System.Drawing.Size(181, 39);
+            this.cmdModElini.Size = new System.Drawing.Size(241, 48);
             this.cmdModElini.TabIndex = 9;
             this.cmdModElini.Text = "Modificar/Eliminar tipo existente";
             this.cmdModElini.UseVisualStyleBackColor = true;
@@ -107,9 +112,11 @@
             this.gbxCarga.Controls.Add(this.cmdCarga);
             this.gbxCarga.Controls.Add(this.txtCarga);
             this.gbxCarga.Enabled = false;
-            this.gbxCarga.Location = new System.Drawing.Point(12, 264);
+            this.gbxCarga.Location = new System.Drawing.Point(16, 325);
+            this.gbxCarga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxCarga.Name = "gbxCarga";
-            this.gbxCarga.Size = new System.Drawing.Size(531, 131);
+            this.gbxCarga.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxCarga.Size = new System.Drawing.Size(708, 161);
             this.gbxCarga.TabIndex = 11;
             this.gbxCarga.TabStop = false;
             // 
@@ -119,18 +126,20 @@
             this.lblCarga.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblCarga.Enabled = false;
             this.lblCarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarga.Location = new System.Drawing.Point(140, 0);
+            this.lblCarga.Location = new System.Drawing.Point(187, 0);
+            this.lblCarga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCarga.Name = "lblCarga";
-            this.lblCarga.Size = new System.Drawing.Size(215, 17);
+            this.lblCarga.Size = new System.Drawing.Size(251, 20);
             this.lblCarga.TabIndex = 13;
             this.lblCarga.Text = "Ingrese el nombre del nuevo tipo";
             // 
             // cmdCarga
             // 
             this.cmdCarga.Enabled = false;
-            this.cmdCarga.Location = new System.Drawing.Point(181, 87);
+            this.cmdCarga.Location = new System.Drawing.Point(241, 107);
+            this.cmdCarga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdCarga.Name = "cmdCarga";
-            this.cmdCarga.Size = new System.Drawing.Size(158, 23);
+            this.cmdCarga.Size = new System.Drawing.Size(211, 28);
             this.cmdCarga.TabIndex = 8;
             this.cmdCarga.Text = "Cargar producto";
             this.cmdCarga.UseVisualStyleBackColor = true;
@@ -139,11 +148,11 @@
             // txtCarga
             // 
             this.txtCarga.Enabled = false;
-            this.txtCarga.Location = new System.Drawing.Point(154, 44);
-            this.txtCarga.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCarga.Location = new System.Drawing.Point(205, 54);
+            this.txtCarga.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCarga.Multiline = true;
             this.txtCarga.Name = "txtCarga";
-            this.txtCarga.Size = new System.Drawing.Size(212, 24);
+            this.txtCarga.Size = new System.Drawing.Size(281, 29);
             this.txtCarga.TabIndex = 7;
             // 
             // lblPrincipal
@@ -151,9 +160,10 @@
             this.lblPrincipal.AutoSize = true;
             this.lblPrincipal.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrincipal.Location = new System.Drawing.Point(151, 0);
+            this.lblPrincipal.Location = new System.Drawing.Point(201, 0);
+            this.lblPrincipal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrincipal.Name = "lblPrincipal";
-            this.lblPrincipal.Size = new System.Drawing.Size(204, 17);
+            this.lblPrincipal.Size = new System.Drawing.Size(243, 20);
             this.lblPrincipal.TabIndex = 12;
             this.lblPrincipal.Text = "Seleccione la accion a realizar:";
             // 
@@ -162,9 +172,11 @@
             this.gbxPrincipal.Controls.Add(this.lblPrincipal);
             this.gbxPrincipal.Controls.Add(this.cmdCargarTipoIni);
             this.gbxPrincipal.Controls.Add(this.cmdModElini);
-            this.gbxPrincipal.Location = new System.Drawing.Point(12, 151);
+            this.gbxPrincipal.Location = new System.Drawing.Point(16, 186);
+            this.gbxPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxPrincipal.Name = "gbxPrincipal";
-            this.gbxPrincipal.Size = new System.Drawing.Size(531, 88);
+            this.gbxPrincipal.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxPrincipal.Size = new System.Drawing.Size(708, 108);
             this.gbxPrincipal.TabIndex = 13;
             this.gbxPrincipal.TabStop = false;
             // 
@@ -178,9 +190,11 @@
             this.gbxMod.Controls.Add(this.cmdMod);
             this.gbxMod.Controls.Add(this.txtMod);
             this.gbxMod.Enabled = false;
-            this.gbxMod.Location = new System.Drawing.Point(12, 410);
+            this.gbxMod.Location = new System.Drawing.Point(16, 505);
+            this.gbxMod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxMod.Name = "gbxMod";
-            this.gbxMod.Size = new System.Drawing.Size(531, 147);
+            this.gbxMod.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxMod.Size = new System.Drawing.Size(708, 181);
             this.gbxMod.TabIndex = 14;
             this.gbxMod.TabStop = false;
             // 
@@ -188,9 +202,10 @@
             // 
             this.lbl2.AutoSize = true;
             this.lbl2.Enabled = false;
-            this.lbl2.Location = new System.Drawing.Point(73, 81);
+            this.lbl2.Location = new System.Drawing.Point(97, 100);
+            this.lbl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(59, 13);
+            this.lbl2.Size = new System.Drawing.Size(76, 17);
             this.lbl2.TabIndex = 17;
             this.lbl2.Text = "Nuevo tipo";
             // 
@@ -198,28 +213,30 @@
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Enabled = false;
-            this.lbl1.Location = new System.Drawing.Point(38, 43);
+            this.lbl1.Location = new System.Drawing.Point(51, 53);
+            this.lbl1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(94, 13);
+            this.lbl1.Size = new System.Drawing.Size(123, 17);
             this.lbl1.TabIndex = 16;
             this.lbl1.Text = "Tipo seleccionado";
             // 
             // txtMod2
             // 
             this.txtMod2.Enabled = false;
-            this.txtMod2.Location = new System.Drawing.Point(154, 78);
-            this.txtMod2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMod2.Location = new System.Drawing.Point(205, 96);
+            this.txtMod2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMod2.Multiline = true;
             this.txtMod2.Name = "txtMod2";
-            this.txtMod2.Size = new System.Drawing.Size(212, 24);
+            this.txtMod2.Size = new System.Drawing.Size(281, 29);
             this.txtMod2.TabIndex = 15;
             // 
             // cmdEliminar
             // 
             this.cmdEliminar.Enabled = false;
-            this.cmdEliminar.Location = new System.Drawing.Point(264, 118);
+            this.cmdEliminar.Location = new System.Drawing.Point(352, 145);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(102, 23);
+            this.cmdEliminar.Size = new System.Drawing.Size(136, 28);
             this.cmdEliminar.TabIndex = 14;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
@@ -231,18 +248,20 @@
             this.lblMod.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblMod.Enabled = false;
             this.lblMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMod.Location = new System.Drawing.Point(106, 0);
+            this.lblMod.Location = new System.Drawing.Point(141, 0);
+            this.lblMod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMod.Name = "lblMod";
-            this.lblMod.Size = new System.Drawing.Size(317, 17);
+            this.lblMod.Size = new System.Drawing.Size(376, 20);
             this.lblMod.TabIndex = 13;
             this.lblMod.Text = "Seleccione un elemento de la lista para modificar";
             // 
             // cmdMod
             // 
             this.cmdMod.Enabled = false;
-            this.cmdMod.Location = new System.Drawing.Point(154, 118);
+            this.cmdMod.Location = new System.Drawing.Point(205, 145);
+            this.cmdMod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdMod.Name = "cmdMod";
-            this.cmdMod.Size = new System.Drawing.Size(93, 23);
+            this.cmdMod.Size = new System.Drawing.Size(124, 28);
             this.cmdMod.TabIndex = 8;
             this.cmdMod.Text = "Modificar";
             this.cmdMod.UseVisualStyleBackColor = true;
@@ -251,22 +270,24 @@
             // txtMod
             // 
             this.txtMod.Enabled = false;
-            this.txtMod.Location = new System.Drawing.Point(154, 40);
-            this.txtMod.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMod.Location = new System.Drawing.Point(205, 49);
+            this.txtMod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMod.Multiline = true;
             this.txtMod.Name = "txtMod";
-            this.txtMod.Size = new System.Drawing.Size(212, 24);
+            this.txtMod.Size = new System.Drawing.Size(281, 29);
             this.txtMod.TabIndex = 7;
             // 
             // frmTipoProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 569);
+            this.ClientSize = new System.Drawing.Size(739, 700);
             this.Controls.Add(this.gbxCarga);
             this.Controls.Add(this.dgvTipoProducto);
             this.Controls.Add(this.gbxPrincipal);
             this.Controls.Add(this.gbxMod);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmTipoProducto";
             this.Text = "frmTipoProducto";
             this.Load += new System.EventHandler(this.frmTipoProducto_Load);

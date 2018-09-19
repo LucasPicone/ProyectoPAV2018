@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.idProductos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,11 +63,12 @@
             this.descripcion,
             this.precioUnitario,
             this.idTipoProducto});
-            this.dgvProductos.Location = new System.Drawing.Point(14, 12);
+            this.dgvProductos.Location = new System.Drawing.Point(19, 15);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(753, 150);
+            this.dgvProductos.Size = new System.Drawing.Size(1004, 185);
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 
@@ -84,7 +86,7 @@
             this.descripcion.MinimumWidth = 10;
             this.descripcion.Name = "descripcion";
             this.descripcion.ReadOnly = true;
-            this.descripcion.Width = 88;
+            this.descripcion.Width = 111;
             // 
             // precioUnitario
             // 
@@ -103,10 +105,9 @@
             // txtInstrucciones
             // 
             this.txtInstrucciones.AutoSize = true;
-            this.txtInstrucciones.Location = new System.Drawing.Point(11, 185);
-            this.txtInstrucciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtInstrucciones.Location = new System.Drawing.Point(15, 228);
             this.txtInstrucciones.Name = "txtInstrucciones";
-            this.txtInstrucciones.Size = new System.Drawing.Size(492, 13);
+            this.txtInstrucciones.Size = new System.Drawing.Size(661, 17);
             this.txtInstrucciones.TabIndex = 12;
             this.txtInstrucciones.Text = "Cargue los campos abajo para agregar un producto o seleccione uno de la lista par" +
     "a modificar/eliminar.";
@@ -114,54 +115,56 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(113, 239);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescripcion.Location = new System.Drawing.Point(151, 294);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(192, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(255, 22);
             this.txtDescripcion.TabIndex = 15;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(11, 242);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNombre.Location = new System.Drawing.Point(15, 298);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(79, 13);
+            this.lblNombre.Size = new System.Drawing.Size(105, 17);
             this.lblNombre.TabIndex = 13;
             this.lblNombre.Text = "Descripción: (*)";
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(113, 282);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrecio.Location = new System.Drawing.Point(151, 347);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(192, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(255, 22);
             this.txtPrecio.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 285);
+            this.label1.Location = new System.Drawing.Point(15, 351);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(101, 17);
             this.label1.TabIndex = 18;
             this.label1.Text = "Precio Unitario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(404, 242);
+            this.label2.Location = new System.Drawing.Point(539, 298);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
+            this.label2.Size = new System.Drawing.Size(116, 17);
             this.label2.TabIndex = 19;
             this.label2.Text = "Tipo de producto";
             // 
             // cbxTipo
             // 
             this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Location = new System.Drawing.Point(498, 239);
+            this.cbxTipo.Location = new System.Drawing.Point(664, 294);
+            this.cbxTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(192, 21);
+            this.cbxTipo.Size = new System.Drawing.Size(255, 24);
             this.cbxTipo.TabIndex = 20;
             // 
             // groupBox1
@@ -169,18 +172,21 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(407, 285);
+            this.groupBox1.Location = new System.Drawing.Point(543, 351);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(360, 108);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(480, 133);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(9, 59);
+            this.button1.Location = new System.Drawing.Point(12, 73);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(332, 23);
+            this.button1.Size = new System.Drawing.Size(443, 28);
             this.button1.TabIndex = 24;
             this.button1.Text = "Agregar Tipo de Producto";
             this.button1.UseVisualStyleBackColor = true;
@@ -189,17 +195,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 16);
+            this.label3.Location = new System.Drawing.Point(8, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(335, 13);
+            this.label3.Size = new System.Drawing.Size(447, 17);
             this.label3.TabIndex = 22;
             this.label3.Text = "*Si no encuentra el tipo de producto en la lista puede agragarlo aquí: ";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(14, 334);
+            this.button2.Location = new System.Drawing.Point(19, 411);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 42);
+            this.button2.Size = new System.Drawing.Size(189, 52);
             this.button2.TabIndex = 22;
             this.button2.Text = "Cargar";
             this.button2.UseVisualStyleBackColor = true;
@@ -207,9 +215,10 @@
             // 
             // cmdEliminar
             // 
-            this.cmdEliminar.Location = new System.Drawing.Point(213, 334);
+            this.cmdEliminar.Location = new System.Drawing.Point(284, 411);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(142, 42);
+            this.cmdEliminar.Size = new System.Drawing.Size(189, 52);
             this.cmdEliminar.TabIndex = 23;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
@@ -217,9 +226,10 @@
             // 
             // cmdModificar
             // 
-            this.cmdModificar.Location = new System.Drawing.Point(213, 396);
+            this.cmdModificar.Location = new System.Drawing.Point(284, 487);
+            this.cmdModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdModificar.Name = "cmdModificar";
-            this.cmdModificar.Size = new System.Drawing.Size(142, 42);
+            this.cmdModificar.Size = new System.Drawing.Size(189, 52);
             this.cmdModificar.TabIndex = 24;
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.UseVisualStyleBackColor = true;
@@ -227,9 +237,9 @@
             // 
             // frmProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 463);
+            this.ClientSize = new System.Drawing.Size(1067, 570);
             this.Controls.Add(this.cmdModificar);
             this.Controls.Add(this.cmdEliminar);
             this.Controls.Add(this.button2);
@@ -242,6 +252,8 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtInstrucciones);
             this.Controls.Add(this.dgvProductos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmProductos";
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.frmProductos_Load);
