@@ -27,7 +27,7 @@ namespace ProyectoBOCHAS
 
         public void cargarTipoProducto(string nombre)
         {
-            SqlCommand comando = new SqlCommand("INSERT INTO TipoProducto(nombre) VALUES(@nombre)");
+            SqlCommand comando = new SqlCommand("INSERT INTO TipoProducto(nombre, estado) VALUES(@nombre, 'S')");
             comando.Parameters.AddWithValue("@nombre", nombre);
             oDatos.ComandoSQL(comando);
         }
