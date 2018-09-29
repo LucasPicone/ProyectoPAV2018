@@ -27,6 +27,11 @@ namespace ProyectoBOCHAS
 
         private void DeshabilitarCarga()
         {
+            txtCategoria.Text = string.Empty;
+            txtEdadInicial.Text = string.Empty;
+            txtEdadTope.Text = string.Empty;
+            txtPrecioCuota.Text = string.Empty;
+            txtPrecioInscripcion.Text = string.Empty;
             txtCategoria.Enabled = false;
             txtEdadInicial.Enabled = false;
             txtEdadTope.Enabled = false;
@@ -37,11 +42,11 @@ namespace ProyectoBOCHAS
             cmbDisciplina.Enabled = true;
             btnConsultar.Enabled = true;
             btnNuevaAccion.Enabled = true;
-
         }
 
         private void HabilitarNuevo()
         {
+            btnNuevaAccion.Enabled = false;
             txtCategoria.Enabled = true;
             txtEdadInicial.Enabled = true;
             txtEdadTope.Enabled = true;
@@ -58,7 +63,7 @@ namespace ProyectoBOCHAS
             {
                 for (int i = 0; i < tabla.Rows.Count; i++)
                 {
-                    grilla.Rows.Add(tabla.Rows[i]["idDisciplina"], tabla.Rows[i]["idCategoria"], tabla.Rows[i]["nombre"], tabla.Rows[i]["edadDesde"], tabla.Rows[i]["edadHasta"], tabla.Rows[i]["precioCuota"], tabla.Rows[i]["precioInscripcion"]);
+                    grilla.Rows.Add(tabla.Rows[i]["dnombre"], tabla.Rows[i]["idCategoria"], tabla.Rows[i]["nombre"], tabla.Rows[i]["edadDesde"], tabla.Rows[i]["edadHasta"], tabla.Rows[i]["precioCuota"], tabla.Rows[i]["precioInscripcion"]);
                 }
             }
         }
@@ -115,7 +120,7 @@ namespace ProyectoBOCHAS
                 MessageBox.Show("Seleccione una fila de la grilla", "Campos vacios", MessageBoxButtons.OK);
             else 
             {
-                int id = Int32.Parse(dgvCategorias.CurrentRow.Cells[0].Value.ToString());
+                int id = Int32.Parse(dgvCategorias.CurrentRow.Cells[1].Value.ToString());
                 categoria.modificarCategoria(id,txtCategoria.Text, txtEdadInicial.Text, txtEdadTope.Text, cmbDisciplina.SelectedValue.ToString(), txtPrecioInscripcion.Text, txtPrecioCuota.Text);
                 llenarGrilla(categoria.consultaCategorias(), dgvCategorias);
             }
@@ -127,19 +132,25 @@ namespace ProyectoBOCHAS
                 MessageBox.Show("Seleccione una fila de la grilla", "Campos vacios", MessageBoxButtons.OK);
             else
             {
-                int id = Int32.Parse(dgvCategorias.CurrentRow.Cells[0].Value.ToString());
-                categoria.eliminarCategoria(id, txtCategoria.Text, txtEdadInicial.Text, txtEdadTope.Text, cmbDisciplina.SelectedValue.ToString(), txtPrecioInscripcion.Text, txtPrecioCuota.Text);
+                int id = Int32.Parse(dgvCategorias.CurrentRow.Cells[1].Value.ToString());
+                categoria.eliminarCategoria(id, cmbDisciplina.SelectedValue.ToString());
                 llenarGrilla(categoria.consultaCategorias(), dgvCategorias);
             }
         }
 
         private void dgvCategorias_SelectionChanged(object sender, EventArgs e)
         {
-            txtCategoria.Text = dgvCategorias.CurrentRow.Cells[2].Value.ToString();
-            txtEdadInicial.Text = dgvCategorias.CurrentRow.Cells[3].Value.ToString();
-            txtEdadTope.Text = dgvCategorias.CurrentRow.Cells[4].Value.ToString();
-            txtPrecioInscripcion.Text = dgvCategorias.CurrentRow.Cells[5].Value.ToString();
-            txtPrecioCuota.Text = dgvCategorias.CurrentRow.Cells[6].Value.ToString();
+            if (btnNuevaAccion.Enabled)
+                return;
+            else
+            {
+                txtCategoria.Text = dgvCategorias.CurrentRow.Cells[2].Value.ToString();
+                txtEdadInicial.Text = dgvCategorias.CurrentRow.Cells[3].Value.ToString();
+                txtEdadTope.Text = dgvCategorias.CurrentRow.Cells[4].Value.ToString();
+                txtPrecioInscripcion.Text = dgvCategorias.CurrentRow.Cells[5].Value.ToString();
+                txtPrecioCuota.Text = dgvCategorias.CurrentRow.Cells[6].Value.ToString();
+                cmbDisciplina.Text = dgvCategorias.CurrentRow.Cells[0].Value.ToString();
+            }
         }
     }
 }

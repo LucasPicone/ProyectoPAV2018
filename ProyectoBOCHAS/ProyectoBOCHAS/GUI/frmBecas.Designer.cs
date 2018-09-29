@@ -121,7 +121,7 @@
             this.cmdNueva.Name = "cmdNueva";
             this.cmdNueva.Size = new System.Drawing.Size(82, 31);
             this.cmdNueva.TabIndex = 6;
-            this.cmdNueva.Text = "Nueva";
+            this.cmdNueva.Text = "Cargar";
             this.cmdNueva.UseVisualStyleBackColor = true;
             this.cmdNueva.Visible = false;
             this.cmdNueva.Click += new System.EventHandler(this.cmdNueva_Click);
@@ -161,7 +161,7 @@
             // 
             // cmdHabilitar
             // 
-            this.cmdHabilitar.Location = new System.Drawing.Point(389, 228);
+            this.cmdHabilitar.Location = new System.Drawing.Point(389, 227);
             this.cmdHabilitar.Name = "cmdHabilitar";
             this.cmdHabilitar.Size = new System.Drawing.Size(184, 128);
             this.cmdHabilitar.TabIndex = 10;

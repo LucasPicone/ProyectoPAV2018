@@ -66,6 +66,7 @@ namespace ProyectoBOCHAS
         {
             frmModSocios frmModSocios = new frmModSocios();
             frmModSocios.ShowDialog();
+            llenarGrilla(socios.ConsultarSocio(), dgvSocios);
         }
 
         private void cmdHabilitar_Click(object sender, EventArgs e)

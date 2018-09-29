@@ -16,24 +16,19 @@ namespace ProyectoBOCHAS
          public DataTable consultaCategorias()
          {
             DataTable tabla = new DataTable();
-            SqlCommand comando = new SqlCommand("select * from categorias where estado = 'S'");
+            SqlCommand comando = new SqlCommand("select d.nombre as dnombre, idCategoria, c.nombre, c.edadDesde, c.edadHasta, c.precioCuota, c.precioInscripcion from categorias c join disciplinas d on (c.idDisciplina = d.idDisciplina) where c.estado = 'S' and d.estado = 'S'");
             tabla =  oDatos.ConsultaSQL(comando);
             return tabla;
          }
 
-         public void LlenarComboDisciplinas(ComboBox combo)
+        public void LlenarComboDisciplinas(ComboBox combo)
          {
             DataTable tabla = new DataTable();
-            SqlCommand comando = new SqlCommand("select * from Disciplinas");
+            SqlCommand comando = new SqlCommand("select * from Disciplinas where estado = 'S'");
             tabla = oDatos.ConsultaSQL(comando);
             combo.DataSource = tabla;
             combo.ValueMember = tabla.Columns[0].ToString();
             combo.DisplayMember = tabla.Columns[1].ToString();
-         }
-
-         public void conseguirIdDisciplina(string disc)
-         {
-             
          }
 
          public void añadirCategoria(string nombre, string edadDesde, string edadHasta, string idDisciplina, string precioInscripcion, string precioCuota)
@@ -61,7 +56,7 @@ namespace ProyectoBOCHAS
              oDatos.ComandoSQL(sql);
          }
 
-         public void eliminarCategoria (int idCategoria, string nombre, string edadDesde, string edadHasta, string idDisciplina, string precioInscripcion, string precioCuota)
+         public void eliminarCategoria (int idCategoria, string idDisciplina)
          {
              SqlCommand sql = new SqlCommand("USE BDBochas Update Categorias set estado = 'N' where idCategoria = @idCategoria and idDisciplina = @idDisciplina");
              sql.Parameters.AddWithValue("@idCategoria", idCategoria);

@@ -32,5 +32,21 @@ namespace ProyectoBOCHAS
             comando.Parameters.AddWithValue("@precio", precio);
             oDatos.ComandoSQL(comando);
         }
+
+        public void EliminarDisciplina(string nombre)
+        {
+            SqlCommand comando = new SqlCommand("update disciplinas set estado = 'N' where nombre = @nombre");
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            oDatos.ComandoSQL(comando);
+        }
+
+        public void ModificarDisciplina(string id, string nombre, string precio)
+        {
+            SqlCommand comando = new SqlCommand("update disciplinas set nombre = @nombre, precioCuota = @precio where idDisciplina = @id");
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.Parameters.AddWithValue("@precio", precio);
+            comando.Parameters.AddWithValue("@id", id);
+            oDatos.ComandoSQL(comando);
+        }
     }
 }

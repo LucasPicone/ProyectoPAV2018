@@ -60,8 +60,10 @@
             this.dgvDisciplinas.Name = "dgvDisciplinas";
             this.dgvDisciplinas.RowHeadersVisible = false;
             this.dgvDisciplinas.RowTemplate.Height = 24;
+            this.dgvDisciplinas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDisciplinas.Size = new System.Drawing.Size(448, 140);
             this.dgvDisciplinas.TabIndex = 0;
+            this.dgvDisciplinas.SelectionChanged += new System.EventHandler(this.dgvDisciplinas_SelectionChanged);
             // 
             // idDisciplinas
             // 
@@ -121,7 +123,7 @@
             this.cmdNuevo.Name = "cmdNuevo";
             this.cmdNuevo.Size = new System.Drawing.Size(89, 32);
             this.cmdNuevo.TabIndex = 5;
-            this.cmdNuevo.Text = "Nuevo";
+            this.cmdNuevo.Text = "Cargar";
             this.cmdNuevo.UseVisualStyleBackColor = true;
             this.cmdNuevo.Click += new System.EventHandler(this.cmdNuevo_Click);
             // 

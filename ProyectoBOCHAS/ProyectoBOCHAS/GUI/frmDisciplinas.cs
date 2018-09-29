@@ -21,6 +21,8 @@ namespace ProyectoBOCHAS
         private void frmDisciplinas_Load(object sender, EventArgs e)
         {
             llenarGrilla(Disciplinas.ConsultarDisciplinas(), dgvDisciplinas);
+            txtNombre.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
         }
 
         private void llenarGrilla(DataTable tabla, DataGridView grilla)
@@ -38,6 +40,8 @@ namespace ProyectoBOCHAS
         private void cmdHabilitar_Click(object sender, EventArgs e)
         {
             cmdHabilitar.Visible = false;
+            txtNombre.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
             txtNombre.Enabled = true;
             txtPrecio.Enabled = true;
         }
@@ -57,17 +61,34 @@ namespace ProyectoBOCHAS
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-
+            if (txtNombre.Text == string.Empty)
+                MessageBox.Show("Debe seleccionar una disciplina de la lista", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else if (MessageBox.Show("¿Seguro desea eliminar la disciplina " + txtNombre.Text + "?", "Confirmación de eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Disciplinas.EliminarDisciplina(txtNombre.Text);
+                MessageBox.Show("Disciplina eliminada", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                llenarGrilla(Disciplinas.ConsultarDisciplinas(), dgvDisciplinas);
+            }
         }
 
         private void cmdModificar_Click(object sender, EventArgs e)
         {
-
+            if (txtNombre.Text == string.Empty || txtPrecio.Text == string.Empty)
+                MessageBox.Show("Deben estar cargados ambos campos", "Validación de entrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            else if (MessageBox.Show("¿Seguro desea modificar la disciplina " + txtNombre.Text + "?", "Confirmación modificacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string id = dgvDisciplinas.CurrentRow.Cells[0].Value.ToString();
+                Disciplinas.ModificarDisciplina(id, txtNombre.Text, txtPrecio.Text);
+                MessageBox.Show("Disciplina modificada", "Modificación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                llenarGrilla(Disciplinas.ConsultarDisciplinas(), dgvDisciplinas);
+            }
         }
 
         private void cmdCancelar_Click(object sender, EventArgs e)
         {
             cmdHabilitar.Visible = true;
+            txtNombre.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
             txtNombre.Enabled = false;
             txtPrecio.Enabled = false;
         }
@@ -76,6 +97,17 @@ namespace ProyectoBOCHAS
         {
             frmCategorias frmCategorias = new frmCategorias();
             frmCategorias.ShowDialog();
+        }
+
+        private void dgvDisciplinas_SelectionChanged(object sender, EventArgs e)
+        {
+            if (cmdHabilitar.Visible)
+                return;
+            else
+            {
+                txtNombre.Text = dgvDisciplinas.CurrentRow.Cells[1].Value.ToString();
+                txtPrecio.Text = dgvDisciplinas.CurrentRow.Cells[2].Value.ToString();
+            }
         }
     }
 }
