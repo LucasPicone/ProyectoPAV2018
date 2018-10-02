@@ -159,7 +159,7 @@
             this.cmdCargar.Name = "cmdCargar";
             this.cmdCargar.Size = new System.Drawing.Size(156, 46);
             this.cmdCargar.TabIndex = 6;
-            this.cmdCargar.Text = "Cargar usuario";
+            this.cmdCargar.Text = "Agregar usuario";
             this.cmdCargar.UseVisualStyleBackColor = true;
             this.cmdCargar.Click += new System.EventHandler(this.cmdCargar_Click);
             // 

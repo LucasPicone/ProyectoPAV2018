@@ -63,7 +63,7 @@
             this.idTipoProducto,
             this.nombre});
             this.dgvTipoProducto.Location = new System.Drawing.Point(16, 15);
-            this.dgvTipoProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTipoProducto.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTipoProducto.Name = "dgvTipoProducto";
             this.dgvTipoProducto.RowHeadersVisible = false;
             this.dgvTipoProducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -87,18 +87,18 @@
             // cmdCargarTipoIni
             // 
             this.cmdCargarTipoIni.Location = new System.Drawing.Point(80, 43);
-            this.cmdCargarTipoIni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdCargarTipoIni.Margin = new System.Windows.Forms.Padding(4);
             this.cmdCargarTipoIni.Name = "cmdCargarTipoIni";
             this.cmdCargarTipoIni.Size = new System.Drawing.Size(224, 48);
             this.cmdCargarTipoIni.TabIndex = 8;
-            this.cmdCargarTipoIni.Text = "Cargar nuevo tipo de producto";
+            this.cmdCargarTipoIni.Text = "Agregar nuevo tipo de producto";
             this.cmdCargarTipoIni.UseVisualStyleBackColor = true;
             this.cmdCargarTipoIni.Click += new System.EventHandler(this.cmdCargarTipoIni_Click);
             // 
             // cmdModElini
             // 
             this.cmdModElini.Location = new System.Drawing.Point(387, 43);
-            this.cmdModElini.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdModElini.Margin = new System.Windows.Forms.Padding(4);
             this.cmdModElini.Name = "cmdModElini";
             this.cmdModElini.Size = new System.Drawing.Size(241, 48);
             this.cmdModElini.TabIndex = 9;
@@ -113,9 +113,9 @@
             this.gbxCarga.Controls.Add(this.txtCarga);
             this.gbxCarga.Enabled = false;
             this.gbxCarga.Location = new System.Drawing.Point(16, 325);
-            this.gbxCarga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxCarga.Margin = new System.Windows.Forms.Padding(4);
             this.gbxCarga.Name = "gbxCarga";
-            this.gbxCarga.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxCarga.Padding = new System.Windows.Forms.Padding(4);
             this.gbxCarga.Size = new System.Drawing.Size(708, 161);
             this.gbxCarga.TabIndex = 11;
             this.gbxCarga.TabStop = false;
@@ -137,11 +137,11 @@
             // 
             this.cmdCarga.Enabled = false;
             this.cmdCarga.Location = new System.Drawing.Point(241, 107);
-            this.cmdCarga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdCarga.Margin = new System.Windows.Forms.Padding(4);
             this.cmdCarga.Name = "cmdCarga";
             this.cmdCarga.Size = new System.Drawing.Size(211, 28);
             this.cmdCarga.TabIndex = 8;
-            this.cmdCarga.Text = "Cargar producto";
+            this.cmdCarga.Text = "Agregar producto";
             this.cmdCarga.UseVisualStyleBackColor = true;
             this.cmdCarga.Click += new System.EventHandler(this.cmdCarga_Click);
             // 
@@ -173,9 +173,9 @@
             this.gbxPrincipal.Controls.Add(this.cmdCargarTipoIni);
             this.gbxPrincipal.Controls.Add(this.cmdModElini);
             this.gbxPrincipal.Location = new System.Drawing.Point(16, 186);
-            this.gbxPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.gbxPrincipal.Name = "gbxPrincipal";
-            this.gbxPrincipal.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxPrincipal.Padding = new System.Windows.Forms.Padding(4);
             this.gbxPrincipal.Size = new System.Drawing.Size(708, 108);
             this.gbxPrincipal.TabIndex = 13;
             this.gbxPrincipal.TabStop = false;
@@ -191,9 +191,9 @@
             this.gbxMod.Controls.Add(this.txtMod);
             this.gbxMod.Enabled = false;
             this.gbxMod.Location = new System.Drawing.Point(16, 505);
-            this.gbxMod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxMod.Margin = new System.Windows.Forms.Padding(4);
             this.gbxMod.Name = "gbxMod";
-            this.gbxMod.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxMod.Padding = new System.Windows.Forms.Padding(4);
             this.gbxMod.Size = new System.Drawing.Size(708, 181);
             this.gbxMod.TabIndex = 14;
             this.gbxMod.TabStop = false;
@@ -234,7 +234,7 @@
             // 
             this.cmdEliminar.Enabled = false;
             this.cmdEliminar.Location = new System.Drawing.Point(352, 145);
-            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(136, 28);
             this.cmdEliminar.TabIndex = 14;
@@ -259,7 +259,7 @@
             // 
             this.cmdMod.Enabled = false;
             this.cmdMod.Location = new System.Drawing.Point(205, 145);
-            this.cmdMod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdMod.Margin = new System.Windows.Forms.Padding(4);
             this.cmdMod.Name = "cmdMod";
             this.cmdMod.Size = new System.Drawing.Size(124, 28);
             this.cmdMod.TabIndex = 8;
@@ -287,7 +287,7 @@
             this.Controls.Add(this.gbxPrincipal);
             this.Controls.Add(this.gbxMod);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTipoProducto";
             this.Text = "frmTipoProducto";
             this.Load += new System.EventHandler(this.frmTipoProducto_Load);

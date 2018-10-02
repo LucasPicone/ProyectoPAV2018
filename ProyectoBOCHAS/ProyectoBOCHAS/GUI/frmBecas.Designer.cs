@@ -121,7 +121,7 @@
             this.cmdNueva.Name = "cmdNueva";
             this.cmdNueva.Size = new System.Drawing.Size(82, 31);
             this.cmdNueva.TabIndex = 6;
-            this.cmdNueva.Text = "Cargar";
+            this.cmdNueva.Text = "Agregar";
             this.cmdNueva.UseVisualStyleBackColor = true;
             this.cmdNueva.Visible = false;
             this.cmdNueva.Click += new System.EventHandler(this.cmdNueva_Click);

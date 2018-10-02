@@ -64,7 +64,7 @@
             this.precioUnitario,
             this.idTipoProducto});
             this.dgvProductos.Location = new System.Drawing.Point(19, 15);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersVisible = false;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -162,7 +162,7 @@
             // 
             this.cbxTipo.FormattingEnabled = true;
             this.cbxTipo.Location = new System.Drawing.Point(664, 294);
-            this.cbxTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(255, 24);
             this.cbxTipo.TabIndex = 20;
@@ -173,9 +173,9 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(543, 351);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(480, 133);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
@@ -184,7 +184,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(12, 73);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(443, 28);
             this.button1.TabIndex = 24;
@@ -205,18 +205,18 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(19, 411);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(189, 52);
             this.button2.TabIndex = 22;
-            this.button2.Text = "Cargar";
+            this.button2.Text = "Agregar";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // cmdEliminar
             // 
             this.cmdEliminar.Location = new System.Drawing.Point(284, 411);
-            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdEliminar.Name = "cmdEliminar";
             this.cmdEliminar.Size = new System.Drawing.Size(189, 52);
             this.cmdEliminar.TabIndex = 23;
@@ -227,7 +227,7 @@
             // cmdModificar
             // 
             this.cmdModificar.Location = new System.Drawing.Point(284, 487);
-            this.cmdModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdModificar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdModificar.Name = "cmdModificar";
             this.cmdModificar.Size = new System.Drawing.Size(189, 52);
             this.cmdModificar.TabIndex = 24;
@@ -253,7 +253,7 @@
             this.Controls.Add(this.txtInstrucciones);
             this.Controls.Add(this.dgvProductos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProductos";
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.frmProductos_Load);

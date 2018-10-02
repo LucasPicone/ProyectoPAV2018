@@ -42,6 +42,10 @@ namespace ProyectoBOCHAS
             cmbDisciplina.Enabled = true;
             btnConsultar.Enabled = true;
             btnNuevaAccion.Enabled = true;
+            btnCancelar.Enabled = false;
+            txtPrecioCuota.Enabled = false;
+            txtPrecioInscripcion.Enabled = false;
+            cmbDisciplina.Enabled = false;
         }
 
         private void HabilitarNuevo()
@@ -54,6 +58,10 @@ namespace ProyectoBOCHAS
             btnAñadir.Enabled = true;
             btnEliminar.Enabled = true;
             btnModificar.Enabled = true;
+            btnCancelar.Enabled = true;
+            txtPrecioCuota.Enabled = true;
+            txtPrecioInscripcion.Enabled = true;
+            cmbDisciplina.Enabled = true;
         }
 
         private void llenarGrilla(DataTable tabla, DataGridView grilla)
@@ -151,6 +159,11 @@ namespace ProyectoBOCHAS
                 txtPrecioCuota.Text = dgvCategorias.CurrentRow.Cells[6].Value.ToString();
                 cmbDisciplina.Text = dgvCategorias.CurrentRow.Cells[0].Value.ToString();
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DeshabilitarCarga();
         }
     }
 }

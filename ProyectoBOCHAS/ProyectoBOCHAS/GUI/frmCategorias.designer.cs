@@ -44,11 +44,6 @@
             this.btnAñadir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
-            this.btnNuevaAccion = new System.Windows.Forms.Button();
-            this.lblPrecioInscripcion = new System.Windows.Forms.Label();
-            this.txtPrecioInscripcion = new System.Windows.Forms.TextBox();
-            this.lblPrecioCuota = new System.Windows.Forms.Label();
-            this.txtPrecioCuota = new System.Windows.Forms.TextBox();
             this.idDisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +51,12 @@
             this.edadHasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioCuota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioInscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnNuevaAccion = new System.Windows.Forms.Button();
+            this.lblPrecioInscripcion = new System.Windows.Forms.Label();
+            this.txtPrecioInscripcion = new System.Windows.Forms.TextBox();
+            this.lblPrecioCuota = new System.Windows.Forms.Label();
+            this.txtPrecioCuota = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,51 +199,6 @@
             this.dgvCategorias.TabIndex = 8;
             this.dgvCategorias.SelectionChanged += new System.EventHandler(this.dgvCategorias_SelectionChanged);
             // 
-            // btnNuevaAccion
-            // 
-            this.btnNuevaAccion.Location = new System.Drawing.Point(324, 464);
-            this.btnNuevaAccion.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNuevaAccion.Name = "btnNuevaAccion";
-            this.btnNuevaAccion.Size = new System.Drawing.Size(100, 63);
-            this.btnNuevaAccion.TabIndex = 14;
-            this.btnNuevaAccion.Text = "Nueva Accion";
-            this.btnNuevaAccion.UseVisualStyleBackColor = true;
-            this.btnNuevaAccion.Click += new System.EventHandler(this.btnNuevaAccion_Click);
-            // 
-            // lblPrecioInscripcion
-            // 
-            this.lblPrecioInscripcion.AutoSize = true;
-            this.lblPrecioInscripcion.Location = new System.Drawing.Point(178, 380);
-            this.lblPrecioInscripcion.Name = "lblPrecioInscripcion";
-            this.lblPrecioInscripcion.Size = new System.Drawing.Size(98, 17);
-            this.lblPrecioInscripcion.TabIndex = 15;
-            this.lblPrecioInscripcion.Text = "Inscripción: (*)";
-            // 
-            // txtPrecioInscripcion
-            // 
-            this.txtPrecioInscripcion.Location = new System.Drawing.Point(282, 380);
-            this.txtPrecioInscripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPrecioInscripcion.Name = "txtPrecioInscripcion";
-            this.txtPrecioInscripcion.Size = new System.Drawing.Size(100, 22);
-            this.txtPrecioInscripcion.TabIndex = 16;
-            // 
-            // lblPrecioCuota
-            // 
-            this.lblPrecioCuota.AutoSize = true;
-            this.lblPrecioCuota.Location = new System.Drawing.Point(181, 409);
-            this.lblPrecioCuota.Name = "lblPrecioCuota";
-            this.lblPrecioCuota.Size = new System.Drawing.Size(68, 17);
-            this.lblPrecioCuota.TabIndex = 17;
-            this.lblPrecioCuota.Text = "Cuota: (*)";
-            // 
-            // txtPrecioCuota
-            // 
-            this.txtPrecioCuota.Location = new System.Drawing.Point(282, 410);
-            this.txtPrecioCuota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPrecioCuota.Name = "txtPrecioCuota";
-            this.txtPrecioCuota.Size = new System.Drawing.Size(100, 22);
-            this.txtPrecioCuota.TabIndex = 18;
-            // 
             // idDisciplina
             // 
             this.idDisciplina.HeaderText = "Disciplina";
@@ -284,11 +240,70 @@
             this.precioInscripcion.HeaderText = "Precio de la inscripción";
             this.precioInscripcion.Name = "precioInscripcion";
             // 
+            // btnNuevaAccion
+            // 
+            this.btnNuevaAccion.Location = new System.Drawing.Point(324, 464);
+            this.btnNuevaAccion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevaAccion.Name = "btnNuevaAccion";
+            this.btnNuevaAccion.Size = new System.Drawing.Size(100, 63);
+            this.btnNuevaAccion.TabIndex = 14;
+            this.btnNuevaAccion.Text = "Nueva Accion";
+            this.btnNuevaAccion.UseVisualStyleBackColor = true;
+            this.btnNuevaAccion.Click += new System.EventHandler(this.btnNuevaAccion_Click);
+            // 
+            // lblPrecioInscripcion
+            // 
+            this.lblPrecioInscripcion.AutoSize = true;
+            this.lblPrecioInscripcion.Location = new System.Drawing.Point(178, 380);
+            this.lblPrecioInscripcion.Name = "lblPrecioInscripcion";
+            this.lblPrecioInscripcion.Size = new System.Drawing.Size(98, 17);
+            this.lblPrecioInscripcion.TabIndex = 15;
+            this.lblPrecioInscripcion.Text = "Inscripción: (*)";
+            // 
+            // txtPrecioInscripcion
+            // 
+            this.txtPrecioInscripcion.Enabled = false;
+            this.txtPrecioInscripcion.Location = new System.Drawing.Point(282, 380);
+            this.txtPrecioInscripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrecioInscripcion.Name = "txtPrecioInscripcion";
+            this.txtPrecioInscripcion.Size = new System.Drawing.Size(100, 22);
+            this.txtPrecioInscripcion.TabIndex = 16;
+            // 
+            // lblPrecioCuota
+            // 
+            this.lblPrecioCuota.AutoSize = true;
+            this.lblPrecioCuota.Location = new System.Drawing.Point(181, 409);
+            this.lblPrecioCuota.Name = "lblPrecioCuota";
+            this.lblPrecioCuota.Size = new System.Drawing.Size(68, 17);
+            this.lblPrecioCuota.TabIndex = 17;
+            this.lblPrecioCuota.Text = "Cuota: (*)";
+            // 
+            // txtPrecioCuota
+            // 
+            this.txtPrecioCuota.Enabled = false;
+            this.txtPrecioCuota.Location = new System.Drawing.Point(282, 410);
+            this.txtPrecioCuota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrecioCuota.Name = "txtPrecioCuota";
+            this.txtPrecioCuota.Size = new System.Drawing.Size(100, 22);
+            this.txtPrecioCuota.TabIndex = 18;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Location = new System.Drawing.Point(431, 465);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(100, 62);
+            this.btnCancelar.TabIndex = 19;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 717);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtPrecioCuota);
             this.Controls.Add(this.lblPrecioCuota);
             this.Controls.Add(this.txtPrecioInscripcion);
@@ -345,5 +360,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn edadHasta;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioCuota;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioInscripcion;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
