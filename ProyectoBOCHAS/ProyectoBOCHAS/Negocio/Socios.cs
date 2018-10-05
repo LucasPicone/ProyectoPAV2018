@@ -33,19 +33,22 @@ namespace ProyectoBOCHAS
             comando.Parameters.AddWithValue("@direccion", direccion);
             comando.Parameters.AddWithValue("@dni", dni);
             comando.Parameters.AddWithValue("@fecha", fecha);
-            oDatos.ComandoSQL(comando);
-            comando = new SqlCommand("select idSocio from Socios where estado = 'S' and apellido = @apellido and nombre = @nombre and dni = @dni");
-            comando.Parameters.AddWithValue("@nombre", nombre);
-            comando.Parameters.AddWithValue("@apellido", apellido);
-            comando.Parameters.AddWithValue("@dni", dni);
+            List<SqlCommand> comandos = new List<SqlCommand>();
+            comandos.Add(comando);
+            comando = new SqlCommand("select idSocio from Socios where idSocio >= all(select idSocio from socios)");
             DataTable tabla = new DataTable();
             tabla = oDatos.ConsultaSQL(comando);
-            string id = tabla.Rows[0][0].ToString();
+            string id;
+            if (tabla.Rows.Count > 0) //cochinada para conseguir el ultimo id de socios para usar en el otro insert
+                id = (Convert.ToInt32(tabla.Rows[0][0].ToString()) + 1).ToString();
+            else
+                id = "1";
             comando = new SqlCommand("insert into TelefonosXSocios (idSocio, nroTelefono, responsableTelefono, estado) values (@id, @telefono, @responsable, 'S')");
             comando.Parameters.AddWithValue("@id", id);
             comando.Parameters.AddWithValue("@telefono", telefono);
             comando.Parameters.AddWithValue("@responsable", responsable);
-            oDatos.ComandoSQL(comando);
+            comandos.Add(comando);
+            oDatos.TransaccionSQL(comandos);
         }
 
         public DataTable BuscarSocio(string apellido, string nombre, string dni) //Busca con o sin parametros

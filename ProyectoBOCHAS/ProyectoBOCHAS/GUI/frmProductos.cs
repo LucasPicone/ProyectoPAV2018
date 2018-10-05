@@ -48,11 +48,6 @@ namespace ProyectoBOCHAS
             txtDescripcion.Text = prod;
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if(txtDescripcion.Text == string.Empty || txtPrecio.Text == string.Empty || cbxTipo.Text ==string.Empty)

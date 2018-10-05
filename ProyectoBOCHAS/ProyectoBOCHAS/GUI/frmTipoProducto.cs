@@ -29,9 +29,6 @@ namespace ProyectoBOCHAS
             lbl2.Enabled = true;
             txtMod.Enabled = true;
             txtMod2.Enabled = true;
-
-
-
         }
 
         public void deshabilitarMod()
@@ -42,8 +39,6 @@ namespace ProyectoBOCHAS
             cmdMod.Enabled = false;
             cmdEliminar.Enabled = false;
             txtCarga.Enabled = false;
-
-
         }
 
         public void habilitarCarga()

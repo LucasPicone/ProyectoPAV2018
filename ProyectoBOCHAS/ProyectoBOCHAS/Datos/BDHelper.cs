@@ -55,5 +55,27 @@ namespace ProyectoBOCHAS
             comando.ExecuteNonQuery();
             Desconectar();
         }
+
+        public void TransaccionSQL(List<SqlCommand> comandos)
+        {
+            conexion.Open();
+            SqlTransaction transaccion;
+            transaccion = conexion.BeginTransaction("porque no anda");
+            try
+            {
+                for (int i = 0; i < comandos.Count; i++)
+                {
+                    comandos[i].Connection = conexion;
+                    comandos[i].Transaction = transaccion;
+                    comandos[i].ExecuteNonQuery();
+                }
+                transaccion.Commit();
+            }
+            catch
+            {
+                transaccion.Rollback();
+            }
+            Desconectar();
+        }
     }
 }
