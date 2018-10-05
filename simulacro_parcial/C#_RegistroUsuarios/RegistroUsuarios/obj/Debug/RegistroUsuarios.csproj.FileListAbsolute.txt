@@ -1,9 +1,0 @@
-M:\pavi_3k1\simulacro_parcial\C#_RegistroUsuarios\RegistroUsuarios\bin\Debug\RegistroUsuarios.exe.config
-M:\pavi_3k1\simulacro_parcial\C#_RegistroUsuarios\RegistroUsuarios\obj\Debug\RegistroUsuarios.csprojResolveAssemblyReference.cache
-M:\pavi_3k1\simulacro_parcial\C#_RegistroUsuarios\RegistroUsuarios\obj\Debug\RegistroUsuarios.GUILayer.frmDetalleUsuario.resources
-M:\pavi_3k1\simulacro_parcial\C#_RegistroUsuarios\RegistroUsuarios\obj\Debug\RegistroUsuarios.GUILayer.frmConsultaUsuarios.resources
-M:\pavi_3k1\simulacro_parcial\C#_RegistroUsuarios\RegistroUsuarios\obj\Debug\RegistroUsuarios.Properties.Resources.resources
-M:\pavi_3k1\simulacro_parcial\C#_RegistroUsuarios\RegistroUsuarios\obj\Debug\RegistroUsuarios.csproj.GenerateResource.Cache
-M:\pavi_3k1\simulacro_parcial\C#_RegistroUsuarios\RegistroUsuarios\obj\Debug\RegistroUsuarios.pdb
-D:\simulacro_parcial\C#_RegistroUsuarios\RegistroUsuarios\bin\Debug\RegistroUsuarios.exe.config
-D:\simulacro_parcial\C#_RegistroUsuarios\RegistroUsuarios\obj\Debug\RegistroUsuarios.pdb
