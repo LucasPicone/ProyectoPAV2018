@@ -56,12 +56,13 @@
             this.idDisciplinas,
             this.nombre,
             this.precioCuota});
-            this.dgvDisciplinas.Location = new System.Drawing.Point(13, 13);
+            this.dgvDisciplinas.Location = new System.Drawing.Point(10, 11);
+            this.dgvDisciplinas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDisciplinas.Name = "dgvDisciplinas";
             this.dgvDisciplinas.RowHeadersVisible = false;
             this.dgvDisciplinas.RowTemplate.Height = 24;
             this.dgvDisciplinas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDisciplinas.Size = new System.Drawing.Size(448, 140);
+            this.dgvDisciplinas.Size = new System.Drawing.Size(323, 114);
             this.dgvDisciplinas.TabIndex = 0;
             this.dgvDisciplinas.SelectionChanged += new System.EventHandler(this.dgvDisciplinas_SelectionChanged);
             // 
@@ -86,25 +87,28 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(16, 188);
+            this.lblNombre.Location = new System.Drawing.Point(12, 153);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(81, 17);
+            this.lblNombre.Size = new System.Drawing.Size(60, 13);
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Nombre: (*)";
             // 
             // txtNombre
             // 
             this.txtNombre.Enabled = false;
-            this.txtNombre.Location = new System.Drawing.Point(103, 185);
+            this.txtNombre.Location = new System.Drawing.Point(77, 150);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(143, 22);
+            this.txtNombre.Size = new System.Drawing.Size(108, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // lblPrecio
             // 
-            this.lblPrecio.Location = new System.Drawing.Point(13, 216);
+            this.lblPrecio.Location = new System.Drawing.Point(10, 176);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(84, 54);
+            this.lblPrecio.Size = new System.Drawing.Size(63, 44);
             this.lblPrecio.TabIndex = 3;
             this.lblPrecio.Text = "Precio de la cuota basica: (*)";
             this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,16 +116,18 @@
             // txtPrecio
             // 
             this.txtPrecio.Enabled = false;
-            this.txtPrecio.Location = new System.Drawing.Point(103, 232);
+            this.txtPrecio.Location = new System.Drawing.Point(77, 188);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(143, 22);
+            this.txtPrecio.Size = new System.Drawing.Size(108, 20);
             this.txtPrecio.TabIndex = 4;
             // 
             // cmdNuevo
             // 
-            this.cmdNuevo.Location = new System.Drawing.Point(260, 184);
+            this.cmdNuevo.Location = new System.Drawing.Point(195, 150);
+            this.cmdNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdNuevo.Name = "cmdNuevo";
-            this.cmdNuevo.Size = new System.Drawing.Size(89, 32);
+            this.cmdNuevo.Size = new System.Drawing.Size(67, 26);
             this.cmdNuevo.TabIndex = 5;
             this.cmdNuevo.Text = "Agregar";
             this.cmdNuevo.UseVisualStyleBackColor = true;
@@ -129,9 +135,10 @@
             // 
             // cmdModificar
             // 
-            this.cmdModificar.Location = new System.Drawing.Point(260, 222);
+            this.cmdModificar.Location = new System.Drawing.Point(195, 180);
+            this.cmdModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdModificar.Name = "cmdModificar";
-            this.cmdModificar.Size = new System.Drawing.Size(89, 32);
+            this.cmdModificar.Size = new System.Drawing.Size(67, 26);
             this.cmdModificar.TabIndex = 6;
             this.cmdModificar.Text = "Modificar";
             this.cmdModificar.UseVisualStyleBackColor = true;
@@ -139,9 +146,10 @@
             // 
             // cmdEliminar
             // 
-            this.cmdEliminar.Location = new System.Drawing.Point(355, 184);
+            this.cmdEliminar.Location = new System.Drawing.Point(266, 150);
+            this.cmdEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdEliminar.Name = "cmdEliminar";
-            this.cmdEliminar.Size = new System.Drawing.Size(89, 32);
+            this.cmdEliminar.Size = new System.Drawing.Size(67, 26);
             this.cmdEliminar.TabIndex = 7;
             this.cmdEliminar.Text = "Eliminar";
             this.cmdEliminar.UseVisualStyleBackColor = true;
@@ -149,9 +157,10 @@
             // 
             // cmdCategorias
             // 
-            this.cmdCategorias.Location = new System.Drawing.Point(473, 180);
+            this.cmdCategorias.Location = new System.Drawing.Point(337, 150);
+            this.cmdCategorias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdCategorias.Name = "cmdCategorias";
-            this.cmdCategorias.Size = new System.Drawing.Size(89, 32);
+            this.cmdCategorias.Size = new System.Drawing.Size(67, 56);
             this.cmdCategorias.TabIndex = 8;
             this.cmdCategorias.Text = "Categorias";
             this.cmdCategorias.UseVisualStyleBackColor = true;
@@ -159,9 +168,10 @@
             // 
             // cmdCancelar
             // 
-            this.cmdCancelar.Location = new System.Drawing.Point(355, 222);
+            this.cmdCancelar.Location = new System.Drawing.Point(266, 180);
+            this.cmdCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdCancelar.Name = "cmdCancelar";
-            this.cmdCancelar.Size = new System.Drawing.Size(89, 32);
+            this.cmdCancelar.Size = new System.Drawing.Size(67, 26);
             this.cmdCancelar.TabIndex = 9;
             this.cmdCancelar.Text = "Cancelar";
             this.cmdCancelar.UseVisualStyleBackColor = true;
@@ -169,9 +179,10 @@
             // 
             // cmdHabilitar
             // 
-            this.cmdHabilitar.Location = new System.Drawing.Point(260, 184);
+            this.cmdHabilitar.Location = new System.Drawing.Point(195, 150);
+            this.cmdHabilitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmdHabilitar.Name = "cmdHabilitar";
-            this.cmdHabilitar.Size = new System.Drawing.Size(184, 70);
+            this.cmdHabilitar.Size = new System.Drawing.Size(138, 57);
             this.cmdHabilitar.TabIndex = 10;
             this.cmdHabilitar.Text = "Nueva acción";
             this.cmdHabilitar.UseVisualStyleBackColor = true;
@@ -179,9 +190,9 @@
             // 
             // frmDisciplinas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 365);
+            this.ClientSize = new System.Drawing.Size(430, 297);
             this.Controls.Add(this.cmdHabilitar);
             this.Controls.Add(this.cmdCancelar);
             this.Controls.Add(this.cmdCategorias);
@@ -194,6 +205,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvDisciplinas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDisciplinas";
             this.Text = "Disciplinas";
             this.Load += new System.EventHandler(this.frmDisciplinas_Load);

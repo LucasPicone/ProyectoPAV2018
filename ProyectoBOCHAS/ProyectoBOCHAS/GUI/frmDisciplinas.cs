@@ -109,5 +109,34 @@ namespace ProyectoBOCHAS
                 txtPrecio.Text = dgvDisciplinas.CurrentRow.Cells[2].Value.ToString();
             }
         }
+
+        private bool validarTxtPrecios(TextBox textBox1)
+        {
+            {
+                {
+                    int i;
+                    if (textBox1.Text != string.Empty)
+                    {
+
+                        if (!int.TryParse(textBox1.Text, out i)) //valida que sean solo caracteres numericos en los textbox de numeros
+                        {
+                            if (MessageBox.Show("Solo se permiten caracteres numericos", "Error de tipo", MessageBoxButtons.OK) == DialogResult.OK)
+                                textBox1.Clear();
+                            return false;
+                        }
+                        else
+                            if (int.Parse(textBox1.Text.ToString()) <= 0 || int.Parse(textBox1.Text.ToString()) >= 1000)
+                            {
+                                if (MessageBox.Show("Esta ingresando valores muy chicos o muy grandes. Debe reintentarlo", "Valores erroneos", MessageBoxButtons.OK) == DialogResult.OK)
+                                    textBox1.Clear();
+                                return false;
+                            }
+                            else
+                                return true;
+                    }
+                    return false;
+                }
+            }
+        }
     }
 }

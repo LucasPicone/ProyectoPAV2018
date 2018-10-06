@@ -86,7 +86,7 @@ namespace ProyectoBOCHAS
             HabilitarNuevo();
         }
 
-        private bool validarTxtNumericos (TextBox textBox1)
+        private bool validarTxtEdad (TextBox textBox1)
         {
             int i;
             if (textBox1.Text != string.Empty)
@@ -111,11 +111,41 @@ namespace ProyectoBOCHAS
             return false;
         }
 
+        private bool validarTxtPrecios(TextBox textBox1)
+        {
+            {
+                int i;
+                if (textBox1.Text != string.Empty)
+                {
+
+                    if (!int.TryParse(textBox1.Text, out i)) //valida que sean solo caracteres numericos en los textbox de numeros
+                    {
+                        if (MessageBox.Show("Solo se permiten caracteres numericos", "Error de tipo", MessageBoxButtons.OK) == DialogResult.OK)
+                            textBox1.Clear();
+                        return false;
+                    }
+                    else
+                        if (int.Parse(textBox1.Text.ToString()) <= 0 || int.Parse(textBox1.Text.ToString()) >= 1000)
+                        {
+                            if (MessageBox.Show("Esta ingresando valores muy chicos o muy grandes. Debe reintentarlo", "Valores erroneos", MessageBoxButtons.OK) == DialogResult.OK)
+                                textBox1.Clear();
+                            return false;
+                        }
+                        else
+                            return true;
+                }
+                return false;
+            }
+        }
+
         private void btnAñadir_Click(object sender, EventArgs e) //FALTA VALIDAR LOS PRECIOS
         {
-            if (txtCategoria.Text.Length == 0 || txtEdadInicial.Text.Length == 0 || txtEdadTope.Text.Length == 0)
+            if (txtCategoria.Text.Length == 0 || txtEdadInicial.Text.Length == 0 || txtEdadTope.Text.Length == 0 || txtPrecioCuota.Text.Length == 0 || txtPrecioInscripcion.Text.Length == 0)
                 MessageBox.Show("No realizo la carga de ningun campo", "Campos vacios", MessageBoxButtons.OK);
-            else if ((validarTxtNumericos(txtEdadInicial)) && (validarTxtNumericos(txtEdadTope)))
+            else if ((validarTxtPrecios(txtPrecioCuota) && (validarTxtPrecios(txtPrecioInscripcion))) == false)
+                MessageBox.Show("Formato invalido de precios", "Error", MessageBoxButtons.OK);
+           
+            else if ((validarTxtEdad(txtEdadInicial)) && (validarTxtEdad(txtEdadTope)))
             {
                 categoria.añadirCategoria(txtCategoria.Text, txtEdadInicial.Text, txtEdadTope.Text, cmbDisciplina.SelectedValue.ToString(), txtPrecioInscripcion.Text, txtPrecioCuota.Text);
                 llenarGrilla(categoria.consultaCategorias(), dgvCategorias);

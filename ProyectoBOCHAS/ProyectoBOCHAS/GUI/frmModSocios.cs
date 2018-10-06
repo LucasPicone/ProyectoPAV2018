@@ -30,7 +30,7 @@ namespace ProyectoBOCHAS
             }
         }
 
-        private void cmdBuscar_Click(object sender, EventArgs e)
+        private void cmdBuscar_Click(object sender, EventArgs e) //aca no hace falta validar porque busca con o sin parametros #NADIEPARAMETRIZAALBOBBY
         {
             llenarGrilla(socios.BuscarSocio(txtApellido.Text, txtNombre.Text, txtDni.Text), dgvSocios);
         }
