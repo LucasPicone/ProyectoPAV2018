@@ -82,12 +82,14 @@ namespace ProyectoBOCHAS
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.Parameters.AddWithValue("@direccion", direccion);
             comando.Parameters.AddWithValue("@id", id);
-            oDatos.ComandoSQL(comando);
+            List<SqlCommand> comandos = new List<SqlCommand>();
+            comandos.Add(comando);
             comando = new SqlCommand("update TelefonosXSocios set nroTelefono = @telefono, responsableTelefono = @responsable where idSocio = @id");
             comando.Parameters.AddWithValue("@telefono", telefono);
             comando.Parameters.AddWithValue("@responsable", responsable);
             comando.Parameters.AddWithValue("@id", id);
-            oDatos.ComandoSQL(comando);
+            comandos.Add(comando);
+            oDatos.TransaccionSQL(comandos);
         }
 
         public void AgregarTelefono(int id, string telefono, string responsable)
@@ -103,10 +105,12 @@ namespace ProyectoBOCHAS
         {
             SqlCommand comando = new SqlCommand("update socios set estado = 'N' where idSocio = @id");
             comando.Parameters.AddWithValue("@id", id);
-            oDatos.ComandoSQL(comando);
+            List<SqlCommand> comandos = new List<SqlCommand>();
+            comandos.Add(comando);
             comando = new SqlCommand("update TelefonosXSocios set estado = 'N' where idSocio = @id");
             comando.Parameters.AddWithValue("@id", id);
-            oDatos.ComandoSQL(comando);
+            comandos.Add(comando);
+            oDatos.TransaccionSQL(comandos);
         }
 
         public void EliminarTelefono(int id, string telefono)
