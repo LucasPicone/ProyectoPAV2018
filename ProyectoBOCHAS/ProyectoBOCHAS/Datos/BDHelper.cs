@@ -60,7 +60,7 @@ namespace ProyectoBOCHAS
         {
             conexion.Open();
             SqlTransaction transaccion;
-            transaccion = conexion.BeginTransaction("porque no anda");
+            transaccion = conexion.BeginTransaction("transaccion");
             try
             {
                 for (int i = 0; i < comandos.Count; i++)
@@ -71,9 +71,10 @@ namespace ProyectoBOCHAS
                 }
                 transaccion.Commit();
             }
-            catch
+            catch(Exception e)
             {
                 transaccion.Rollback();
+                Console.WriteLine(e);
             }
             Desconectar();
         }
