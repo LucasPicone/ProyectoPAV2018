@@ -14,6 +14,7 @@ namespace ProyectoBOCHAS
     public partial class frmCategorias : Form
     {
         Categorias categoria = new Categorias();
+        Validadores validadores = new Validadores();
         public frmCategorias()
         {
             InitializeComponent();
@@ -35,7 +36,6 @@ namespace ProyectoBOCHAS
             txtCategoria.Enabled = false;
             txtEdadInicial.Enabled = false;
             txtEdadTope.Enabled = false;
-            dgvCategorias.Enabled = false;
             btnAñadir.Enabled = false;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
@@ -86,93 +86,51 @@ namespace ProyectoBOCHAS
             HabilitarNuevo();
         }
 
-        private bool validarTxtEdad (TextBox textBox1)
-        {
-            int i;
-            if (textBox1.Text != string.Empty)
-            {
-
-                if (!int.TryParse(textBox1.Text, out i)) //valida que sean solo caracteres numericos en los textbox de numeros
-                {
-                    if (MessageBox.Show("Solo se permiten caracteres numericos", "Error de tipo", MessageBoxButtons.OK) == DialogResult.OK)
-                        textBox1.Clear();
-                    return false;
-                }
-                else
-                    if (int.Parse(textBox1.Text.ToString()) <= 0 || int.Parse(textBox1.Text.ToString()) >= 99)
-                    {
-                        if (MessageBox.Show("Esta ingresando valores muy chicos o muy grandes. Debe reintentarlo", "Valores erroneos", MessageBoxButtons.OK) == DialogResult.OK)
-                            textBox1.Clear();
-                        return false;
-                    }
-                    else
-                        return true;
-            }
-            return false;
-        }
-
-        private bool validarTxtPrecios(TextBox textBox1)
-        {
-            {
-                int i;
-                if (textBox1.Text != string.Empty)
-                {
-
-                    if (!int.TryParse(textBox1.Text, out i)) //valida que sean solo caracteres numericos en los textbox de numeros
-                    {
-                        if (MessageBox.Show("Solo se permiten caracteres numericos", "Error de tipo", MessageBoxButtons.OK) == DialogResult.OK)
-                            textBox1.Clear();
-                        return false;
-                    }
-                    else
-                        if (int.Parse(textBox1.Text.ToString()) <= 0 || int.Parse(textBox1.Text.ToString()) >= 1000)
-                        {
-                            if (MessageBox.Show("Esta ingresando valores muy chicos o muy grandes. Debe reintentarlo", "Valores erroneos", MessageBoxButtons.OK) == DialogResult.OK)
-                                textBox1.Clear();
-                            return false;
-                        }
-                        else
-                            return true;
-                }
-                return false;
-            }
-        }
-
-        private void btnAñadir_Click(object sender, EventArgs e) //FALTA VALIDAR LOS PRECIOS
+        private void btnAñadir_Click(object sender, EventArgs e)
         {
             if (txtCategoria.Text.Length == 0 || txtEdadInicial.Text.Length == 0 || txtEdadTope.Text.Length == 0 || txtPrecioCuota.Text.Length == 0 || txtPrecioInscripcion.Text.Length == 0)
-                MessageBox.Show("No realizo la carga de ningun campo", "Campos vacios", MessageBoxButtons.OK);
-            else if ((validarTxtPrecios(txtPrecioCuota) && (validarTxtPrecios(txtPrecioInscripcion))) == false)
-                MessageBox.Show("Formato invalido de precios", "Error", MessageBoxButtons.OK);
-           
-            else if ((validarTxtEdad(txtEdadInicial)) && (validarTxtEdad(txtEdadTope)))
+                MessageBox.Show("No realizo la carga de ningun campo", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else if ((validadores.ValidarTxt(txtPrecioCuota) && (validadores.ValidarTxt(txtPrecioInscripcion))) == false)
+                return;
+            else if ((validadores.ValidarTxt(txtEdadInicial)) && (validadores.ValidarTxt(txtEdadTope)))
             {
                 categoria.añadirCategoria(txtCategoria.Text, txtEdadInicial.Text, txtEdadTope.Text, cmbDisciplina.SelectedValue.ToString(), txtPrecioInscripcion.Text, txtPrecioCuota.Text);
                 llenarGrilla(categoria.consultaCategorias(), dgvCategorias);
+                MessageBox.Show("Categoria creada", "Creacción exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             if (txtCategoria.Text.Length == 0 || txtEdadInicial.Text.Length == 0 || txtEdadTope.Text.Length == 0)
-                MessageBox.Show("Seleccione una fila de la grilla", "Campos vacios", MessageBoxButtons.OK);
-            else 
+                MessageBox.Show("Seleccione una fila de la grilla", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else if ((validadores.ValidarTxt(txtPrecioCuota) && (validadores.ValidarTxt(txtPrecioInscripcion))) == false)
+                return;
+            else if ((validadores.ValidarTxt(txtEdadInicial)) && (validadores.ValidarTxt(txtEdadTope)))
             {
                 int id = Int32.Parse(dgvCategorias.CurrentRow.Cells[1].Value.ToString());
-                categoria.modificarCategoria(id,txtCategoria.Text, txtEdadInicial.Text, txtEdadTope.Text, cmbDisciplina.SelectedValue.ToString(), txtPrecioInscripcion.Text, txtPrecioCuota.Text);
-                llenarGrilla(categoria.consultaCategorias(), dgvCategorias);
+                if (MessageBox.Show("¿Seguro desea modificar la categoria " + txtCategoria.Text + "?", "confirmacion de modificación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    categoria.modificarCategoria(id, txtCategoria.Text, txtEdadInicial.Text, txtEdadTope.Text, cmbDisciplina.SelectedValue.ToString(), txtPrecioInscripcion.Text, txtPrecioCuota.Text);
+                    llenarGrilla(categoria.consultaCategorias(), dgvCategorias);
+                    MessageBox.Show("Categoria modificada", "Modificación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (txtCategoria.Text.Length == 0 || txtEdadInicial.Text.Length == 0 || txtEdadTope.Text.Length == 0)
-                MessageBox.Show("Seleccione una fila de la grilla", "Campos vacios", MessageBoxButtons.OK);
+                MessageBox.Show("Seleccione una fila de la grilla", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 int id = Int32.Parse(dgvCategorias.CurrentRow.Cells[1].Value.ToString());
-                categoria.eliminarCategoria(id, cmbDisciplina.SelectedValue.ToString());
-                llenarGrilla(categoria.consultaCategorias(), dgvCategorias);
+                if (MessageBox.Show("¿Seguro desea eliminar la categoria " + txtCategoria.Text + "?", "Confirmación de eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    categoria.eliminarCategoria(id, cmbDisciplina.SelectedValue.ToString());
+                    llenarGrilla(categoria.consultaCategorias(), dgvCategorias);
+                    MessageBox.Show("Categoria eliminada", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 

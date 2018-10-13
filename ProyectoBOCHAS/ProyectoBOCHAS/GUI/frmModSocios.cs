@@ -13,6 +13,7 @@ namespace ProyectoBOCHAS
     public partial class frmModSocios : Form
     {
         Socios socios = new Socios();
+        Validadores validadores = new Validadores();
         public frmModSocios()
         {
             InitializeComponent();
@@ -32,7 +33,10 @@ namespace ProyectoBOCHAS
 
         private void cmdBuscar_Click(object sender, EventArgs e) //aca no hace falta validar porque busca con o sin parametros #NADIEPARAMETRIZAALBOBBY
         {
-            llenarGrilla(socios.BuscarSocio(txtApellido.Text, txtNombre.Text, txtDni.Text), dgvSocios);
+            if (validadores.ValidarTxt(txtDni) || txtDni.Text == string.Empty)
+                llenarGrilla(socios.BuscarSocio(txtApellido.Text, txtNombre.Text, txtDni.Text), dgvSocios);
+            else
+                MessageBox.Show("No puede cargar letras en el DNI", "Validación de entrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void dgvSocios_SelectionChanged(object sender, EventArgs e)
@@ -60,7 +64,7 @@ namespace ProyectoBOCHAS
             {
                 MessageBox.Show("Debe asegurarse de tener cargados los campos obligatorios", "Validación de entrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else
+            else if (validadores.ValidarTxt(txtTelefono))
             {
                 if(MessageBox.Show("¿Seguro desea modificar al socio '" + dgvSocios.CurrentRow.Cells[1].Value.ToString() +" "+ dgvSocios.CurrentRow.Cells[2].Value.ToString() + "'?", "Confirmación de modificación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
@@ -126,7 +130,7 @@ namespace ProyectoBOCHAS
             {
                 MessageBox.Show("Debe asegurarse de tener cargados los campos obligatorios", "Validación de entrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else
+            else if (validadores.ValidarTxt(txtTelefonoNuevo))
             {
                 if (MessageBox.Show("¿Seguro desea agregar un telefono a '" + dgvSocios.CurrentRow.Cells[1].Value.ToString() + " " + dgvSocios.CurrentRow.Cells[2].Value.ToString() + "'?", "Confirmación de agregación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {

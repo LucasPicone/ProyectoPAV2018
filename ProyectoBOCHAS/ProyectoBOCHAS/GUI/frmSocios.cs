@@ -13,6 +13,7 @@ namespace ProyectoBOCHAS
     public partial class frmSocios : Form
     {
         Socios socios = new Socios();
+        Validadores validadores = new Validadores();
 
         public frmSocios()
         {
@@ -42,11 +43,12 @@ namespace ProyectoBOCHAS
             {
                 MessageBox.Show("No realizo la carga de algun campo obligatorio", "Validación de entrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else
+            else if (validadores.ValidarTxt(txtDni) && validadores.ValidarTxt(txtTelefono))
             {
                 socios.NuevoSocio(txtApellido.Text, txtNombre.Text, txtDireccion.Text, txtDni.Text, dtpFecha.Value.ToString("MM/dd/yyyy"), txtTelefono.Text, txtResponsable.Text);
                 llenarGrilla(socios.ConsultarSocio(), dgvSocios);
                 cmdCancelar_Click(sender, e);
+                MessageBox.Show("Socio creado", "Creación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

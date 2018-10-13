@@ -120,6 +120,7 @@
     <Compile Include="Negocio\Usuarios.cs" />
     <Compile Include="Negocio\Socios.cs" />
     <Compile Include="Negocio\TiposProductos.cs" />
+    <Compile Include="Validadores\Validadores.cs" />
     <EmbeddedResource Include="GUI\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>

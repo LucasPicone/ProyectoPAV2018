@@ -20,7 +20,7 @@ namespace ProyectoBOCHAS
         public DataTable consultarProductos()
         {
             DataTable tabla = new DataTable();
-            SqlCommand comando = new SqlCommand("SELECT * FROM Productos WHERE estado='S'");
+            SqlCommand comando = new SqlCommand("select p.idProductos, p.descripcion, p.precioUnitario, p.idTipoProducto, tp.nombre from productos p join TipoProducto tp on (p.idTipoProducto = tp.idTipoProducto) where p.estado = 'S' and tp.estado = 'S'");
             tabla = oDatos.ConsultaSQL(comando);
             return tabla;
         }
@@ -28,7 +28,6 @@ namespace ProyectoBOCHAS
         public void cargarProducto(int tipo, string descripcion, string precio)
         {
             SqlCommand comando = new SqlCommand("INSERT INTO Productos(idTipoProducto,descripcion,precioUnitario,estado) VALUES(@idTipoProducto,@descripcion,@precio,'S')");
-
             comando.Parameters.AddWithValue("@idTipoProducto",tipo);
             comando.Parameters.AddWithValue("@descripcion", descripcion);
             comando.Parameters.AddWithValue("@precio", precio);
@@ -42,9 +41,7 @@ namespace ProyectoBOCHAS
             comando.Parameters.AddWithValue("@precio", precio);
             comando.Parameters.AddWithValue("@idTipoProducto", idTipoProducto);
             comando.Parameters.AddWithValue("@idProducto", idProducto);
-
             oDatos.ComandoSQL(comando);
-
         }
        
         public void eliminarProducto(int idProducto)

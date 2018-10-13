@@ -13,6 +13,7 @@ namespace ProyectoBOCHAS
     public partial class frmDisciplinas : Form
     {
         Disciplinas Disciplinas = new Disciplinas();
+        Validadores validadores = new Validadores();
         public frmDisciplinas()
         {
             InitializeComponent();
@@ -21,8 +22,6 @@ namespace ProyectoBOCHAS
         private void frmDisciplinas_Load(object sender, EventArgs e)
         {
             llenarGrilla(Disciplinas.ConsultarDisciplinas(), dgvDisciplinas);
-            txtNombre.Text = string.Empty;
-            txtPrecio.Text = string.Empty;
         }
 
         private void llenarGrilla(DataTable tabla, DataGridView grilla)
@@ -52,10 +51,11 @@ namespace ProyectoBOCHAS
             {
                 MessageBox.Show("Debe cargar todos los campos obligatorios", "Validación de entrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else
+            else if (validadores.ValidarTxt(txtPrecio))
             {
                 Disciplinas.AltaDisciplinas(txtNombre.Text, txtPrecio.Text);
                 llenarGrilla(Disciplinas.ConsultarDisciplinas(), dgvDisciplinas);
+                MessageBox.Show("Disciplina creada", "Creación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -63,11 +63,11 @@ namespace ProyectoBOCHAS
         {
             if (txtNombre.Text == string.Empty)
                 MessageBox.Show("Debe seleccionar una disciplina de la lista", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else if (MessageBox.Show("¿Seguro desea eliminar la disciplina " + txtNombre.Text + "?", "Confirmación de eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            else if (MessageBox.Show("¿Seguro desea eliminar la disciplina '" + txtNombre.Text + "'?", "Confirmación de eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Disciplinas.EliminarDisciplina(txtNombre.Text);
-                MessageBox.Show("Disciplina eliminada", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                llenarGrilla(Disciplinas.ConsultarDisciplinas(), dgvDisciplinas);
+                    Disciplinas.EliminarDisciplina(txtNombre.Text);
+                    llenarGrilla(Disciplinas.ConsultarDisciplinas(), dgvDisciplinas);
+                    MessageBox.Show("Disciplina eliminada", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -75,12 +75,15 @@ namespace ProyectoBOCHAS
         {
             if (txtNombre.Text == string.Empty || txtPrecio.Text == string.Empty)
                 MessageBox.Show("Deben estar cargados ambos campos", "Validación de entrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else if (MessageBox.Show("¿Seguro desea modificar la disciplina " + txtNombre.Text + "?", "Confirmación modificacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            else if (validadores.ValidarTxt(txtPrecio))
             {
                 string id = dgvDisciplinas.CurrentRow.Cells[0].Value.ToString();
-                Disciplinas.ModificarDisciplina(id, txtNombre.Text, txtPrecio.Text);
-                MessageBox.Show("Disciplina modificada", "Modificación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                llenarGrilla(Disciplinas.ConsultarDisciplinas(), dgvDisciplinas);
+                if (MessageBox.Show("¿Seguro desea modificar la disciplina a '" + txtNombre.Text + "'?", "Confirmación modificacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Disciplinas.ModificarDisciplina(id, txtNombre.Text, txtPrecio.Text);
+                    MessageBox.Show("Disciplina modificada", "Modificación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    llenarGrilla(Disciplinas.ConsultarDisciplinas(), dgvDisciplinas);
+                }
             }
         }
 
@@ -107,35 +110,6 @@ namespace ProyectoBOCHAS
             {
                 txtNombre.Text = dgvDisciplinas.CurrentRow.Cells[1].Value.ToString();
                 txtPrecio.Text = dgvDisciplinas.CurrentRow.Cells[2].Value.ToString();
-            }
-        }
-
-        private bool validarTxtPrecios(TextBox textBox1)
-        {
-            {
-                {
-                    int i;
-                    if (textBox1.Text != string.Empty)
-                    {
-
-                        if (!int.TryParse(textBox1.Text, out i)) //valida que sean solo caracteres numericos en los textbox de numeros
-                        {
-                            if (MessageBox.Show("Solo se permiten caracteres numericos", "Error de tipo", MessageBoxButtons.OK) == DialogResult.OK)
-                                textBox1.Clear();
-                            return false;
-                        }
-                        else
-                            if (int.Parse(textBox1.Text.ToString()) <= 0 || int.Parse(textBox1.Text.ToString()) >= 1000)
-                            {
-                                if (MessageBox.Show("Esta ingresando valores muy chicos o muy grandes. Debe reintentarlo", "Valores erroneos", MessageBoxButtons.OK) == DialogResult.OK)
-                                    textBox1.Clear();
-                                return false;
-                            }
-                            else
-                                return true;
-                    }
-                    return false;
-                }
             }
         }
     }

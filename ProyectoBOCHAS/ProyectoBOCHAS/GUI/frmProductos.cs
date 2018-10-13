@@ -13,7 +13,7 @@ namespace ProyectoBOCHAS
     public partial class frmProductos : Form
     {
         Productos producto = new Productos();
-
+        Validadores validadores = new Validadores();
         TiposProductos tipos = new TiposProductos();
 
         public frmProductos()
@@ -29,7 +29,7 @@ namespace ProyectoBOCHAS
             {
                 for (int i = 0; i < tabla.Rows.Count; i++)
                 {
-                    grilla.Rows.Add(tabla.Rows[i]["idProductos"], tabla.Rows[i]["descripcion"],tabla.Rows[i]["precioUnitario"],tabla.Rows[i]["idTipoProducto"]);
+                    grilla.Rows.Add(tabla.Rows[i]["idProductos"], tabla.Rows[i]["descripcion"],tabla.Rows[i]["precioUnitario"],tabla.Rows[i]["idTipoProducto"], tabla.Rows[i]["nombre"]);
                 }
             }
         }
@@ -44,15 +44,14 @@ namespace ProyectoBOCHAS
                 
         private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)//pone la descripcion de la fila seleccionada en el txtDescripcion
         {
-            string prod = dgvProductos.CurrentRow.Cells[1].Value.ToString();
-            txtDescripcion.Text = prod;
+            txtDescripcion.Text = dgvProductos.CurrentRow.Cells[1].Value.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             if(txtDescripcion.Text == string.Empty || txtPrecio.Text == string.Empty || cbxTipo.Text ==string.Empty)
                 MessageBox.Show("Debe cargar un valor en todos los campos", "Validación de entrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else if (validarTxtPrecios(txtPrecio))
+            else if (validadores.ValidarTxt(txtPrecio))
             {
                 int tipo = tipos.traerIdTipo(cbxTipo.Text);
                 producto.cargarProducto(tipo, txtDescripcion.Text, txtPrecio.Text);
@@ -70,13 +69,10 @@ namespace ProyectoBOCHAS
         private void frmProductos_Load(object sender, EventArgs e)
         {
             llenarCombo(cbxTipo, tipos.consultarTiposProducto(), "n", "nombre");
-
         }
 
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-            
-
             if (txtDescripcion.Text == string.Empty)
                 MessageBox.Show("Debe seleccionar un producto en la lista", "Validación de entrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
@@ -87,9 +83,7 @@ namespace ProyectoBOCHAS
                     producto.eliminarProducto(id);
                     MessageBox.Show("Producto eliminado", "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     llenarGrilla(producto.consultarProductos(), dgvProductos);
-
                 }
-
             }
         }
 
@@ -97,7 +91,7 @@ namespace ProyectoBOCHAS
         {
             if(txtDescripcion.Text == string.Empty)
                 MessageBox.Show("Debe seleccionar un producto y llenar los campos con los nuevos valores", "Validación de entrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else
+            else if (validadores.ValidarTxt(txtPrecio))
             {
                 int tipo = tipos.traerIdTipo(cbxTipo.Text);
                 int id = Int32.Parse(dgvProductos.CurrentRow.Cells[0].Value.ToString()); //devuelve el id del elemento seleccionado como int
@@ -105,33 +99,7 @@ namespace ProyectoBOCHAS
                 llenarGrilla(producto.consultarProductos(), dgvProductos);
                 MessageBox.Show("Producto modificado", "Modificacion exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-        }
-
-           private bool validarTxtPrecios(TextBox textBox1)
-            {
-                int i;
-                if (textBox1.Text != string.Empty)
-                {
-
-                    if (!int.TryParse(textBox1.Text, out i)) //valida que sean solo caracteres numericos en los textbox de numeros
-                    {
-                        if (MessageBox.Show("Solo se permiten caracteres numericos", "Error de tipo", MessageBoxButtons.OK) == DialogResult.OK)
-                            textBox1.Clear();
-                        return false;
-                    }
-                    else
-                        if (int.Parse(textBox1.Text.ToString()) <= 0 || int.Parse(textBox1.Text.ToString()) >= 1000)
-                        {
-                            if (MessageBox.Show("Esta ingresando valores muy chicos o muy grandes. Debe reintentarlo", "Valores erroneos", MessageBoxButtons.OK) == DialogResult.OK)
-                                textBox1.Clear();
-                            return false;
-                        }
-                        else
-                            return true;
-                }
-                return false;
-            }
         }
     }
+}
 
