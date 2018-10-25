@@ -1,0 +1,22 @@
+D:\transaccion\transaccion\bin\Debug\transaccion.exe.config
+D:\transaccion\transaccion\bin\Debug\transaccion.exe
+D:\transaccion\transaccion\bin\Debug\transaccion.pdb
+D:\transaccion\transaccion\obj\Debug\transaccion.csprojResolveAssemblyReference.cache
+D:\transaccion\transaccion\obj\Debug\transaccion.frmPedidos.resources
+D:\transaccion\transaccion\obj\Debug\transaccion.Properties.Resources.resources
+D:\transaccion\transaccion\obj\Debug\transaccion.csproj.GenerateResource.Cache
+D:\transaccion\transaccion\obj\Debug\transaccion.exe
+D:\transaccion\transaccion\obj\Debug\transaccion.pdb
+D:\transaccion hecha y el profe no\transaccion\bin\Debug\transaccion.exe.config
+D:\transaccion hecha y el profe no\transaccion\obj\Debug\transaccion.exe
+D:\transaccion hecha y el profe no\transaccion\obj\Debug\transaccion.pdb
+D:\transaccion hecha y el profe no\transaccion\bin\Debug\transaccion.exe
+D:\transaccion hecha y el profe no\transaccion\bin\Debug\transaccion.pdb
+D:\transaccion hecha y el profe no\transaccion\obj\Debug\transaccion.csprojResolveAssemblyReference.cache
+D:\transaccion hecha y el profe no\transaccion\obj\Debug\transaccion.frmPedidos.resources
+D:\transaccion hecha y el profe no\transaccion\obj\Debug\transaccion.Properties.Resources.resources
+D:\transaccion hecha y el profe no\transaccion\obj\Debug\transaccion.reporte.resources
+D:\transaccion hecha y el profe no\transaccion\obj\Debug\transaccion.reporte2.resources
+D:\transaccion hecha y el profe no\transaccion\obj\Debug\transaccion.csproj.GenerateResource.Cache
+D:\transaccion hecha y el profe no\transaccion\obj\Debug\RdlCompile.cache
+D:\transaccion hecha y el profe no\transaccion\obj\Debug\RdlCompile.compiled
