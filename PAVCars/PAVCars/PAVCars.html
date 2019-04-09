@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <title>PAVCars</title>
+</head>
+<body style="background-color:darkslategrey">
+    <div class="container-fluid" style="background-color:darkcyan">
+        <div class="jumbotron" style="background-color:antiquewhite">
+            <h1>PAVCars</h1>
+        </div>
+        <form class="row">
+                <h3 class="col-sm-12">Alta de Autos</h3>
+
+                <div class="row col-sm-12">
+                    <div class="col-sm-6">
+                        <label>Ingrese el modelo: </label>
+                        <input class="col-sm-9" type="text" name="Modelo" placeholder="Ingrese el modelo" />
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Ingrese la Marca: </label>
+                        <select class="col-sm-9" name="Marca">
+                            <option value="ford">Ford</option>
+                            <option value="chev">Chevrolet</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row col-sm-12">
+                    <div class="col-md-6">
+                        <label>Ingrese el nro de chasis:</label>
+                        <input class="col-md-8" type="number" name="Cod_chasis" placeholder="Ingrese el codigo de chasis" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Ingrese el precio de venta:</label>
+                        <input class="col-md-8" type="number" name="Precio" placeholder="Ingrese el precio" />
+                    </div>
+                </div>
+                <div class="row col-md-12">
+                    <div class="col-md-5 text-center">
+                        <label>Ingrese la fecha de llegada</label>
+                        <input class="col-md-4" type="date" name="Fecha_Llegada" />
+                    </div>
+                    <div class="col-md-7 text-center">
+                        <input class="col-md-5" type="submit" name="Enviar" value="Agregar Auto" />
+                    </div>
+                </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
