@@ -5,53 +5,101 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <title>PAVCars</title>
 </head>
-<body style="background-color:darkslategrey">
-    <div class="container-fluid" style="background-color:darkcyan">
-        <div class="jumbotron" style="background:#fff;">
+<body style="background-color:lightgray">
+    <div id="PC" class="container d-none d-md-block">
+        <div class="jumbotron" style="background:#fff; padding: 2rem; margin-bottom: 0rem">
             <div class="row">
-                <h1  style="position: relative; z-index: 0; left: 0; top: 75px; width: 100%;" class="col-md-2">PAVCars</h1>
-                <div class="col-md-10 text-right">
-                    <img src="img/car.jpg" height="150" width="300" />
+                <img src="img/generatedtext.png" class="col-md-6" />
+                <div class="col-md-6 text-right d-none d-md-block">
+                    <img src="img/car.png" height="150" width="300" />
                 </div>
             </div>
         </div>
         <form class="row">
-                <h3 class="col-sm-12">Alta de Autos</h3>
-
-                <div class="row col-md-12">
-                    <div class="col-sm-6">
-                        <label>Ingrese el modelo: </label>
-                        <input class="col-sm-9" type="text" name="Modelo" placeholder="Ingrese el modelo" />
-                    </div>
-                    <div class="col-sm-6">
-                        <label>Ingrese la Marca: </label>
-                        <select class="col-sm-9" name="Marca">
-                            <option value="ford">Ford</option>
-                            <option value="chev">Chevrolet</option>
-                        </select>
-                    </div>
+            <h3 class="col-sm-12" style="margin-bottom: 30px">Alta de Autos</h3>
+            <div id="primeraColumna" class="row col-md-12" style="margin-bottom: 30px">
+                <div class="row col">
+                    <label class="col text-right">Ingrese el modelo: </label>
+                    <input class="col" type="text" name="Modelo" placeholder="Ingrese el modelo" />
                 </div>
-                <div class="row col-md-12">
-                    <div class="col-md-6">
-                        <label>Ingrese el nro de chasis:</label>
-                        <input class="col-md-8" type="number" name="Cod_chasis" placeholder="Ingrese el codigo de chasis" />
-                    </div>
-                    <div class="col-md-6">
-                        <label>Ingrese el precio de venta:</label>
-                        <input class="col-md-8" type="number" name="Precio" placeholder="Ingrese el precio" />
-                    </div>
+                <div class="row col">
+                    <label class="col text-right">Ingrese la Marca: </label>
+                    <select class="col" name="Marca">
+                        <option value="ford">Ford</option>
+                        <option value="chev">Chevrolet</option>
+                    </select>
                 </div>
-                <div class="row col-md-12">
-                    <div class="col-md-5 text-center">
-                        <label>Ingrese la fecha de llegada</label>
-                        <input class="col-md-4" type="date" name="Fecha_Llegada" />
-                    </div>
-                    <div class="col-md-7 text-center">
-                        <input class="col-md-5" type="submit" name="Enviar" value="Agregar Auto" />
-                    </div>
+            </div>
+            <div class="row col-md-12" style="margin-bottom: 30px">
+                <div class="row col">
+                    <label class="col text-right">Ingrese el nro de chasis:</label>
+                    <input class="col" type="number" name="Cod_chasis" placeholder="Ingrese el codigo de chasis" />
                 </div>
+                <div class="row col">
+                    <label class="col text-right">Ingrese el precio de venta:</label>
+                    <input class="col" type="number" name="Precio" placeholder="Ingrese el precio" />
+                </div>
+            </div>
+            <div class="row col-md-12" style="margin-bottom: 30px">
+                <div class="row col">
+                    <label class="col text-right">Ingrese la fecha de llegada:</label>
+                    <input class="col" type="date" name="Fecha_Llegada" />
+                </div>
+                <div class="col-md-6 text-center" style="padding: 0.5rem">
+                    <input class="col-5 btn btn-primary" type="submit" name="Enviar" value="Agregar Auto" />
+                </div>
+            </div>
         </form>
     </div>
+
+
+    <div class="container d-block d-md-none" id="telefono">
+        <div class="jumbotron" style="background:#fff; padding: 2rem; margin-bottom: 0rem">
+            <div class="row">
+                <img src="img/generatedtext.png" />
+            </div>
+        </div>
+        <form class="row">
+            <h3 class="col-sm-12">Alta de Autos</h3>
+            <div class="row col-md-12">
+                <div class="col-sm-6">
+                    <label>Ingrese el modelo: </label>
+                    <input class="col-sm-8" type="text" name="Modelo" placeholder="Ingrese el modelo" />
+                </div>
+                <div class="col-sm-6">
+                    <label>Ingrese la Marca: </label>
+                    <select class="col-sm-9" name="Marca">
+                        <option value="ford">Ford</option>
+                        <option value="chev">Chevrolet</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="col-md-6">
+                    <label>Ingrese el nro de chasis:</label>
+                    <input class="col-md-8" type="number" name="Cod_chasis" placeholder="Ingrese el codigo de chasis" />
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese el precio de venta:</label>
+                    <input class="col-md-7" type="number" name="Precio" placeholder="Ingrese el precio" />
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="col-md-6">
+                    <label>Ingrese la fecha de llegada:</label>
+                    <input class="col-md-6" type="date" name="Fecha_Llegada" />
+                </div>
+                <div class="col-md-6 text-center" style="padding: 0.5rem">
+                    <input class="col-md-5 btn btn-primary" type="submit" name="Enviar" value="Agregar Auto" />
+                </div>
+            </div>
+        </form>
+        <div class="row text-center d-block d-md-none" style="padding: 1rem">
+            <img class="col" src="img/car.png" />
+        </div>
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
