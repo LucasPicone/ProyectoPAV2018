@@ -1,105 +1,100 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <title>PAVCars</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="js/angular.js"></script>
 </head>
 <body style="background-color:lightgray">
-    <div id="PC" class="container d-none d-md-block">
-        <div class="jumbotron" style="background:#fff; padding: 2rem; margin-bottom: 0rem">
-            <div class="row">
-                <img src="img/generatedtext.png" class="col-md-6" />
-                <div class="col-md-6 text-right d-none d-md-block">
-                    <img src="img/car.png" height="150" width="300" />
+    <div ng-controller="myCtrl">
+        <div class="container">
+            <div>
+                <div class="jumbotron mb-3" style="background:#fff; padding: 2rem; margin-bottom: 0rem">
+                    <div class="row">
+                        <img class="col-md-6" src="img/generatedtext.png" />
+                        <div class="col-md-6 text-right d-none d-md-block">
+                            <img src="img/car.png" height="150" width="300" />
+                        </div>
+                    </div>
+                </div>
+                <form name="frmAuto" class="row" ng-show="mostrar == 'A'" novalidate="novalidate">
+                    <h1 class="col-sm-12 mb-md-5">Alta de Autos</h1>
+                    <div class="row col-md-12 mb-md-4">
+                        <div class="row col-sm-6 col-md">
+                            <label class="col-md text-md-right">Ingrese el modelo: </label>
+                            <input ng-model="autoModelo" class="col-sm-8 col-md" type="text" placeholder="Ingrese el modelo" required/>
+                        </div>
+                        <div class="row col-sm-6 col-md">
+                            <label class="col-md text-md-right">Ingrese la Marca: </label>
+                            <select ng-model="autoMarca" class="col-sm-9 col-md" required>
+                                <option ng-repeat="marca in marcas" value="{{marca.nombre}}">{{marca.nombre}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row col-md-12 mb-md-4">
+                        <div class="row col-md">
+                            <label class="col-md text-md-right">Ingrese el nro de chasis:</label>
+                            <input required ng-model="autoChasis" class="col-md" type="number" placeholder="Ingrese el codigo de chasis" />
+                        </div>
+                        <div class="row col-md">
+                            <label class="col-md text-md-right">Ingrese el precio de venta:</label>
+                            <input required ng-model="autoPrecio" class="col-md" type="number" placeholder="Ingrese el precio" />
+                        </div>
+                    </div>
+                    <div class="row col-md-12 mb-md-4  mb-5">
+                        <div class="row col-md">
+                            <label class="col-md text-md-right">Ingrese la fecha de llegada:</label>
+                            <input required ng-model="autoFecha" class="col-md" type="date" />
+                        </div>
+                        <div class="col-md-6 text-center" style="padding: 0.5rem">
+                            <button ng-click="guardar()" ng-disabled="frmAuto.$invalid" class="col-md-5 btn btn-primary" type="button">Agregar Auto</button>
+                        </div>
+                    </div>
+                    <div class="row col-12">
+                        <button class="col-md-6 btn btn-primary offset-md-3" ng-click="mostrar = 'L'">Listado</button>
+                    </div>
+                </form>
+                <div id="listado" ng-show="mostrar == 'L'">
+                    <div class="row mb-3">
+                        <h1 class="col-6">Listado</h1>
+                        <button class="col-6 btn btn-primary" ng-click="mostrar= 'A'">Agregar Autos</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="col table table-dark table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <td scope="col">Modelo</td>
+                                    <td scope="col">Marca</td>
+                                    <td scope="col">Nro de Chasis</td>
+                                    <td scope="col">Precio</td>
+                                    <td scope="col">Fecha de Llegada</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="auto in autos">
+                                    <th scope="row" hidden="hidden"></th>
+                                    <td>{{auto.autoModelo}}</td>
+                                    <td>{{auto.autoMarca}}</td>
+                                    <td>{{auto.autoChasis}}</td>
+                                    <td>{{auto.autoPrecio}}</td>
+                                    <td>{{auto.autoFecha}}</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5" align="center">Total autos: {{autos.length}}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
-        <form class="row">
-            <h3 class="col-sm-12" style="margin-bottom: 30px">Alta de Autos</h3>
-            <div id="primeraColumna" class="row col-md-12" style="margin-bottom: 30px">
-                <div class="row col">
-                    <label class="col text-right">Ingrese el modelo: </label>
-                    <input class="col" type="text" name="Modelo" placeholder="Ingrese el modelo" />
-                </div>
-                <div class="row col">
-                    <label class="col text-right">Ingrese la Marca: </label>
-                    <select class="col" name="Marca">
-                        <option value="ford">Ford</option>
-                        <option value="chev">Chevrolet</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row col-md-12" style="margin-bottom: 30px">
-                <div class="row col">
-                    <label class="col text-right">Ingrese el nro de chasis:</label>
-                    <input class="col" type="number" name="Cod_chasis" placeholder="Ingrese el codigo de chasis" />
-                </div>
-                <div class="row col">
-                    <label class="col text-right">Ingrese el precio de venta:</label>
-                    <input class="col" type="number" name="Precio" placeholder="Ingrese el precio" />
-                </div>
-            </div>
-            <div class="row col-md-12" style="margin-bottom: 30px">
-                <div class="row col">
-                    <label class="col text-right">Ingrese la fecha de llegada:</label>
-                    <input class="col" type="date" name="Fecha_Llegada" />
-                </div>
-                <div class="col-md-6 text-center" style="padding: 0.5rem">
-                    <input class="col-5 btn btn-primary" type="submit" name="Enviar" value="Agregar Auto" />
-                </div>
-            </div>
-        </form>
-    </div>
-
-
-    <div class="container d-block d-md-none" id="telefono">
-        <div class="jumbotron" style="background:#fff; padding: 2rem; margin-bottom: 0rem">
-            <div class="row">
-                <img src="img/generatedtext.png" />
-            </div>
-        </div>
-        <form class="row">
-            <h3 class="col-sm-12">Alta de Autos</h3>
-            <div class="row col-md-12">
-                <div class="col-sm-6">
-                    <label>Ingrese el modelo: </label>
-                    <input class="col-sm-8" type="text" name="Modelo" placeholder="Ingrese el modelo" />
-                </div>
-                <div class="col-sm-6">
-                    <label>Ingrese la Marca: </label>
-                    <select class="col-sm-9" name="Marca">
-                        <option value="ford">Ford</option>
-                        <option value="chev">Chevrolet</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row col-md-12">
-                <div class="col-md-6">
-                    <label>Ingrese el nro de chasis:</label>
-                    <input class="col-md-8" type="number" name="Cod_chasis" placeholder="Ingrese el codigo de chasis" />
-                </div>
-                <div class="col-md-6">
-                    <label>Ingrese el precio de venta:</label>
-                    <input class="col-md-7" type="number" name="Precio" placeholder="Ingrese el precio" />
-                </div>
-            </div>
-            <div class="row col-md-12">
-                <div class="col-md-6">
-                    <label>Ingrese la fecha de llegada:</label>
-                    <input class="col-md-6" type="date" name="Fecha_Llegada" />
-                </div>
-                <div class="col-md-6 text-center" style="padding: 0.5rem">
-                    <input class="col-md-5 btn btn-primary" type="submit" name="Enviar" value="Agregar Auto" />
-                </div>
-            </div>
-        </form>
-        <div class="row text-center d-block d-md-none" style="padding: 1rem">
-            <img class="col" src="img/car.png" />
+            
         </div>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
