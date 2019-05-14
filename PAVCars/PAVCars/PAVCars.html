@@ -48,6 +48,7 @@
                         <div class="row col-md">
                             <label class="col-md text-md-right">Ingrese la fecha de llegada:</label>
                             <input required ng-model="autoFecha" class="col-md" type="date" />
+
                         </div>
                         <div class="col-md-6 text-center" style="padding: 0.5rem">
                             <button ng-click="guardar()" ng-disabled="frmAuto.$invalid" class="col-md-5 btn btn-primary" type="button">Agregar Auto</button>
@@ -74,13 +75,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="auto in autos">
+                                <tr ng-repeat="auto in autos" ng-click="seleccionar(auto.autoModelo)">
                                     <th scope="row" hidden="hidden"></th>
                                     <td>{{auto.autoModelo}}</td>
                                     <td>{{auto.autoMarca}}</td>
                                     <td>{{auto.autoChasis}}</td>
-                                    <td>{{auto.autoPrecio}}</td>
-                                    <td>{{auto.autoFecha}}</td>
+                                    <td ng-bind="auto.autoPrecio | currency"></td>
+                                    <td ng-bind="auto.autoFecha | date: 'dd/MM/yyyy'"></td>
                                 </tr>
                             </tbody>
                             <tfoot>

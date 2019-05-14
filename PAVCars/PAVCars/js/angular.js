@@ -17,4 +17,8 @@ myApp.controller("myCtrl", function ($scope, $http) {
             $scope.autoPrecio = '';
         }
     }
+
+    $scope.seleccionar = function (modelo) {
+        alert("Y ahora? " + modelo);
+    }
 });
