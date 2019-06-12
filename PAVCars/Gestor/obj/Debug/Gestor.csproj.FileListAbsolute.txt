@@ -1,0 +1,12 @@
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\PAVCars\Gestor\bin\Debug\Gestor.dll.config
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\PAVCars\Gestor\bin\Debug\Gestor.dll
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\PAVCars\Gestor\bin\Debug\Gestor.pdb
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\PAVCars\Gestor\bin\Debug\EntityFramework.dll
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\PAVCars\Gestor\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\PAVCars\Gestor\bin\Debug\EntityFramework.xml
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\PAVCars\Gestor\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\PAVCars\Gestor\obj\Debug\Gestor.csprojResolveAssemblyReference.cache
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\PAVCars\Gestor\obj\Debug\Gestor.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\PAVCars\Gestor\obj\Debug\Gestor.csproj.CopyComplete
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\PAVCars\Gestor\obj\Debug\Gestor.dll
+C:\Users\lucas\Desktop\FACULTAD\Visual Studio\ProyectoPAV2018\ProyectoPAV2018\PAVCars\Gestor\obj\Debug\Gestor.pdb

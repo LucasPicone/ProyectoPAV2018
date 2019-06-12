@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <title>PAVCars</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="js/angular.js"></script>
+</head>
+<body style="background-color:lightgray">
+    <div ng-controller="myCtrl">
+        <div class="container">
+            <div>
+                <div class="jumbotron mb-3" style="background:#fff; padding: 2rem; margin-bottom: 0rem">
+                    <div class="row">
+                        <img class="col-md-6" src="img/generatedtext.png" />
+                        <div class="col-md-6 text-right d-none d-md-block">
+                            <img src="img/car.png" height="150" width="300" />
+                        </div>
+                    </div>
+                </div>
+                <form name="frmAuto" class="row" ng-show="mostrar == 'A'" novalidate="novalidate">
+                    <h1 class="col-sm-12 mb-md-5">Alta de Autos</h1>
+                    <div class="row col-md-12 mb-md-4">
+                        <div class="row col-sm-6 col-md">
+                            <label class="col-md text-md-right">Ingrese el modelo: </label>
+                            <input ng-model="auto.modelo" class="col-sm-8 col-md" type="text" placeholder="Ingrese el modelo" required ng-maxlength="50"/>
+                        </div>
+                        <div class="row col-sm-6 col-md">
+                            <label class="col-md text-md-right">Ingrese la Marca: </label>
+                            <select ng-model="auto.cod_marca" class="col-sm-9 col-md" required>
+                                <option ng-repeat="marca in marcas" value="{{marca.cod_marca}}">{{marca.nombre}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row col-md-12 mb-md-4">
+                        <div class="row col-md">
+                            <label class="col-md text-md-right">Ingrese el nro de chasis:</label>
+                            <input id="codchasis" required ng-model="auto.cod_chasis" class="col-md" type="number" placeholder="Ingrese el codigo de chasis" min="0"/>
+                        </div>
+                        <div class="row col-md">
+                            <label class="col-md text-md-right">Ingrese el precio de venta:</label>
+                            <input id="precio" required ng-model="auto.precio" class="col-md" type="number" placeholder="Ingrese el precio" min="0"/>
+                        </div>
+                    </div>
+                    <div class="row col-md-12 mb-md-4  mb-5">
+                        <div class="row col-md">
+                            <label class="col-md text-md-right">Ingrese la fecha de llegada:</label>
+                            <input required ng-model="auto.fecha_llegada" class="col-md" type="date" />
+
+                        </div>
+                        <div class="col-md-6 text-center" style="padding: 0.5rem">
+                            <button ng-click="guardar()" class="col-md-5 btn btn-primary" type="button">Agregar Auto</button>
+                        </div>
+                    </div>
+                    <div class="row col-12">
+                        <button class="col-md-6 btn btn-primary offset-md-3" ng-click="mostrar = 'L'">Listado</button>
+                    </div>
+                </form>
+                <form name="frmModif" class="row" ng-show="mostrar == 'M'" novalidate="novalidate">
+                    <h1 class="col-sm-12 mb-md-5">Modificación de Autos</h1>
+                    <div class="row col-md-12 mb-md-4">
+                        <div class="row col-sm-6 col-md">
+                            <label class="col-md text-md-right">Ingrese el modelo: </label>
+                            <input ng-model="auto.modelo" class="col-sm-8 col-md" type="text" placeholder="Ingrese el modelo" required ng-maxlength="50"/>
+                        </div>
+                        <div class="row col-sm-6 col-md">
+                            <label class="col-md text-md-right">Ingrese la Marca: </label>
+                            <select ng-model="auto.cod_marca" class="col-sm-9 col-md" required>
+                                <option ng-repeat="marca in marcas" value="{{marca.cod_marca}}" ng-selected="marca.cod_marca == auto.cod_marca">{{marca.nombre}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row col-md-12 mb-md-4">
+                        <div class="row col-md">
+                            <label class="col-md text-md-right">Ingrese el nro de chasis:</label>
+                            <input id="codchasis" required ng-model="auto.cod_chasis" class="col-md" type="number" placeholder="Ingrese el codigo de chasis" min="0" />
+                        </div>
+                        <div class="row col-md">
+                            <label class="col-md text-md-right">Ingrese el precio de venta:</label>
+                            <input id="precio" required ng-model="auto.precio" class="col-md" type="number" placeholder="Ingrese el precio" min="0" />
+                        </div>
+                    </div>
+                    <div class="row col-md-12 mb-md-4  mb-5">
+                        <div class="row col-md">
+                            <label class="col-md text-md-right">Ingrese la fecha de llegada:</label>
+                            <input required ng-model="auto.fecha_llegada" class="col-md" type="date" />
+
+                        </div>
+                        <div class="col-md-6 text-center" style="padding: 0.5rem">
+                            <button ng-click="modif(indice)" class="col-md-5 btn btn-primary" type="button">Modificar Auto</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="listado" ng-show="mostrar == 'L'">
+                    <div class="row mb-3">
+                        <h1 class="col-6">Listado</h1>
+                        <button class="col-6 btn btn-primary" ng-click="mostrar= 'A'">Agregar Autos</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="col table table-dark table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <td scope="col">Modelo</td>
+                                    <td scope="col">Marca</td>
+                                    <td scope="col">Nro de Chasis</td>
+                                    <td scope="col">Precio</td>
+                                    <td scope="col">Fecha de Llegada</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="auto in autos">
+                                    <th hidden scope="row">{{$index}}</th>
+                                    <td>{{auto.modelo}}</td>
+                                    <td>{{marcas[(auto.cod_marca)-1].nombre}}</td>
+                                    <td>{{auto.cod_chasis}}</td>
+                                    <td ng-bind="auto.precio | currency"></td>
+                                    <td ng-bind="auto.fecha_llegada | date: 'dd/MM/yyyy'"></td>
+                                    <td>
+                                        <button ng-click="modificar(auto, $index)" class="btn btn-primary" type="button">Modificar Auto</button>
+                                        <button ng-click="eliminar(auto, $index)" class="btn btn-danger" type="button">Eliminar Auto</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5" align="center">Total autos: {{autos.length}}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
