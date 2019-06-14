@@ -12,9 +12,21 @@ namespace PAVCars_webApi.Controllers
     {
         public IHttpActionResult Get()
         {
-            return Ok(AutoDao.ObtenerTodos());
+            return Ok(AutoDao.Obtener());
         }
-        
+
+        //[HttpGet]
+        //[ActionName("Busqueda")]
+        //public IHttpActionResult MeRindo(string cadena)
+        //{
+        //    return Ok(AutoDao.Obtener(cadena));
+        //}
+
+        public IHttpActionResult Get(int id)
+        {
+            return Ok(AutoDao.Obtener(id));
+        }
+
         public IHttpActionResult Post(Autos auto)
         {
             try

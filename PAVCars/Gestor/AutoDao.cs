@@ -8,7 +8,7 @@ namespace Gestor
 {
     public class AutoDao
     {
-        public static List<Autos> ObtenerTodos()
+        public static List<Autos> Obtener()
         {
             using (PavCarsEntities db = new PavCarsEntities())
             {
@@ -25,6 +25,15 @@ namespace Gestor
             }
         }
 
+        //public static List<Autos> Obtener(string cadena)
+        //{
+        //    using (PavCarsEntities db = new PavCarsEntities())
+        //    {
+        //        var auto = (from aut in db.Autos where aut.modelo.StartsWith(cadena) select aut).ToList();
+        //        return auto;
+        //    }
+        //}
+
         public static void Insertar(Autos auto)
         {
             using (PavCarsEntities db = new PavCarsEntities())
@@ -36,7 +45,7 @@ namespace Gestor
                 }
                 catch (Exception ex)
                 {
-                    throw new ApplicationException("Error al guardar el auto");
+                    throw new ApplicationException("cod_chasis ya esta usado");
                 }
             }
         }
@@ -47,12 +56,13 @@ namespace Gestor
             {
                 try
                 {
-                    db.Entry(auto).State = System.Data.Entity.EntityState.Modified;
+                    var au = (from aut in db.Autos where aut.id == auto.id select aut).FirstOrDefault();
+                    db.Entry(au).CurrentValues.SetValues(auto);
                     db.SaveChanges();
                 }
                 catch (Exception ex)
                 {
-                    throw new ApplicationException("Error al modificar el auto");
+                    throw new ApplicationException("cod_chasis ya esta usado");
                 }
             }
         }
