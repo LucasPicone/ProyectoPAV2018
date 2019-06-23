@@ -77,17 +77,11 @@ myApp.controller("myCtrl", function ($scope, $http) {
         }
     }
 
-    //$scope.pru = function () {
-    //    console.log($scope.prueba);
-    //    //$http({ method: 'GETString', url: 'api/autos/' + $scope.prueba }).then(function (respuesta) {
-    //    //    console.log(respuesta)
-    //    //    $scope.pruebas = respuesta.data;
-    //    //})
-    //    $http.get("prueba/autos/busqueda/" + $scope.prueba).then(function (respuesta) {
-    //        console.log(respuesta);
-    //        $scope.pruebas = respuesta.data;
-    //    })
-    //}
+    $scope.BIncremental = function () {
+        $http.get("api/autos/" + $scope.incremental).then(function successCallback(respuesta) {
+            $scope.autos = respuesta.data;
+        })
+    }
 });
 
 myApp.config(['$qProvider', function ($qProvider) {

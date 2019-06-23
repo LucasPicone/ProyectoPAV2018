@@ -25,14 +25,14 @@ namespace Gestor
             }
         }
 
-        //public static List<Autos> Obtener(string cadena)
-        //{
-        //    using (PavCarsEntities db = new PavCarsEntities())
-        //    {
-        //        var auto = (from aut in db.Autos where aut.modelo.StartsWith(cadena) select aut).ToList();
-        //        return auto;
-        //    }
-        //}
+        public static List<Autos> Obtener(string cadena)
+        {
+            using (PavCarsEntities db = new PavCarsEntities())
+            {
+                var auto = (from aut in db.Autos where aut.modelo.StartsWith(cadena) select aut).ToList();
+                return auto;
+            }
+        }
 
         public static void Insertar(Autos auto)
         {
