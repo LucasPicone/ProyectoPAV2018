@@ -70,6 +70,7 @@ myApp.controller("myCtrl", function ($scope, $http) {
 
     $scope.eliminar = function (auto) {
         if (confirm("Desea eliminar a " + auto.modelo)) {
+            console.log(auto.id);
             $http.delete("api/autos/" + auto.id).then(function (respuesta) {
                 alert("Auto eliminado exitosamente");
                 $scope.buscarAutos();
@@ -81,6 +82,17 @@ myApp.controller("myCtrl", function ($scope, $http) {
         $http.get("api/autos/" + $scope.incremental).then(function successCallback(respuesta) {
             $scope.autos = respuesta.data;
         })
+    }
+
+    $scope.encontrarMarca = function (id) {
+        if ($scope.marcas.cod_marca == 0) {
+            return id;
+        } else {
+            var busqueda = $scope.marcas.find(function (item) {
+                return item.cod_marca === id;
+            });
+            return busqueda.nombre;
+        }
     }
 });
 

@@ -12,7 +12,7 @@ namespace Gestor
         {
             using (PavCarsEntities db = new PavCarsEntities())
             {
-                return db.Autos.ToList();
+                return db.Autos.OrderBy(x => x.modelo).ToList();
             }
         }
 

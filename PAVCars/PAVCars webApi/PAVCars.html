@@ -83,7 +83,7 @@
                                 <tr ng-repeat="auto in autos">
                                     <td hidden>{{auto.id}}</td>
                                     <td>{{auto.modelo}}</td>
-                                    <td>{{marcas[(auto.cod_marca)-1].nombre}}</td>
+                                    <td>{{encontrarMarca(auto.cod_marca)}}</td>
                                     <td>{{auto.cod_chasis}}</td>
                                     <td ng-bind="auto.precio | currency"></td>
                                     <td ng-bind="auto.fecha_llegada | date: 'dd/MM/yyyy'"></td>
